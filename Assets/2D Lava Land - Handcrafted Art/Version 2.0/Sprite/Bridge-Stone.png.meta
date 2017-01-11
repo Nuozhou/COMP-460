@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 324a0c9f4e3b1114abc31c1de9eda7e6
+timeCreated: 1481209283
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bridge-Stone_0
+    21300002: Bridge-Stone_1
+    21300004: Bridge-Stone_2
+    21300006: Bridge-Stone_3
+    21300008: Bridge-Stone_4
+    21300010: Bridge-Stone_5
+    21300012: Bridge-Stone_6
+    21300014: Bridge-Stone_7
+    21300016: Bridge-Stone_8
+    21300018: Bridge-Stone_9
+    21300020: Bridge-Stone_10
+    21300022: Bridge-Stone_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bridge-Stone_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3105
+        width: 1126
+        height: 991
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_1
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 3220
+        width: 693
+        height: 876
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_2
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 2900
+        width: 943
+        height: 1196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_3
+      rect:
+        serializedVersion: 2
+        x: 3223
+        y: 2565
+        width: 873
+        height: 1498
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_4
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 1547
+        width: 1701
+        height: 919
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_5
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1263
+        width: 1306
+        height: 872
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2342
+        width: 1170
+        height: 610
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_7
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 8
+        width: 351
+        height: 636
+      alignment: 9
+      pivot: {x: 0.41068053, y: 0.8943514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_8
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 0
+        width: 238
+        height: 1205
+      alignment: 9
+      pivot: {x: 0.39022738, y: 0.9422953}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_9
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 0
+        width: 161
+        height: 1245
+      alignment: 9
+      pivot: {x: 0.46754485, y: 0.9029035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_10
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 0
+        width: 3103
+        height: 1196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Bridge-Stone_11
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2281
+        width: 889
+        height: 506
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

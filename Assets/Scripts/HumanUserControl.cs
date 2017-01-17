@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
 
 [RequireComponent(typeof (HumanMovements))]
 public class HumanUserControl : MonoBehaviour {
@@ -22,8 +21,8 @@ public class HumanUserControl : MonoBehaviour {
 		if (!m_Jump)
 		{
 			// Read the jump input in Update so button presses aren't missed.
-			m_Jump = CrossPlatformInputManager.GetButtonDown("HumanJump");
-			crouch = CrossPlatformInputManager.GetButton ("HumanCrouch");
+			m_Jump = Input.GetButtonDown ("HumanJump");
+			crouch = Input.GetButton ("HumanCrouch");
 		}
 	}
 
@@ -32,7 +31,7 @@ public class HumanUserControl : MonoBehaviour {
 	{
 		// Read the inputs.
 		//bool crouch = Input.GetKey(KeyCode.LeftControl);
-		float h = CrossPlatformInputManager.GetAxis("HumanHorizontal");
+		float h = Input.GetAxis("HumanHorizontal");
 		// Pass all parameters to the character control script.
 		m_Character.Move(h, crouch, m_Jump);
 		m_Jump = false;

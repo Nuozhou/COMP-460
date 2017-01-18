@@ -5,16 +5,18 @@ using Pathfinding;
 
 [RequireComponent (typeof (Rigidbody2D))]
 [RequireComponent (typeof (Seeker))]
-public class furball : MonoBehaviour {
+public class FlyBall : MonoBehaviour {
 
 	// Use this for initialization
-	public Transform target;
+	public Transform target1;
+	public Transform target2;
+
 	private Seeker seeker;
 	public Path path;
 
 	public float updateRate = 2f;
 
-	public float speed = 30f;
+	public float speed = 300f;
 	public ForceMode2D fMode;
 
 	public bool pathIsEnded = false;
@@ -22,7 +24,7 @@ public class furball : MonoBehaviour {
 	public float nextWayPointDistance = 3;
 	private Rigidbody2D rb2d;
 
-	public float upForce = 20f;
+	public float upForce = 200f;
 
 	private int currentWaypoint = 0;
 
@@ -31,20 +33,29 @@ public class furball : MonoBehaviour {
 
 		seeker = GetComponent<Seeker> ();
 
-		if (target == null) {
-			Debug.LogError ("no target found!");
+		if (target1 == null && target2 == null) {
+			Debug.LogError ("fly ball no target found!");
 			return;
 		}
+		if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
+			seeker.StartPath (transform.position, target1.position, OnPathComplete);
+		} else {
+			seeker.StartPath (transform.position, target2.position, OnPathComplete);
+		}
 		//start a new path to the target position and return the result to the OnpathComplete method
-		seeker.StartPath (transform.position, target.position, OnPathComplete);
+
 		StartCoroutine (UpdatePath ());
 
 
 	}
 
 	IEnumerator UpdatePath() {
-		
-		seeker.StartPath (transform.position, target.position, OnPathComplete);
+		if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
+			seeker.StartPath (transform.position, target1.position, OnPathComplete);
+		} else {
+			seeker.StartPath (transform.position, target2.position, OnPathComplete);
+		}
+
 
 		yield return new WaitForSeconds (1f / updateRate);
 		StartCoroutine (UpdatePath ());
@@ -58,11 +69,11 @@ public class furball : MonoBehaviour {
 			currentWaypoint = 0;
 		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButton (0)) {
-			
+
 
 			rb2d.velocity = Vector2.zero;
 
@@ -71,7 +82,7 @@ public class furball : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		if (target == null) {
+		if (target1 == null && target2 == null) {
 			return;
 		}
 

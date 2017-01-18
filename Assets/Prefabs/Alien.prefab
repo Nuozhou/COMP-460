@@ -24,9 +24,9 @@ GameObject:
   - component: {fileID: 58878545613838680}
   - component: {fileID: 114924320442218864}
   - component: {fileID: 114060353821059990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50512745866062266}
   - component: {fileID: 114440816278933782}
   - component: {fileID: 61221753576896986}
-  - component: {fileID: 114085690717344144}
+  - component: {fileID: 114002157605218270}
   m_Layer: 0
   m_Name: FurBallConst
   m_TagString: Enemy
@@ -96,7 +96,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114085690717344144
+--- !u!114 &114002157605218270
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -104,10 +104,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1031501305080124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6396242661fa64331ae5aecd00ee6aa0, type: 3}
+  m_Script: {fileID: 11500000, guid: f9042501098a14391870bcdce7be9e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
 --- !u!114 &114440816278933782
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114268455836287756}
   - component: {fileID: 114008483539041950}
   - component: {fileID: 114610737562958678}
-  - component: {fileID: 114537746640953032}
+  - component: {fileID: 114063119507392868}
   m_Layer: 0
   m_Name: furball
   m_TagString: Enemy
@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1053202168429788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2, y: 0.93, z: 0}
+  m_LocalPosition: {x: 12.436232, y: 2.2994988, z: 0}
   m_LocalScale: {x: 0.57769215, y: 0.5467916, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -165,6 +165,18 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 
+--- !u!114 &114063119507392868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053202168429788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9042501098a14391870bcdce7be9e83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!114 &114268455836287756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,18 +195,6 @@ MonoBehaviour:
   pathIsEnded: 0
   nextWayPointDistance: 1
   upForce: 200
---- !u!114 &114537746640953032
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1053202168429788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6396242661fa64331ae5aecd00ee6aa0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
 --- !u!114 &114610737562958678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,7 +239,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 119391881
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300028, guid: b04511e046b4ac64cbb6cddf651a9c3a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

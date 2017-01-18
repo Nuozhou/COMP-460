@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour {
 	public Transform firePoint;
 	public float bulletSpeed = 30f;
 	public float fireRate = 3f;
-	public float damage = 10f;
 
 	private float fireTime = 0;
 	private HumanMovements humanMovements;

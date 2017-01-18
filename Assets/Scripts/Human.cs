@@ -6,7 +6,7 @@ public class Human : MonoBehaviour {
 
 	public int health = 100;
 
-	public int fallBoundary = -100;
+	public int fallBoundary = -50;
 
 	public void DamageHuman(int damage) {
 		health -= damage;

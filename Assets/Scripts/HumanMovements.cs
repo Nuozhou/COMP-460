@@ -16,7 +16,10 @@ public class HumanMovements : MonoBehaviour {
 	const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
 	private Animator m_Anim;            // Reference to the player's animator component.
 	private Rigidbody2D m_Rigidbody2D;
-	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	public bool m_FacingRight = true;  // For determining which way the player is currently facing.
+	private Camera camera;
+	private float cameraHeight;
+	private float cameraWidth;
 
 	private void Awake()
 	{
@@ -25,6 +28,9 @@ public class HumanMovements : MonoBehaviour {
 		m_CeilingCheck = transform.Find("CeilingCheck");
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		camera = Camera.main;
+		cameraHeight = camera.orthographicSize * 2f;
+		cameraWidth = cameraHeight * camera.aspect;
 	}
 
 
@@ -71,9 +77,15 @@ public class HumanMovements : MonoBehaviour {
 			// The Speed animator parameter is set to the absolute value of the horizontal input.
 			m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
-			// Move the character
-			m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
-
+			if (this.gameObject.transform.position.x >= camera.transform.position.x + cameraWidth / 2f - 0.34 && m_FacingRight) {
+				m_Rigidbody2D.velocity = new Vector2 (0, m_Rigidbody2D.velocity.y);
+			}
+			else if (this.gameObject.transform.position.x <= camera.transform.position.x - cameraWidth / 2f + 0.34 && !m_FacingRight) {
+				m_Rigidbody2D.velocity = new Vector2 (0, m_Rigidbody2D.velocity.y);
+			} else {
+				// Move the character
+				m_Rigidbody2D.velocity = new Vector2 (move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
+			}
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
 			{

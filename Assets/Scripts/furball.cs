@@ -12,6 +12,9 @@ public class furball : MonoBehaviour {
 	private Seeker seeker;
 	public Path path;
 
+
+
+
 	public float updateRate = 2f;
 
 	public float speed = 30f;
@@ -58,6 +61,9 @@ public class furball : MonoBehaviour {
 			currentWaypoint = 0;
 		}
 	}
+
+
+
 	
 	// Update is called once per frame
 	void Update () {

@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - SavePoint
+  - Enemy
+  - EnemyFly
+  - EnemyConst
+  - EnemyFollow
   layers:
   - Default
   - TransparentFX

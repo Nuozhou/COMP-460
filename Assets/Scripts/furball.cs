@@ -32,7 +32,7 @@ public class furball : MonoBehaviour {
 		seeker = GetComponent<Seeker> ();
 
 		if (target == null) {
-			Debug.LogError ("no target found!");
+			//Debug.LogError ("no target found!");
 			return;
 		}
 		//start a new path to the target position and return the result to the OnpathComplete method
@@ -51,7 +51,7 @@ public class furball : MonoBehaviour {
 	}
 
 	public void OnPathComplete(Path p) {
-		Debug.Log("we found a path!");
+		//Debug.Log("we found a path!");
 
 		if (!p.error) {
 			path = p;
@@ -83,7 +83,7 @@ public class furball : MonoBehaviour {
 			if (pathIsEnded) {
 				return;
 			}
-			Debug.Log ("end of path reached!");
+			//Debug.Log ("end of path reached!");
 			pathIsEnded = true;
 			return;
 

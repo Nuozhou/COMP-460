@@ -34,7 +34,7 @@ public class FlyBall : MonoBehaviour {
 		seeker = GetComponent<Seeker> ();
 
 		if (target1 == null && target2 == null) {
-			Debug.LogError ("fly ball no target found!");
+			//Debug.LogError ("fly ball no target found!");
 			return;
 		}
 		if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
@@ -62,7 +62,7 @@ public class FlyBall : MonoBehaviour {
 	}
 
 	public void OnPathComplete(Path p) {
-		Debug.Log("we found a path!");
+		//Debug.Log("we found a path!");
 
 		if (!p.error) {
 			path = p;
@@ -94,7 +94,7 @@ public class FlyBall : MonoBehaviour {
 			if (pathIsEnded) {
 				return;
 			}
-			Debug.Log ("end of path reached!");
+			//Debug.Log ("end of path reached!");
 			pathIsEnded = true;
 			return;
 

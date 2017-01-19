@@ -19,7 +19,7 @@ public class EnemyFollowTwo : MonoBehaviour {
 
 	public float AttackDist;
 
-	public float AttackPower;
+	public int AttackPower;
 
 	public float speed = 300f;
 	public ForceMode2D fMode;

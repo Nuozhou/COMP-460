@@ -17,6 +17,10 @@ public class enemySelfMovement : MonoBehaviour {
 
 	}
 
+	public void SetSpeed(float inputSpeed) {
+		speed = inputSpeed;
+	}
+
 	void FixedUpdate() {
 		Vector2 lineCast = transform.position - transform.right * myWidth;
 		Debug.DrawLine (lineCast, lineCast + Vector2.down);

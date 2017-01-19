@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  cloud: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!114 &114647201043243400
 MonoBehaviour:
   m_ObjectHideFlags: 1

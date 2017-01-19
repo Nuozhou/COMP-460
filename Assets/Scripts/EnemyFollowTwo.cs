@@ -17,6 +17,10 @@ public class EnemyFollowTwo : MonoBehaviour {
 
 	public float updateRate = 2f;
 
+	public float AttackDist;
+
+	public float AttackPower;
+
 	public float speed = 300f;
 	public ForceMode2D fMode;
 
@@ -33,6 +37,8 @@ public class EnemyFollowTwo : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 
 		seeker = GetComponent<Seeker> ();
+
+		AttackDist = 3 * GetComponent<SpriteRenderer> ().bounds.extents.x;
 
 		UpdateTarget ();
 
@@ -89,6 +95,9 @@ public class EnemyFollowTwo : MonoBehaviour {
 		if (target1 == null && target2 == null) {
 			return;
 		}
+		if (Vector3.Distance (transform.position, target.position) < AttackDist) {
+			Attack ();
+		}
 
 		if (path == null) {
 			return;
@@ -116,5 +125,9 @@ public class EnemyFollowTwo : MonoBehaviour {
 			currentWaypoint++;
 			return;
 		}
+	}
+
+	void Attack() {
+		target.GetComponent<Human> ().DamageHuman (AttackPower);
 	}
 }

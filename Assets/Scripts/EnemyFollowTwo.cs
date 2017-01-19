@@ -5,11 +5,12 @@ using Pathfinding;
 
 [RequireComponent (typeof (Rigidbody2D))]
 [RequireComponent (typeof (Seeker))]
-public class FlyBall : MonoBehaviour {
+public class EnemyFollowTwo : MonoBehaviour {
 
 	// Use this for initialization
 	public Transform target1;
 	public Transform target2;
+	private Transform target;
 
 	private Seeker seeker;
 	public Path path;
@@ -24,7 +25,7 @@ public class FlyBall : MonoBehaviour {
 	public float nextWayPointDistance = 3;
 	private Rigidbody2D rb2d;
 
-	public float upForce = 200f;
+
 
 	private int currentWaypoint = 0;
 
@@ -33,15 +34,11 @@ public class FlyBall : MonoBehaviour {
 
 		seeker = GetComponent<Seeker> ();
 
-		if (target1 == null && target2 == null) {
-			//Debug.LogError ("fly ball no target found!");
-			return;
-		}
-		if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
-			seeker.StartPath (transform.position, target1.position, OnPathComplete);
-		} else {
-			seeker.StartPath (transform.position, target2.position, OnPathComplete);
-		}
+		UpdateTarget ();
+
+
+		seeker.StartPath (transform.position, target.position, OnPathComplete);
+
 		//start a new path to the target position and return the result to the OnpathComplete method
 
 		StartCoroutine (UpdatePath ());
@@ -49,13 +46,28 @@ public class FlyBall : MonoBehaviour {
 
 	}
 
-	IEnumerator UpdatePath() {
-		if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
-			seeker.StartPath (transform.position, target1.position, OnPathComplete);
-		} else {
-			seeker.StartPath (transform.position, target2.position, OnPathComplete);
+	void UpdateTarget() {
+		if (target1 == null && target2 == null) {
+			Debug.LogError ("fly ball no target found!");
+			return;
 		}
+		if (target1 == null) {
+			target = target2;
+		} else if (target2 == null) {
+			target = target1;
+		} else {
+			if (Vector3.Distance (transform.position, target1.position) <= Vector3.Distance (transform.position, target2.position)) {
+				target = target1;
+			} else {
+				target = target2;
+			}
+		}
+	}
 
+	IEnumerator UpdatePath() {
+		UpdateTarget ();
+
+		seeker.StartPath (transform.position, target.position, OnPathComplete);
 
 		yield return new WaitForSeconds (1f / updateRate);
 		StartCoroutine (UpdatePath ());
@@ -71,15 +83,7 @@ public class FlyBall : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButton (0)) {
 
-
-			rb2d.velocity = Vector2.zero;
-
-			rb2d.AddForce (new Vector2 (0, upForce));
-		}
-	}
 
 	void FixedUpdate() {
 		if (target1 == null && target2 == null) {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnAlterObject : MonoBehaviour {
 
 	public bool facingRight = false;
+	public string objectName = "FurBallConst";
 	GameObject SpawnObject;
 
 //	Rigidbody2D rb2d;
@@ -15,7 +16,7 @@ public class SpawnAlterObject : MonoBehaviour {
 	void Start () {
 //		rb2d = GetComponent<Rigidbody2D> ();
 //		myWidth = GetComponent<SpriteRenderer> ().bounds.extents.x;
-		SpawnObject = (GameObject)Instantiate(Resources.Load("FurBallConst"));
+		SpawnObject = (GameObject)Instantiate(Resources.Load(objectName));
 		InvokeRepeating ("Spawn", 0f, 20f);
 	}
 

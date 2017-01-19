@@ -8,6 +8,11 @@ public class Enemy : MonoBehaviour {
 	// Use this for initialization
 	public GameObject cloud;
 
+	public Renderer rend;
+
+	public void Start() {
+		rend = GetComponent<Renderer>();
+	}
 	public void Damage(int healthDecrease) {
 		health -= healthDecrease;
 		if (health <= 0) {
@@ -20,6 +25,27 @@ public class Enemy : MonoBehaviour {
 			}
 			Destroy (gameObject);
 
+		} else {
+			StartCoroutine (Blink (8.0));
 		}
+	}
+
+	IEnumerator Blink(double time) {
+		double endTime = Time.time + time;
+//		while (Time.time < endTime) {
+		int counter = 0;
+
+
+
+		rend.enabled = false;
+		yield return new WaitForSeconds(0.1f);
+		rend.enabled = true;
+
+
+
+			
+
+
+		//}
 	}
 }

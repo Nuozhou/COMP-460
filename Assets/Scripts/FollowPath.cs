@@ -12,7 +12,7 @@ public class FollowPath : MonoBehaviour {
 	public float reachDistance = 5.0f;
 	public float speed = 5.0f;
 	Rigidbody2D rb2d;
-
+	public bool enable = true;
 
 
 
@@ -23,14 +23,17 @@ public class FollowPath : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		switch (MoveTypes) {
-		case MoveType.UseTransform:
-			UseTransform ();
-			break;
-		case MoveType.UsePhysice:
-			UsePhysice ();
-			break;
+		if (enable) {
+			switch (MoveTypes) {
+			case MoveType.UseTransform:
+				UseTransform ();
+				break;
+			case MoveType.UsePhysice:
+				UsePhysice ();
+				break;
+			}
 		}
+
 	}
 
 	void UsePhysice() {

@@ -794,6 +794,7 @@ GameObject:
   - component: {fileID: 1050102980}
   - component: {fileID: 1050102979}
   - component: {fileID: 1050102978}
+  - component: {fileID: 1050102983}
   m_Layer: 0
   m_Name: FlyUpDown
   m_TagString: Untagged
@@ -901,6 +902,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1050102983
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1050102977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f6a4e2c5781b054a909644da19e4fb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &1087620023 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4231192685128978, guid: a09543052e313431992b24fa933cd2c8,
@@ -967,7 +985,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -989,7 +1007,7 @@ Transform:
   m_GameObject: {fileID: 1127272848}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 0.6138574, y: 0.6138574, z: 0.6138574}
+  m_LocalScale: {x: 0.5893434, y: 0.5893434, z: 0.5893434}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1653,6 +1671,7 @@ GameObject:
   - component: {fileID: 1948796680}
   - component: {fileID: 1948796679}
   - component: {fileID: 1948796678}
+  - component: {fileID: 1948796683}
   m_Layer: 0
   m_Name: FlySquare
   m_TagString: Untagged
@@ -1762,6 +1781,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1948796683
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948796677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f6a4e2c5781b054a909644da19e4fb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &2083573962
 Prefab:
   m_ObjectHideFlags: 0
@@ -1771,11 +1807,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 1.486
       objectReference: {fileID: 0}
     - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.79
+      value: -4.555
       objectReference: {fileID: 0}
     - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1810,6 +1846,18 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayerID
       value: 119391881
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7157641
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.71576625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441530186137696, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.6238858
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e4bd1f0125c724f50a3d63feddfc6553, type: 2}

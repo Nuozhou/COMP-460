@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AlienMovements : MonoBehaviour {
 
-	[SerializeField] private float m_MaxSpeed = 10f;  
+	[SerializeField] private float m_MaxSpeed = 10f;
 	private Rigidbody2D m_Rigidbody2D;
 	private Camera camera;
 	private float cameraHeight;
@@ -60,6 +60,10 @@ public class AlienMovements : MonoBehaviour {
 			// ... flip the player.
 			Flip();
 		}
+	}
+
+	public void Grab() {
+		
 	}
 
 	private void Flip()

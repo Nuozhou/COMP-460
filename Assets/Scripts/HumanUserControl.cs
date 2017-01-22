@@ -5,9 +5,10 @@ using UnityEngine;
 public class HumanUserControl : MonoBehaviour {
 
 	private HumanMovements m_Character;
-
 	private bool m_Jump;
 	private bool crouch;
+
+	private GameObject box;
 
 
 	private void Awake()

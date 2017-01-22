@@ -7,7 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class AlienUserControl : MonoBehaviour {
 
 	private AlienMovements m_Character;
-
+	private bool grab;
 	// Use this for initialization
 	private void Awake () {
 		m_Character = GetComponent<AlienMovements>();

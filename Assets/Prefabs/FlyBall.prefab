@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 95283304879709562}
   - component: {fileID: 50106334589052480}
   - component: {fileID: 60800537068088684}
-  - component: {fileID: 114815300810183890}
   - component: {fileID: 114619710756638482}
   - component: {fileID: 114424124637692196}
   - component: {fileID: 114421923624238560}
@@ -201,6 +200,8 @@ MonoBehaviour:
   target1: {fileID: 0}
   target2: {fileID: 0}
   updateRate: 2
+  AttackDist: 0
+  AttackPower: 0
   speed: 300
   fMode: 0
   pathIsEnded: 0
@@ -217,7 +218,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthStat:
+    bar: {fileID: 0}
+    maxVal: 0
+    currentVal: 0
   cloud: {fileID: 0}
+  rend: {fileID: 0}
 --- !u!114 &114619710756638482
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,28 +251,6 @@ MonoBehaviour:
     tagsChange: -1
     tagsSet: -1
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
---- !u!114 &114815300810183890
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1755109574058484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83987ba67d103402a8b073f7e8e56d7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target1: {fileID: 0}
-  target2: {fileID: 0}
-  seeker: {fileID: 0}
-  updateRate: 10
-  speed: 100
-  fMode: 0
-  pathIsEnded: 0
-  nextWayPointDistance: 3
-  rb2d: {fileID: 0}
-  upForce: 200
-  currentWaypoint: 0
 --- !u!212 &212566813474303520
 SpriteRenderer:
   m_ObjectHideFlags: 1

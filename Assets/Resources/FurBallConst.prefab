@@ -166,6 +166,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthStat:
+    bar: {fileID: 114630422432038016, guid: 2c5625211b7044f1c9469767389a12d1, type: 2}
+    maxVal: 0
+    currentVal: 0
   cloud: {fileID: 0}
   rend: {fileID: 0}
 --- !u!114 &114647201043243400

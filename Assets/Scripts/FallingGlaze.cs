@@ -7,6 +7,7 @@ public class FallingGlaze : MonoBehaviour {
 	public Transform target;
 	Rigidbody2D targetRb2d;
 	Rigidbody2D rb2d;
+	private bool isFalling = false;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -18,10 +19,14 @@ public class FallingGlaze : MonoBehaviour {
 		float dist = rb2d.position.x - targetRb2d.position.x;
 		if (dist < 0.5 && dist > -0.5) {
 			transform.GetComponent<Falling> ().startTime = true;
+			isFalling = true;
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Destroy (gameObject);
+		if (isFalling) {
+			Destroy (gameObject);
+		}
+
 	}
 }

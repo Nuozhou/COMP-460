@@ -8,11 +8,14 @@ public class Falling : MonoBehaviour {
 	float timer = 0f;
 	public bool startTime = false;
 	public float waitTime = 0.5f;
+	public bool isIcicle;
 
+	public Animator anim;
 
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
+		anim = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -21,13 +24,18 @@ public class Falling : MonoBehaviour {
 			timer += Time.fixedDeltaTime;
 			if (timer > waitTime) {
 				rb2d.isKinematic = false;
-
+				if (anim != null) {
+					anim.enabled = false;
+				}
 			}
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		startTime = true;
+		if (!isIcicle) {
+			startTime = true;
+		} 
+
 	}
 
 

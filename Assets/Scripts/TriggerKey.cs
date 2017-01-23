@@ -18,7 +18,8 @@ public class TriggerKey : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		//audio.PlayOneShot (audio.GetComponent<AudioClip> ());
-		audio.enabled = true;
+		Debug.Log("collide!");
+		audio.Play ();
 		lift.GetComponent<TriggerLift> ().Lift (index);
 	}
 

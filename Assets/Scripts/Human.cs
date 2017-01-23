@@ -63,7 +63,7 @@ public class Human : MonoBehaviour {
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				DamageHuman (20);
 				lastHitTime = Time.time;
-				Destroy (col.gameObject);
+
 			}
 		}
 	}

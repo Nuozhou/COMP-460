@@ -59,7 +59,7 @@ public class Alien : MonoBehaviour {
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				DamageAlien (20);
 				lastHitTime = Time.time;
-				Destroy (col.gameObject);
+
 			}
 		}
 	}

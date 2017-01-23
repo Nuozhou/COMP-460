@@ -5,7 +5,7 @@ using UnityEngine;
 public class Elevator : MonoBehaviour {
 
 	private Rigidbody2D m_Rigidbody2D;
-	private float alternateTime = 10f;
+	private bool enabled = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,10 +15,7 @@ public class Elevator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time > alternateTime) {
-			SwitchDirection ();
-			alternateTime += 10f;
-		}
+		
 	}
 
 	public void StopElevator() {

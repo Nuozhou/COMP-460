@@ -54,6 +54,12 @@ public class Alien : MonoBehaviour {
 			{
 				DamageAlien (10);
 				lastHitTime = Time.time;
+			} 
+		} else if (col.gameObject.tag == "FallingIce") {
+			if (Time.time > lastHitTime + repeatDamagePeriod) {
+				DamageAlien (20);
+				lastHitTime = Time.time;
+				Destroy (col.gameObject);
 			}
 		}
 	}

@@ -26,6 +26,7 @@ public class HumanMovements : MonoBehaviour {
 		// Setting up references.
 		m_GroundCheck = transform.Find("GroundCheck");
 		m_CeilingCheck = transform.Find("CeilingCheck");
+		Debug.Log ("Awake ceiling position" + m_CeilingCheck.position);
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		camera = Camera.main;
@@ -56,14 +57,19 @@ public class HumanMovements : MonoBehaviour {
 	public void Move(float move, bool crouch, bool jump)
 	{
 		// If crouching, check to see if the character can stand up
+		/*
 		if (!crouch && m_Anim.GetBool("Crouch"))
 		{
 			// If the character has a ceiling preventing them from standing up, keep them crouching
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
+				Debug.Log("Executed");
+				Debug.Log (m_CeilingCheck.position);
+				Debug.Log (k_CeilingRadius);
 				crouch = true;
 			}
 		}
+		*/
 
 		// Set whether or not the character is crouching in the animator
 		m_Anim.SetBool("Crouch", crouch);

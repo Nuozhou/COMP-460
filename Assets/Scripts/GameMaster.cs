@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -25,25 +26,34 @@ public class GameMaster : MonoBehaviour {
 			gm = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameMaster>();
 		}
 	}
-
-	public Transform HumanPrefab;
+		
 	public Transform SavePoint;
 
-	public static void KillHuman(Human human) {
+	public static IEnumerator KillHuman(Human human) {
+		yield return new WaitForSeconds(2);
 		human.gameObject.transform.position = gm.SavePoint.position;
-		human.health = 100;
+		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 2f, gm.SavePoint.position.z);
+		human.health = 25;
+		Image healthBar = GameObject.Find ("HumanHealthBarContent").GetComponent<Image> ();
+		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - human.health * 0.01f);
+		healthBar.transform.localScale = new Vector3(human.healthScale.x * human.health * 0.01f, 1f, 1f);
 	}
 
-	public static void KillAlien(Alien alien) {
-		alien.gameObject.transform.position = gm.SavePoint.position;
-		alien.health = 100;
+	public static IEnumerator KillAlien(Alien alien) {
+		yield return new WaitForSeconds(2);
+		GameObject.Find("Human").transform.position = gm.SavePoint.position;
+		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 2f, gm.SavePoint.position.z);
+		alien.health = 25;
+		Image healthBar = GameObject.Find ("AlienHealthBarContent").GetComponent<Image> ();
+		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - alien.health * 0.01f);
+		healthBar.transform.localScale = new Vector3(alien.healthScale.x * alien.health * 0.01f, 1f, 1f);
 	}
 
 	public static void Save() {
 		BinaryFormatter bf = new BinaryFormatter ();
 		FileStream file = File.Create (Application.persistentDataPath + "/playerInfo.dat");
 		PlayerData data = new PlayerData ();
-		data.humanHealth = GameObject.Find ("CharacterRobotBoy").GetComponent<Human> ().health;
+		data.humanHealth = GameObject.Find ("Human").GetComponent<Human> ().health;
 		data.alienHealth = GameObject.Find ("Alien").GetComponent<Alien> ().health;
 		data.sceneId = SceneManager.GetActiveScene ().buildIndex;
 		data.SavePoint = gm.SavePoint;

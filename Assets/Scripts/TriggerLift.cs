@@ -17,7 +17,7 @@ public class TriggerLift : MonoBehaviour {
 
 	public void Lift (int nextStage) {
 		if (nextStage == (stage + 1)) {
-			transform.position = new Vector3(transform.position.x, transform.position.y+1, transform.position.z);
+			transform.position = new Vector3(transform.position.x, transform.position.y-1, transform.position.z);
 			stage += 1;
 		} else {
 			transform.position = originalPosition;

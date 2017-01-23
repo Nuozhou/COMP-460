@@ -11,6 +11,8 @@ using System.IO;
 public class GameMaster : MonoBehaviour {
 
 	public static GameMaster gm;
+	public Timer timer;
+	public Transform SavePoint;
 
 	[Serializable]
 	class PlayerData
@@ -25,28 +27,34 @@ public class GameMaster : MonoBehaviour {
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameMaster>();
 		}
+		timer = gameObject.GetComponent<Timer> ();
 	}
-		
-	public Transform SavePoint;
 
 	public static IEnumerator KillHuman(Human human) {
 		yield return new WaitForSeconds(2);
-		human.gameObject.transform.position = gm.SavePoint.position;
-		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 2f, gm.SavePoint.position.z);
+		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
+		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		human.health = 25;
 		Image healthBar = GameObject.Find ("HumanHealthBarContent").GetComponent<Image> ();
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - human.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(human.healthScale.x * human.health * 0.01f, 1f, 1f);
+
+		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
+			gm.timer.remainingTime = 30f;
+		}
 	}
 
 	public static IEnumerator KillAlien(Alien alien) {
 		yield return new WaitForSeconds(2);
-		GameObject.Find("Human").transform.position = gm.SavePoint.position;
-		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 2f, gm.SavePoint.position.z);
+		GameObject.Find("Human").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
+		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		alien.health = 25;
 		Image healthBar = GameObject.Find ("AlienHealthBarContent").GetComponent<Image> ();
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - alien.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(alien.healthScale.x * alien.health * 0.01f, 1f, 1f);
+		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
+			gm.timer.remainingTime = 30f;
+		}
 	}
 
 	public static void Save() {

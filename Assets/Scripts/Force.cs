@@ -26,7 +26,7 @@ public class Force : MonoBehaviour {
 				Collider2D[] colliderArray = 
 					Physics2D.OverlapCircleAll (new Vector2 (transform.position.x, transform.position.y), 
 						grabRange, grabMask);
-
+				Debug.Log ("ColliderArrayLength: " + colliderArray.Length);
 				// Calculate if there is any throwable objects.
 				int numThrowableObjects = 0; 
 				for (int i = 0; i < colliderArray.Length; i++) {
@@ -34,6 +34,7 @@ public class Force : MonoBehaviour {
 						numThrowableObjects++;
 					}
 				}
+				Debug.Log ("numThrowable: " + numThrowableObjects);
 
 				if (numThrowableObjects > 0) {
 					isGrabbed = true;

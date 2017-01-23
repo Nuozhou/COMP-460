@@ -9,6 +9,12 @@ public class Throwable : MonoBehaviour {
 		{
 			// ... find the Enemy script and call the Hurt function.
 			col.gameObject.GetComponent<Enemy>().Damage(100);
+		} else if (col.gameObject.tag == "Turret") {
+			// ... find the Enemy script and call the Hurt function.
+			col.gameObject.GetComponent<TurretAI> ().Damage (100);
+
+			// Destroy the rocket.
+			Destroy (gameObject);
 		}
 	}
 

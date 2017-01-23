@@ -12,10 +12,15 @@ public class Bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
-		if(col.tag == "Enemy")
-		{
+		if (col.tag == "Enemy") {
 			// ... find the Enemy script and call the Hurt function.
-			col.gameObject.GetComponent<Enemy>().Damage(50);
+			col.gameObject.GetComponent<Enemy> ().Damage (damage);
+
+			// Destroy the rocket.
+			Destroy (gameObject);
+		} else if (col.tag == "Turret") {
+			// ... find the Enemy script and call the Hurt function.
+			col.gameObject.GetComponent<TurretAI> ().Damage (damage);
 
 			// Destroy the rocket.
 			Destroy (gameObject);

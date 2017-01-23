@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 58878545613838680}
   - component: {fileID: 114924320442218864}
   - component: {fileID: 114060353821059990}
+  - component: {fileID: 114596735383910990}
+  - component: {fileID: 114470722562008640}
   m_Layer: 9
   m_Name: Alien
   m_TagString: Player
@@ -89,6 +91,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a916f0efaa6444391e0ccdbaf9d923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114470722562008640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1510034495303760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48da70f69473f447c94050db8486660f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1982764251194808, guid: fe1890a2aebab492ca147ea0fa999c71, type: 2}
+  isGrabbed: 0
+  grabMask:
+    serializedVersion: 2
+    m_Bits: 6144
+  throwForce: 50
+  grabRange: 5
+--- !u!114 &114596735383910990
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1510034495303760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 715a96d0693f1455b961219cb8d3670f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthScale: {x: 0, y: 0, z: 0}
+  repeatDamagePeriod: 2
 --- !u!114 &114924320442218864
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +166,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 119391881
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 26114b8a973d94aacae3c428b6804516, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9c85b84f6272d45c0af4adf0b8b0948a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

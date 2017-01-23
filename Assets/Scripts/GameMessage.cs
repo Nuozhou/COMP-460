@@ -25,7 +25,7 @@ public class GameMessage : MonoBehaviour {
 		} 
 	}
 	
-	IEnumerator ShowMessage (string message, float delay) {
+	public static IEnumerator ShowMessage (string message, float delay) {
 		textMessage.text = message;
 		textMessage.enabled = true;
 		yield return new WaitForSeconds(delay);

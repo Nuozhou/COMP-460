@@ -11,6 +11,8 @@ TagManager:
   - EnemyFollow
   - Pushable
   - Throwable
+  - Turret
+  - Elevator
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Player
   - Pushable
   - Throwable
-  - 
+  - Enemy
   - 
   - 
   - 

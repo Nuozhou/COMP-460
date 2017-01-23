@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222145214564265234}
   - component: {fileID: 114730924772791954}
   - component: {fileID: 114124270150794678}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 222437417122834420}
   - component: {fileID: 114687581704544274}
   - component: {fileID: 114602998347216046}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,8 @@ GameObject:
   - component: {fileID: 114020703972589272}
   - component: {fileID: 95809161218040302}
   - component: {fileID: 114607453629625944}
-  m_Layer: 0
+  - component: {fileID: 114477192291700878}
+  m_Layer: 12
   m_Name: FlyUpDown
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -78,7 +79,7 @@ GameObject:
   - component: {fileID: 224302707282751432}
   - component: {fileID: 222313727427223364}
   - component: {fileID: 114959744599119856}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +97,7 @@ GameObject:
   - component: {fileID: 223659726814906062}
   - component: {fileID: 114020410583374614}
   - component: {fileID: 114808675949900172}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,14 +125,14 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772803941478134}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -147,7 +148,7 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
@@ -206,7 +207,7 @@ MonoBehaviour:
   - {fileID: 0}
   currentPath: 0
   reachDistance: 0.51
-  speed: 5
+  speed: 10
   enable: 1
 --- !u!114 &114124270150794678
 MonoBehaviour:
@@ -221,6 +222,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fillAmount: NaN
   content: {fileID: 114959744599119856}
+--- !u!114 &114477192291700878
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772803941478134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f6027f8908bb4d1597e1aa841fb9223, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114602998347216046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,8 +259,8 @@ MonoBehaviour:
   health: 100
   healthStat:
     bar: {fileID: 114124270150794678}
-    maxVal: 300
-    currentVal: 300
+    maxVal: 100
+    currentVal: 100
   cloud: {fileID: 0}
   rend: {fileID: 0}
 --- !u!114 &114687581704544274
@@ -377,7 +389,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 119391881
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f1f9fc88a084b1944abe93743446a2ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -417,7 +429,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2086475193
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &224051478633235164

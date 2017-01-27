@@ -10,8 +10,20 @@ public class Human : MonoBehaviour {
 	public Vector3 healthScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;	
-
 	public int fallBoundary = -50;
+	public Dictionary<string, int> inventory = new Dictionary<string, int>();
+
+	void Start() {
+		health = 100;
+		healthBar = GameObject.Find("HumanHealthBarContent").GetComponent<Image>();
+		healthScale = healthBar.transform.localScale;
+		UpdateHealthBar ();
+	}
+
+	void Update() {
+		if (transform.position.y <= fallBoundary)
+			DamageHuman(health);
+	}
 
 	public void HealHuman (int amount) {
 		health += amount;
@@ -29,16 +41,12 @@ public class Human : MonoBehaviour {
 		}
 	}
 
-	void Start() {
-		health = 100;
-		healthBar = GameObject.Find("HumanHealthBarContent").GetComponent<Image>();
-		healthScale = healthBar.transform.localScale;
-		UpdateHealthBar ();
-	}
-
-	void Update() {
-		if (transform.position.y <= fallBoundary)
-			DamageHuman(health);
+	public void AddToInventory (string name) {
+		if (inventory.ContainsKey (name)) {
+			inventory [name] += 1;
+		} else {
+			inventory.Add (name, 1);
+		}
 	}
 
 	public void UpdateHealthBar ()

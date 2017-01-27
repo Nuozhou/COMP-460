@@ -12,7 +12,10 @@ public class EnemyBullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {
-		if(col.tag == "Player")
+		if (col.tag == "Throwable") {
+			Destroy (gameObject);
+		}
+ 		else if(col.tag == "Player")
 		{
 			if (col.gameObject.name == "Human") {
 				col.gameObject.GetComponent<Human> ().DamageHuman (damage);

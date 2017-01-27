@@ -13,6 +13,7 @@ TagManager:
   - Throwable
   - Turret
   - Elevator
+  - Bullet
   layers:
   - Default
   - TransparentFX

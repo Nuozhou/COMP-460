@@ -10,7 +10,7 @@ public class Force : MonoBehaviour {
 	public float grabRange = 5f;
 
 	private GameObject grabbedObject;
-	private GameObject arr;
+	public GameObject arr;
 
 
 	// Use this for initialization
@@ -20,6 +20,12 @@ public class Force : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (grabbedObject == null) {
+			isGrabbed = false;
+			if (arr != null) {
+				Destroy (arr);
+			}
+		}
 		if (Input.GetButton ("AlienGrab")) {
 			if (!isGrabbed) {
 				// Get all the colliders within the radius

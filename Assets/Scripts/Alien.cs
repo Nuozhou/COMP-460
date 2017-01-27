@@ -9,7 +9,8 @@ public class Alien : MonoBehaviour {
 	private Image healthBar;
 	public Vector3 healthScale;
 	private float lastHitTime;
-	public float repeatDamagePeriod = 2f;	
+	public float repeatDamagePeriod = 2f;
+	public Dictionary<string, int> inventory = new Dictionary<string, int>();
 
 	void Start() {
 		health = 100;
@@ -32,6 +33,14 @@ public class Alien : MonoBehaviour {
 		if (health <= 0) {
 			GameMessage.dead = true;
 			StartCoroutine(GameMaster.KillAlien(this));
+		}
+	}
+
+	public void AddToInventory (string name) {
+		if (inventory.ContainsKey (name)) {
+			inventory [name] += 1;
+		} else {
+			inventory.Add (name, 1);
 		}
 	}
 

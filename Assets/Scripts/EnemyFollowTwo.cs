@@ -34,24 +34,23 @@ public class EnemyFollowTwo : MonoBehaviour {
 	private int currentWaypoint = 0;
 
 	void Start () {
+
+		//Initialization and find the target
 		rb2d = GetComponent<Rigidbody2D> ();
-
 		seeker = GetComponent<Seeker> ();
-
 		AttackDist = 3 * GetComponent<SpriteRenderer> ().bounds.extents.x;
-
 		UpdateTarget ();
 
-
+		//Find a path to the target
 		seeker.StartPath (transform.position, target.position, OnPathComplete);
 
 		//start a new path to the target position and return the result to the OnpathComplete method
-
 		StartCoroutine (UpdatePath ());
 
 
 	}
 
+	//Update the target (find the closest player
 	void UpdateTarget() {
 		if (target1 == null && target2 == null) {
 			Debug.LogError ("fly ball no target found!");
@@ -70,15 +69,16 @@ public class EnemyFollowTwo : MonoBehaviour {
 		}
 	}
 
+	//Continuely update the target and start moving to the target
 	IEnumerator UpdatePath() {
 		UpdateTarget ();
-
 		seeker.StartPath (transform.position, target.position, OnPathComplete);
 
 		yield return new WaitForSeconds (1f / updateRate);
 		StartCoroutine (UpdatePath ());
 	}
 
+	//Find the path
 	public void OnPathComplete(Path p) {
 		//Debug.Log("we found a path!");
 
@@ -89,8 +89,6 @@ public class EnemyFollowTwo : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-
-
 	void FixedUpdate() {
 		if (target1 == null && target2 == null) {
 			return;
@@ -127,7 +125,9 @@ public class EnemyFollowTwo : MonoBehaviour {
 		}
 	}
 
-	void Attack() {
+	IEnumerator Attack() {
+		yield return new WaitForSeconds (0.5f);
 		target.GetComponent<Human> ().DamageHuman (AttackPower);
+
 	}
 }

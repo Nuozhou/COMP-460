@@ -22,10 +22,10 @@ public class Elevator : MonoBehaviour {
 		}
 
 		bool operate = Input.GetButtonDown ("Operate");
-		if (operate == true && enable == false && broken == false && Vector3.Distance (human.transform.position, transform.position) < 40f) {
+		if (operate == true && enable == false && broken == false && Vector3.Distance (human.transform.position, transform.position) < 100f) {
 			StartElevatorUp ();
 			enable = true;
-		} else if (operate == true && enable == true && broken == false && Vector3.Distance (human.transform.position, transform.position) < 40f) {
+		} else if (operate == true && enable == true && broken == false && Vector3.Distance (human.transform.position, transform.position) < 100f) {
 			StopElevator ();
 			enable = false;
 		}

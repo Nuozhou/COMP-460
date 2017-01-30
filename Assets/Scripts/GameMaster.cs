@@ -35,7 +35,7 @@ public class GameMaster : MonoBehaviour {
 		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
 		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		human.health = 25;
-		Image healthBar = GameObject.Find ("HumanHealthBarContent").GetComponent<Image> ();
+		SpriteRenderer healthBar = GameObject.Find("HumanHealth").GetComponent<SpriteRenderer>();
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - human.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(human.healthScale.x * human.health * 0.01f, 1f, 1f);
 
@@ -49,7 +49,7 @@ public class GameMaster : MonoBehaviour {
 		GameObject.Find("Human").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
 		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		alien.health = 25;
-		Image healthBar = GameObject.Find ("AlienHealthBarContent").GetComponent<Image> ();
+		SpriteRenderer healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - alien.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(alien.healthScale.x * alien.health * 0.01f, 1f, 1f);
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {

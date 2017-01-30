@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Alien : MonoBehaviour {
 
 	public int health = 100;
-	private Image healthBar;
+	private SpriteRenderer healthBar;
+	private SpriteRenderer healthBarOutline;
 	public Vector3 healthScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;
@@ -14,7 +15,8 @@ public class Alien : MonoBehaviour {
 
 	void Start() {
 		health = 100;
-		healthBar = GameObject.Find("AlienHealthBarContent").GetComponent<Image>();
+		healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
+		healthBarOutline = GameObject.Find("AlienHealthOutline").GetComponent<SpriteRenderer>();
 		healthScale = healthBar.transform.localScale;
 		UpdateHealthBar ();
 	}
@@ -51,6 +53,16 @@ public class Alien : MonoBehaviour {
 
 		// Set the scale of the health bar to be proportional to the player's health.
 		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1f, 1f);
+
+		StartCoroutine (DisplayHealthBar ());
+	}
+
+	public IEnumerator DisplayHealthBar() {
+		healthBar.sortingLayerName = "Players";
+		healthBarOutline.sortingLayerName = "Players";
+		yield return new WaitForSeconds(3);
+		healthBar.sortingLayerName = "Default";
+		healthBarOutline.sortingLayerName = "Default";
 	}
 
 	void OnCollisionEnter2D (Collision2D col)
@@ -68,7 +80,6 @@ public class Alien : MonoBehaviour {
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				DamageAlien (20);
 				lastHitTime = Time.time;
-
 			}
 		}
 	}

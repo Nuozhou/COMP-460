@@ -26,7 +26,6 @@ public class HumanMovements : MonoBehaviour {
 		// Setting up references.
 		m_GroundCheck = transform.Find("GroundCheck");
 		m_CeilingCheck = transform.Find("CeilingCheck");
-		Debug.Log ("Awake ceiling position" + m_CeilingCheck.position);
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		camera = Camera.main;

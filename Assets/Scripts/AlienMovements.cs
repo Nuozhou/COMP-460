@@ -9,7 +9,7 @@ public class AlienMovements : MonoBehaviour {
 	private Camera camera;
 	private float cameraHeight;
 	private float cameraWidth;
-	private bool m_FacingRight = true;
+	public bool m_FacingRight = true;
 
 	void Awake() {
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -60,10 +60,6 @@ public class AlienMovements : MonoBehaviour {
 			// ... flip the player.
 			Flip();
 		}
-	}
-
-	public void Grab() {
-		
 	}
 
 	private void Flip()

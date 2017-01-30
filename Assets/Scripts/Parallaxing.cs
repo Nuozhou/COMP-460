@@ -29,9 +29,11 @@ public class Parallaxing : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		for (int i = 0; i < backgroundObjects.Length; i++) {
-			float parallax = (previousCameraPosition.x - cam.position.x) * scales [i];
-			float targetPositionX = backgroundObjects [i].position.x + parallax;
-			Vector3 targetPosition = new Vector3 (targetPositionX, backgroundObjects [i].position.y, backgroundObjects [i].position.z);
+			float parallax1 = (previousCameraPosition.x - cam.position.x) * scales [i];
+			float parallax2 = (previousCameraPosition.y - cam.position.y) * scales [i];
+			float targetPositionX = backgroundObjects [i].position.x + parallax1;
+			float targetPositionY = backgroundObjects [i].position.y + parallax2;
+			Vector3 targetPosition = new Vector3 (targetPositionX, targetPositionY, backgroundObjects [i].position.z);
 			backgroundObjects [i].position = Vector3.Lerp (backgroundObjects [i].position, targetPosition, smoothing * Time.deltaTime);
 		}
 

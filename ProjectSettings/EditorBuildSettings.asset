@@ -6,4 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/IceDemo.unity
+  - enabled: 1
     path: Assets/Scenes/LavaScene1.unity
+  - enabled: 1
+    path: Assets/Scenes/Ice2.unity

@@ -12,11 +12,12 @@ public class Force : MonoBehaviour {
 	private GameObject grabbedObject;
 	private float grabbedLocationOffsetX;
 	public GameObject arr;
+	private AlienMovements alienMovements;
 
 
 	// Use this for initialization
 	void Start () {
-		
+		alienMovements = transform.root.GetComponent<AlienMovements> ();
 	}
 	
 	// Update is called once per frame
@@ -79,10 +80,8 @@ public class Force : MonoBehaviour {
 		}
 
 		if (isGrabbed) {
-
 			grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
 			arr.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
-
 		}
 	}
 }

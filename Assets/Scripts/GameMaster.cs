@@ -13,6 +13,7 @@ public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
 	public Timer timer;
 	public Transform SavePoint;
+	private GameObject pausePanel;
 
 	[Serializable]
 	class PlayerData
@@ -28,6 +29,39 @@ public class GameMaster : MonoBehaviour {
 			gm = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameMaster>();
 		}
 		timer = gameObject.GetComponent<Timer> ();
+		pausePanel = GameObject.Find ("GameMenu");
+		pausePanel.SetActive(false);
+	}
+
+	void Update() {
+		if(Input.GetButtonDown ("GameMenu")) 
+		{
+			Debug.Log ("Entered Game menu");
+			if (!pausePanel.activeInHierarchy) 
+			{
+				PauseGame();
+			}
+			else if (pausePanel.activeInHierarchy) 
+			{
+				ContinueGame();   
+			}
+		} 
+	}
+
+	public void PauseGame()
+	{
+		Debug.Log ("Entered pause");
+		Time.timeScale = 0;
+		pausePanel.SetActive(true);
+		//Disable scripts that still work while timescale is set to 0
+	} 
+
+	public void ContinueGame()
+	{
+		Debug.Log ("Exit pause");
+		Time.timeScale = 1;
+		pausePanel.SetActive(false);
+		//enable the scripts again
 	}
 
 	public static IEnumerator KillHuman(Human human) {

@@ -26,6 +26,10 @@ public class FallingGlaze : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (isFalling) {
 			Destroy (gameObject);
+			if (coll.gameObject.tag == "Player") {
+				target.GetComponent<Human> ().DamageHuman (5);
+			}
+				
 		}
 
 	}

@@ -8,27 +8,40 @@ public class Enemy : MonoBehaviour {
 	public int health = 100;
 
 	[SerializeField]
-	private Stat healthStat;
+	//private Stat healthStat;
+	public Vector3 healthScale;
 	// Use this for initialization
 	public GameObject cloud;
 
+
 	public Renderer rend;
 
-	private Canvas healthCanvas;
+	//private Canvas healthCanvas;
+
+	private SpriteRenderer healthBar;
+	private SpriteRenderer healthBarOutline;
 
 	public void Start() {
 		rend = GetComponent<Renderer>();
-		healthStat.Initialize ();
-		healthCanvas = GetComponentInChildren<Canvas> ();
-		healthCanvas.enabled = false;
+		//healthStat.Initialize ();
+
+		healthBar = GameObject.Find("Health").GetComponent<SpriteRenderer>();
+		healthBarOutline = GameObject.Find("HealthBG").GetComponent<SpriteRenderer>();
+		healthScale = healthBar.transform.localScale;
+		//healthCanvas = GetComponentInChildren<Canvas> ();
+		//healthCanvas.enabled = false;
 
 	}
 	public void Damage(int healthDecrease) {
-		if (!healthCanvas.isActiveAndEnabled) {
-			StartCoroutine(ShowBar ());
-		}
-		healthStat.CurrentVal -= healthDecrease;
-		if (healthStat.CurrentVal <= 0) {
+//		if (!healthCanvas.isActiveAndEnabled) {
+//			StartCoroutine(ShowBar ());
+//		}
+
+		//healthStat.CurrentVal -= healthDecrease;
+		health -= healthDecrease;
+		UpdateHealthBar ();
+
+		if (health <= 0) {
 			
 			if (cloud == null) {
 				cloud = (GameObject)Instantiate (Resources.Load ("Cloud"), transform.position, transform.rotation);
@@ -43,11 +56,30 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	IEnumerator ShowBar() {
-		healthCanvas.enabled = true;
-		yield return new WaitForSeconds (1f);
-		healthCanvas.enabled = false;
+	public void UpdateHealthBar ()
+	{
+		// Set the health bar's colour to proportion of the way between green and red based on the player's health.
+
+
+		// Set the scale of the health bar to be proportional to the player's health.
+		healthBar.transform.localScale = new Vector3(healthScale.x * health  * 0.01f, 1f, 1f);
+
+		StartCoroutine(DisplayHealthBar());
 	}
+
+	public IEnumerator DisplayHealthBar() {
+		healthBar.sortingLayerName = "Enemy";
+		healthBarOutline.sortingLayerName = "Enemy";
+		yield return new WaitForSeconds(3);
+		healthBar.sortingLayerName = "Default";
+		healthBarOutline.sortingLayerName = "Default";
+	}
+
+//	IEnumerator ShowBar() {
+//		healthCanvas.enabled = true;
+//		yield return new WaitForSeconds (1f);
+//		healthCanvas.enabled = false;
+//	}
 
 	IEnumerator Blink(double time) {
 		double endTime = Time.time + time;

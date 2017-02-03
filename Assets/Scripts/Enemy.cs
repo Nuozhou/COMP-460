@@ -7,9 +7,8 @@ public class Enemy : MonoBehaviour {
 	[SerializeField]
 	public int health = 100;
 
-	[SerializeField]
 	//private Stat healthStat;
-	public Vector3 healthScale;
+	private Vector3 healthScale;
 	// Use this for initialization
 	public GameObject cloud;
 
@@ -24,9 +23,8 @@ public class Enemy : MonoBehaviour {
 	public void Start() {
 		rend = GetComponent<Renderer>();
 		//healthStat.Initialize ();
-
-		healthBar = GameObject.Find("Health").GetComponent<SpriteRenderer>();
-		healthBarOutline = GameObject.Find("HealthBG").GetComponent<SpriteRenderer>();
+		healthBar = transform.Find("EnemyHealthDisplay/EnemyHealth").GetComponent<SpriteRenderer>();
+		healthBarOutline = transform.Find("EnemyHealthDisplay/EnemyHealthOutline").GetComponent<SpriteRenderer>();
 		healthScale = healthBar.transform.localScale;
 		//healthCanvas = GetComponentInChildren<Canvas> ();
 		//healthCanvas.enabled = false;

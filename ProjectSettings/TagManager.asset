@@ -14,6 +14,8 @@ TagManager:
   - Turret
   - Elevator
   - Bullet
+  - LaserTarget
+  - LaserPlane
   layers:
   - Default
   - TransparentFX

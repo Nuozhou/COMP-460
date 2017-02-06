@@ -17,6 +17,7 @@ public class Laser : MonoBehaviour {
 		line = transform.GetComponent<LineRenderer> ();
 		line.enabled = true;
 		line.useWorldSpace = true;
+		line.sortingLayerName = "Foreground";
 		laserOrigin = new Vector2 (transform.position.x, transform.position.y);
 	}
 

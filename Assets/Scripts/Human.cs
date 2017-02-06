@@ -35,11 +35,17 @@ public class Human : MonoBehaviour {
 		UpdateHealthBar ();
 	}
 	public void DamageHuman(int damage) {
-		health -= damage;
-		UpdateHealthBar ();
-		if (health <= 0) {
-			GameMessage.dead = true;
-			StartCoroutine(GameMaster.KillHuman(this));
+		if (Time.time > lastHitTime + repeatDamagePeriod) {
+			lastHitTime = Time.time;
+			health -= damage;
+			if (health < 0) {
+				health = 0;
+			}
+			UpdateHealthBar ();
+			if (health <= 0) {
+				GameMessage.dead = true;
+				StartCoroutine(GameMaster.KillHuman(this));
+			}
 		}
 	}
 
@@ -75,16 +81,9 @@ public class Human : MonoBehaviour {
 		// If the colliding gameobject is an Enemy...
 		if (col.gameObject.tag == "Enemy") {
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
-			if (Time.time > lastHitTime + repeatDamagePeriod) {
-				DamageHuman (10);
-				lastHitTime = Time.time;
-			}
+			DamageHuman (10);
 		} else if (col.gameObject.tag == "FallingIce") {
-			if (Time.time > lastHitTime + repeatDamagePeriod) {
-				DamageHuman (20);
-				lastHitTime = Time.time;
-
-			}
+			DamageHuman (20);
 		}
 	}
 

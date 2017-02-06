@@ -30,12 +30,19 @@ public class Alien : MonoBehaviour {
 	}
 
 	public void DamageAlien(int damage) {
-		health -= damage;
-		UpdateHealthBar ();
-		if (health <= 0) {
-			GameMessage.dead = true;
-			StartCoroutine(GameMaster.KillAlien(this));
-		}
+		if (Time.time > lastHitTime + repeatDamagePeriod) 
+		{
+			lastHitTime = Time.time;
+			health -= damage;
+			if (health < 0) {
+				health = 0;
+			}
+			UpdateHealthBar ();
+			if (health <= 0) {
+				GameMessage.dead = true;
+				StartCoroutine(GameMaster.KillAlien(this));
+			}
+		} 
 	}
 
 	public void AddToInventory (string name) {
@@ -70,17 +77,9 @@ public class Alien : MonoBehaviour {
 		// If the colliding gameobject is an Enemy...
 		if(col.gameObject.tag == "Enemy")
 		{
-			// ... and if the time exceeds the time of the last hit plus the time between hits...
-			if (Time.time > lastHitTime + repeatDamagePeriod) 
-			{
-				DamageAlien (10);
-				lastHitTime = Time.time;
-			} 
+			DamageAlien (10);
 		} else if (col.gameObject.tag == "FallingIce") {
-			if (Time.time > lastHitTime + repeatDamagePeriod) {
-				DamageAlien (20);
-				lastHitTime = Time.time;
-			}
+			DamageAlien (20);
 		}
 	}
 }

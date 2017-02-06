@@ -81,6 +81,7 @@ public class Force : MonoBehaviour {
 
 		if (isGrabbed) {
 			grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			Debug.Log ("grabbed Object: " + grabbedObject.transform.position);
 			arr.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
 		}
 	}

@@ -3,26 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Laser : MonoBehaviour {
-	
-	LineRenderer line;
+
+	public GameObject laserPrefab;
+	private LineRenderer line;
 	//public Transform laserHit;
-	int n = 2;
+	private Vector2 laserOrigin;
+	private Vector2 lastHitPoint;
+	public Vector2 laserDirection = new Vector2(0, - 90);
+	private bool reflected = false;
+	public GameObject reflectedLaser;
 
 	void Start() {
 		line = transform.GetComponent<LineRenderer> ();
 		line.enabled = true;
 		line.useWorldSpace = true;
+		laserOrigin = new Vector2 (transform.position.x, transform.position.y);
 	}
 
 	void Update() {
 		
-		RaycastHit2D hit = Physics2D.Raycast (transform.position, -transform.up);
-		Debug.DrawLine (transform.position, hit.point);
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, laserDirection, 100);
 		//laserHit.position = hit.point;
 		line.SetPosition (0, transform.position);
-		line.SetPosition (1, hit.point);
-		if (hit.transform.tag == "Player") {
-			hit.transform.GetComponent<Human> ().DamageHuman (5);
+		if (hit.collider == null) {
+			Vector3 endPoint = transform.position + new Vector3(laserDirection.x * 100, laserDirection.y * 100, 0);
+			line.SetPosition (1, endPoint); 
+		} else {
+			if (lastHitPoint != null) {
+				if (hit.point.x != lastHitPoint.x || hit.point.y != lastHitPoint.y) {
+					if (reflected) {
+						DestroyAllReflections ();
+						reflected = false;
+					}
+				}
+			}
+			line.SetPosition (1, hit.point);
+			lastHitPoint = hit.point;
+		}
+		if (hit.collider != null) {
+			if (hit.collider.tag == "Player") {
+				if (hit.collider.gameObject.name == "Human") {
+					hit.collider.gameObject.GetComponent<Human> ().DamageHuman (20);
+				} else if (hit.collider.gameObject.name == "Alien") {
+					hit.collider.gameObject.GetComponent<Alien> ().DamageAlien (20);
+				}
+			} else if (hit.collider.tag == "Throwable") {
+				if (!reflected) {
+
+					Vector2 newDir = Vector2.Reflect ((hit.point - laserOrigin).normalized, hit.normal);
+					reflectedLaser = Instantiate (laserPrefab, new Vector3 (hit.point.x, hit.point.y, 0), hit.transform.rotation);
+					reflectedLaser.GetComponent<Laser> ().laserDirection = newDir;
+					reflected = true;
+				}
+			} else if (hit.collider.tag == "LaserTarget") {
+				Destroy (hit.transform.gameObject);
+			}
+		}
+	}
+
+	public void DestroyAllReflections() {
+		GameObject laser = reflectedLaser;
+		while (laser != null) {
+			GameObject copy = laser;
+			laser = laser.GetComponent<Laser> ().reflectedLaser;
+			Destroy (copy);
 		}
 	}
 

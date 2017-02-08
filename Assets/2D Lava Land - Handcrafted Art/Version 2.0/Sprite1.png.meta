@@ -1,0 +1,591 @@
+fileFormatVersion: 2
+guid: b18757c1beae3144aa15bb04680d7940
+timeCreated: 1481131070
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sprite1_0
+    21300002: Sprite1_1
+    21300004: Sprite1_2
+    21300006: Sprite1_3
+    21300008: Sprite1_4
+    21300010: Sprite1_5
+    21300012: Sprite1_6
+    21300014: Sprite1_7
+    21300016: Sprite1_8
+    21300018: Sprite1_9
+    21300020: Sprite1_10
+    21300022: Sprite1_11
+    21300024: Sprite1_12
+    21300026: Sprite1_13
+    21300028: Sprite1_14
+    21300030: Sprite1_15
+    21300032: Sprite1_16
+    21300034: Sprite1_17
+    21300036: Sprite1_18
+    21300038: Sprite1_19
+    21300040: Sprite1_20
+    21300042: Sprite1_21
+    21300044: Sprite1_22
+    21300046: Sprite1_23
+    21300048: Sprite1_24
+    21300050: Sprite1_25
+    21300052: Sprite1_26
+    21300054: Sprite1_27
+    21300056: Sprite1_28
+    21300058: Sprite1_29
+    21300060: Sprite1_30
+    21300062: Sprite1_31
+    21300064: Sprite1_32
+    21300066: Sprite1_33
+    21300068: Sprite1_34
+    21300070: Sprite1_35
+    21300072: Sprite1_36
+    21300074: Sprite1_37
+    21300076: Sprite1_38
+    21300078: Sprite1_39
+    21300080: Sprite1_40
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite1_0
+      rect:
+        serializedVersion: 2
+        x: 5279
+        y: 6128
+        width: 1137
+        height: 747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_1
+      rect:
+        serializedVersion: 2
+        x: 6489
+        y: 7353
+        width: 742
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_2
+      rect:
+        serializedVersion: 2
+        x: 7292
+        y: 7510
+        width: 900
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_3
+      rect:
+        serializedVersion: 2
+        x: 7625
+        y: 7094
+        width: 567
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_4
+      rect:
+        serializedVersion: 2
+        x: 4839
+        y: 6949
+        width: 1589
+        height: 1217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_5
+      rect:
+        serializedVersion: 2
+        x: 3767
+        y: 7184
+        width: 1027
+        height: 1005
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_6
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 6995
+        width: 558
+        height: 242
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_7
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 7262
+        width: 1656
+        height: 930
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_8
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 7937
+        width: 463
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_9
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 7992
+        width: 373
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7791
+        width: 562
+        height: 401
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7491
+        width: 481
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 6593
+        width: 2174
+        height: 578
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_13
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 6094
+        width: 1209
+        height: 889
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_14
+      rect:
+        serializedVersion: 2
+        x: 4017
+        y: 5963
+        width: 1116
+        height: 929
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_15
+      rect:
+        serializedVersion: 2
+        x: 6455
+        y: 5555
+        width: 451
+        height: 417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_16
+      rect:
+        serializedVersion: 2
+        x: 7089
+        y: 5576
+        width: 1103
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_17
+      rect:
+        serializedVersion: 2
+        x: 6466
+        y: 6061
+        width: 1726
+        height: 999
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_18
+      rect:
+        serializedVersion: 2
+        x: 7355
+        y: 4469
+        width: 837
+        height: 1067
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_19
+      rect:
+        serializedVersion: 2
+        x: 7533
+        y: 3227
+        width: 659
+        height: 1186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_20
+      rect:
+        serializedVersion: 2
+        x: 5744
+        y: 3733
+        width: 1390
+        height: 818
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_21
+      rect:
+        serializedVersion: 2
+        x: 4687
+        y: 3835
+        width: 1035
+        height: 695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_22
+      rect:
+        serializedVersion: 2
+        x: 3414
+        y: 3795
+        width: 1245
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_23
+      rect:
+        serializedVersion: 2
+        x: 3381
+        y: 4572
+        width: 2687
+        height: 1355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_24
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 5252
+        width: 881
+        height: 661
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_25
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 5369
+        width: 1058
+        height: 644
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5172
+        width: 689
+        height: 718
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4361
+        width: 2865
+        height: 571
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2884
+        width: 2099
+        height: 1298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_29
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 898
+        width: 567
+        height: 858
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_30
+      rect:
+        serializedVersion: 2
+        x: 1977
+        y: 868
+        width: 551
+        height: 888
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_31
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1939
+        width: 2260
+        height: 892
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_32
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 1322
+        width: 965
+        height: 654
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_33
+      rect:
+        serializedVersion: 2
+        x: 3002
+        y: 2120
+        width: 1141
+        height: 1011
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_34
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 2917
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_35
+      rect:
+        serializedVersion: 2
+        x: 3172
+        y: 0
+        width: 1442
+        height: 832
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_36
+      rect:
+        serializedVersion: 2
+        x: 4733
+        y: 265
+        width: 3459
+        height: 794
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_37
+      rect:
+        serializedVersion: 2
+        x: 4713
+        y: 1149
+        width: 3479
+        height: 1075
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_38
+      rect:
+        serializedVersion: 2
+        x: 4703
+        y: 2317
+        width: 2823
+        height: 1215
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_39
+      rect:
+        serializedVersion: 2
+        x: 3394
+        y: 3192
+        width: 1299
+        height: 560
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - serializedVersion: 2
+      name: Sprite1_40
+      rect:
+        serializedVersion: 2
+        x: 6258
+        y: 4815
+        width: 1004
+        height: 685
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

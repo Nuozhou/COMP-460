@@ -75,10 +75,11 @@ public class Alien : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col)
 	{
 		// If the colliding gameobject is an Enemy...
-		if(col.gameObject.tag == "Enemy")
-		{
+		if (col.gameObject.tag == "Enemy") {
 			DamageAlien (10);
 		} else if (col.gameObject.tag == "FallingIce") {
+			DamageAlien (20);
+		} else if (col.gameObject.tag == "SwingRock") {
 			DamageAlien (20);
 		}
 	}

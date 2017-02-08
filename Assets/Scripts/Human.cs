@@ -84,6 +84,8 @@ public class Human : MonoBehaviour {
 			DamageHuman (10);
 		} else if (col.gameObject.tag == "FallingIce") {
 			DamageHuman (20);
+		} else if (col.gameObject.tag == "SwingRock") {
+			DamageHuman (20);
 		}
 	}
 

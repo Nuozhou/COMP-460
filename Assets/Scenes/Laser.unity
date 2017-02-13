@@ -587,37 +587,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114533493287617186, guid: 9a9638835fdaa4029a921ffa87adeb0f,
-        type: 2}
-      propertyPath: laserDirection.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533493287617186, guid: 9a9638835fdaa4029a921ffa87adeb0f,
-        type: 2}
-      propertyPath: laserDirection.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4506948027266252, guid: 9a9638835fdaa4029a921ffa87adeb0f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8184196
-      objectReference: {fileID: 0}
-    - target: {fileID: 4506948027266252, guid: 9a9638835fdaa4029a921ffa87adeb0f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.81841964
-      objectReference: {fileID: 0}
-    - target: {fileID: 4506948027266252, guid: 9a9638835fdaa4029a921ffa87adeb0f, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.81841964
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122954248517600, guid: 9a9638835fdaa4029a921ffa87adeb0f, type: 2}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 120632094004277278, guid: 9a9638835fdaa4029a921ffa87adeb0f,
-        type: 2}
-      propertyPath: m_LightmapParameters
-      value: 
-      objectReference: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a9638835fdaa4029a921ffa87adeb0f, type: 2}
   m_IsPrefabParent: 0

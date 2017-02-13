@@ -16,7 +16,6 @@ TagManager:
   - Bullet
   - LaserTarget
   - LaserPlane
-  - SwingRock
   layers:
   - Default
   - TransparentFX

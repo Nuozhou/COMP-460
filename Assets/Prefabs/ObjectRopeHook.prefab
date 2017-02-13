@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 50801866121352084}
   - component: {fileID: 233139943869947894}
   - component: {fileID: 120534795734330556}
-  - component: {fileID: 233234992055583790}
   - component: {fileID: 114685131945479660}
   m_Layer: 0
   m_Name: ObjectRopeHook
@@ -40,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852708267241786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -39.942757, y: 2.8559017, z: 0}
+  m_LocalPosition: {x: 62.92, y: 17.91, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,11 +90,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d222f1079371842e6a9c6849599015cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertextCount: 2
-  distance: 2
+  vertextCount: 5
+  distance: 1
   nodePrefab: {fileID: 1613407953661188, guid: f37e6719df84f487f9686d4a976b9fc9, type: 2}
   nodes: []
   lr: {fileID: 0}
+  direction: {x: -2, y: -1}
   attachedObjectPrefab: {fileID: 1495111578761652, guid: da4594af385594f39a741fb862d813b8,
     type: 2}
 --- !u!120 &120534795734330556
@@ -111,7 +111,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,7 +227,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b57a61c0e727c4086b56e455776f32da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f163871c2c4046b8ac4582775c7817c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,30 +245,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -39.942757, y: 2.8559017}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
---- !u!233 &233234992055583790
-HingeJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1852708267241786}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -39.942757, y: 2.8559017}
+  m_ConnectedAnchor: {x: 62.92, y: 17.91}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

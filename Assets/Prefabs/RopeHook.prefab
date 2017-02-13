@@ -22,13 +22,12 @@ GameObject:
   - component: {fileID: 212830911795575412}
   - component: {fileID: 58195686895676484}
   - component: {fileID: 50318810183615336}
-  - component: {fileID: 233644925540194832}
-  - component: {fileID: 114991277981948606}
   - component: {fileID: 120452855608623020}
   - component: {fileID: 233777289537889708}
+  - component: {fileID: 114424215570257368}
   m_Layer: 0
   m_Name: RopeHook
-  m_TagString: Untagged
+  m_TagString: Throwable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1238540226412346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.445245, y: 12.738116, z: 0}
+  m_LocalPosition: {x: 20.96, y: 13.76, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +79,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &114991277981948606
+--- !u!114 &114424215570257368
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -91,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406cd732e85c4497b8258e44585d510c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertextCount: 10
+  vertextCount: 11
   distance: 1
   nodePrefab: {fileID: 1613407953661188, guid: f37e6719df84f487f9686d4a976b9fc9, type: 2}
   nodes: []
@@ -110,7 +109,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,7 +132,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.2
+    widthMultiplier: 0.3
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -155,10 +154,10 @@ LineRenderer:
         rgba: 4281742921
       key2:
         serializedVersion: 2
-        rgba: 4278190080
+        rgba: 4737118
       key3:
         serializedVersion: 2
-        rgba: 0
+        rgba: 1447653
       key4:
         serializedVersion: 2
         rgba: 0
@@ -173,8 +172,8 @@ LineRenderer:
         rgba: 0
       ctime0: 0
       ctime1: 65535
-      ctime2: 0
-      ctime3: 0
+      ctime2: 65535
+      ctime3: 65535
       ctime4: 0
       ctime5: 0
       ctime6: 0
@@ -226,33 +225,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b57a61c0e727c4086b56e455776f32da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f163871c2c4046b8ac4582775c7817c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!233 &233644925540194832
-HingeJoint2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1238540226412346}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 6.445245, y: 12.738116}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!233 &233777289537889708
 HingeJoint2D:
   m_ObjectHideFlags: 1
@@ -267,7 +243,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 20.96, y: 13.76}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0

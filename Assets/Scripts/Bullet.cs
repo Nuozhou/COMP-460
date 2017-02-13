@@ -24,6 +24,9 @@ public class Bullet : MonoBehaviour {
 
 			// Destroy the rocket.
 			Destroy (gameObject);
+		} else if (col.tag == "Boss") {
+			col.gameObject.GetComponent<BossAI> ().Damage (damage);
+			Destroy (gameObject);
 		}
 	}
 

@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SwingLevel.unity
   - enabled: 1
     path: Assets/Scenes/BossLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/GravityRotation.unity

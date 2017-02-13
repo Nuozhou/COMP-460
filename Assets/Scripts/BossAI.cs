@@ -205,6 +205,10 @@ public class BossAI : MonoBehaviour {
 		transform.position = new Vector3 (targetPosition.x, targetPosition.y, targetPosition.z);
 	}
 
+	void Spawn() {
+		
+	}
+
 	IEnumerator TurnInvisible() {
 		GetComponent<SpriteRenderer> ().enabled = false;
 		yield return new WaitForSeconds (2f);

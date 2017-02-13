@@ -46,7 +46,7 @@ public class Force : MonoBehaviour {
 				// Calculate if there is any throwable objects.
 				int numThrowableObjects = 0; 
 				for (int i = 0; i < colliderArray.Length; i++) {
-					if (colliderArray [i].gameObject.tag == "Throwable" || colliderArray [i].gameObject.tag == "Enemy") {
+					if (colliderArray [i].gameObject.tag == "Throwable" || colliderArray [i].gameObject.tag == "Enemy" || colliderArray [i].gameObject.tag == "Grabbable") {
 						numThrowableObjects++;
 					}
 				}
@@ -57,7 +57,7 @@ public class Force : MonoBehaviour {
 					float minDistance = Vector2.Distance (new Vector2 (grabbedObject.transform.position.x, grabbedObject.transform.position.y),
 						                    new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y));
 					foreach (Collider2D col in colliderArray) {
-						if (col.gameObject.tag == "Throwable" || col.gameObject.tag == "Enemy") {
+						if (col.gameObject.tag == "Throwable" || col.gameObject.tag == "Enemy" || colliderArray [i].gameObject.tag == "Grabbable") {
 							float distance = Vector2.Distance (new Vector2 (col.gameObject.transform.position.x, col.gameObject.transform.position.y),
 								                 new Vector2 (gameObject.transform.position.x, gameObject.transform.position.y));
 							if (distance < minDistance) {

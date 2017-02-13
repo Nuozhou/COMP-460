@@ -19,6 +19,7 @@ TagManager:
   - RotatePlane
   - SwingRock
   - Boss
+  - Grabbable
   layers:
   - Default
   - TransparentFX

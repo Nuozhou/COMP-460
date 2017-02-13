@@ -17,6 +17,8 @@ TagManager:
   - LaserTarget
   - LaserPlane
   - RotatePlane
+  - SwingRock
+  - Boss
   layers:
   - Default
   - TransparentFX

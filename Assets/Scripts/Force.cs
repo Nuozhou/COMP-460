@@ -30,7 +30,7 @@ public class Force : MonoBehaviour {
 		}
 
 		if (Input.GetButtonDown ("AlienThrow")) {
-			if (isGrabbed) {
+			if (isGrabbed && (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy")) {
 				isGrabbed = false;
 				grabbedObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (throwForce * Mathf.Cos (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad), throwForce * Mathf.Sin (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad));
 				Destroy (arr);
@@ -70,19 +70,23 @@ public class Force : MonoBehaviour {
 					grabbedLocationOffsetX = 5f;
 					// Move the grabbed object to the front of the alien.
 					grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
-				
-					arr = Instantiate (arrow, grabbedObject.transform.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+					if (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy") {
+						arr = Instantiate (arrow, grabbedObject.transform.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+					}
 				}
 			} else {
 				isGrabbed = false;
-				Destroy (arr);
+				if (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy") {
+					Destroy (arr);
+				}
 			}
 		}
 
 		if (isGrabbed) {
 			grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
-			Debug.Log ("grabbed Object: " + grabbedObject.transform.position);
-			arr.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			if (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy") {
+				arr.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			}
 		}
 	}
 }

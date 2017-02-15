@@ -21,11 +21,11 @@ public class Weapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (fireRate == 0f) {
-			if (Input.GetButtonDown ("Fire1")) {
+			if (Input.GetButton ("Fire1")) {
 				Shoot ();
 			}
 		} else {
-			if (Input.GetButtonDown ("Fire1") && Time.time > fireTime) {
+			if (Input.GetButton ("Fire1") && Time.time > fireTime) {
 				fireTime = Time.time + 1f / fireRate;
 				Shoot ();
 			}

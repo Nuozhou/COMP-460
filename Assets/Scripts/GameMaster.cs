@@ -14,6 +14,17 @@ public class GameMaster : MonoBehaviour {
 	public Timer timer;
 	public Transform SavePoint;
 	private GameObject pausePanel;
+	public Sprite CrossButtonImage;
+	public Sprite CircleButtonImage;
+	public Sprite SquareButtonImage;
+	public Sprite TriangleButtonImage;
+	public Sprite L1ButtonImage;
+	public Sprite L2ButtonImage;
+	public Sprite R1ButtonImage;
+	public Sprite R2ButtonImage;
+	public Sprite LeftJoystick;
+	public Sprite RightJoystick;
+
 
 	[Serializable]
 	class PlayerData
@@ -31,6 +42,7 @@ public class GameMaster : MonoBehaviour {
 		timer = gameObject.GetComponent<Timer> ();
 		pausePanel = GameObject.Find ("GameMenu");
 		pausePanel.SetActive(false);
+		StartCoroutine(ShowButtonMessage ("Use Left Joystick ", " to move", "LeftJoystick"));
 	}
 
 	void Update() {
@@ -62,6 +74,45 @@ public class GameMaster : MonoBehaviour {
 		Time.timeScale = 1;
 		pausePanel.SetActive(false);
 		//enable the scripts again
+	}
+
+	public static IEnumerator ShowButtonMessage(string message1, string message2, string buttonName) {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject message1UI = UICanvas.transform.Find ("ButtonMessageText1").gameObject;
+		GameObject buttonUI = UICanvas.transform.Find ("ButtonImage").gameObject;
+		GameObject message2UI = UICanvas.transform.Find ("ButtonMessageText2").gameObject;
+		if (buttonName == "Cross") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.CrossButtonImage;
+		} else if (buttonName == "Circle") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.CircleButtonImage;
+		} else if (buttonName == "Square") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.SquareButtonImage;
+		} else if (buttonName == "Triangle") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.TriangleButtonImage;
+		} else if (buttonName == "R1") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.R1ButtonImage;
+		} else if (buttonName == "L1") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.L1ButtonImage;
+		} else if (buttonName == "R2") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.R2ButtonImage;
+		} else if (buttonName == "L2") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.L2ButtonImage;
+		} else if (buttonName == "LeftJoystick") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.LeftJoystick;
+		} else if (buttonName == "RightJoystick") {
+			buttonUI.GetComponent<Image> ().sprite = GameMaster.gm.RightJoystick;
+		}
+
+		message1UI.GetComponent<Text> ().text = message1;
+		message2UI.GetComponent<Text> ().text = message2;
+ 
+		message1UI.SetActive (true);
+		buttonUI.SetActive (true);
+		message2UI.SetActive (true);
+		yield return new WaitForSeconds(3f);
+		message1UI.SetActive (false);
+		buttonUI.SetActive (false);
+		message2UI.SetActive (false);
 	}
 
 	public static IEnumerator KillHuman(Human human) {

@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: c8e4d2f8da4624b39b449ea081156435
+timeCreated: 1487169834
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PS4Buttons_0
+    21300002: PS4Buttons_1
+    21300004: PS4Buttons_2
+    21300006: PS4Buttons_3
+    21300008: PS4Buttons_4
+    21300010: PS4Buttons_5
+    21300012: PS4Buttons_6
+    21300014: PS4Buttons_7
+    21300016: PS4Buttons_8
+    21300018: PS4Buttons_9
+    21300020: PS4Buttons_10
+    21300022: PS4Buttons_11
+    21300024: PS4Buttons_12
+    21300026: PS4Buttons_13
+    21300028: PS4Buttons_14
+    21300030: PS4Buttons_15
+    21300032: PS4Buttons_16
+    21300034: PS4Buttons_17
+    21300036: PS4Buttons_18
+    21300038: PS4Buttons_19
+    21300040: PS4Buttons_20
+    21300042: PS4Buttons_21
+    21300044: PS4Buttons_22
+    21300046: PS4Buttons_23
+    21300048: PS4Buttons_24
+    21300050: PS4Buttons_25
+    21300052: PS4Buttons_26
+    21300054: PS4Buttons_27
+    21300056: PS4Buttons_28
+    21300058: PS4Buttons_29
+    21300060: PS4Buttons_30
+    21300062: PS4Buttons_31
+    21300064: PS4Buttons_32
+    21300066: PS4Buttons_33
+    21300068: PS4Buttons_34
+    21300070: PS4Buttons_35
+    21300072: PS4Buttons_36
+    21300074: PS4Buttons_37
+    21300076: PS4Buttons_38
+    21300078: PS4Buttons_39
+    21300080: PS4Buttons_40
+    21300082: PS4Buttons_41
+    21300084: PS4Buttons_42
+    21300086: PS4Buttons_43
+    21300088: PS4Buttons_44
+    21300090: PS4Buttons_45
+    21300092: PS4Buttons_46
+    21300094: PS4Buttons_47
+    21300096: PS4Buttons_48
+    21300098: PS4Buttons_49
+    21300100: PS4Buttons_50
+    21300102: PS4Buttons_51
+    21300104: PS4Buttons_52
+    21300106: PS4Buttons_53
+    21300108: PS4Buttons_54
+    21300110: PS4Buttons_55
+    21300112: PS4Buttons_56
+    21300114: PS4Buttons_57
+    21300116: PS4Buttons_58
+    21300118: PS4Buttons_59
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PS4Buttons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 972
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 972
+        width: 51
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 970
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 972
+        width: 53
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 970
+        width: 54
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_5
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 966
+        width: 43
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_6
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 973
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 7}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_7
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 971
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_8
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 976
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_9
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 971
+        width: 55
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_10
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 972
+        width: 46
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_11
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 974
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 682.6666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_13
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 970
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 968
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_15
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 973
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_16
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 969
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_17
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 974
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 341.66666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_19
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 341.66666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_20
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 341.66666
+        width: 56.888916
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_21
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 341.66666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_22
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 341.66666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_23
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 341.66666
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_26
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_27
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_28
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PS4Buttons_29
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0.6666565
+        width: 56.88889
+        height: 341.33334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

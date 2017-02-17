@@ -10,7 +10,9 @@ public class LoadNewScene : MonoBehaviour {
 	}
 
 	public void LoadMainMenu() {
-		GameMaster.gm.ContinueGame ();
+		if (SceneManager.GetActiveScene ().buildIndex != 8) {
+			GameMaster.gm.ContinueGame ();
+		}
 		SceneManager.LoadScene (0);
 	}
 }

@@ -10,12 +10,14 @@ public class AlienMovements : MonoBehaviour {
 	private float cameraHeight;
 	private float cameraWidth;
 	public bool m_FacingRight = true;
+	private Force force;
 
 	void Awake() {
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		camera = Camera.main;
 		cameraHeight = camera.orthographicSize * 2f;
 		cameraWidth = cameraHeight * camera.aspect;
+		force = GetComponent<Force> ();
 	}
 
 	public void Move(float h, float v)
@@ -44,21 +46,25 @@ public class AlienMovements : MonoBehaviour {
 		} else if (newX != 0f && newY == 0f) {
 			m_Rigidbody2D.velocity = new Vector2 (h * m_MaxSpeed, 0f);
 		} else {
-			// Move the character
-			m_Rigidbody2D.velocity = new Vector2(h * m_MaxSpeed, v * m_MaxSpeed);
+			m_Rigidbody2D.velocity = new Vector2 (h * m_MaxSpeed, v * m_MaxSpeed);
 		}
 
+		if (force.grabbedObject != null && force.grabbedObject.tag == "Grabbable") {
+			Grabbable g = force.grabbedObject.GetComponent<Grabbable> ();
+			Mathf.Clamp (transform.position.x, g.originalPosition.x - g.movableDistance - 5f, g.originalPosition.x + g.movableDistance - 5f);
+			Mathf.Clamp (transform.position.y, g.originalPosition.y - g.movableDistance, g.originalPosition.y + g.movableDistance);
+
+		}	
+
 		// If the input is moving the player right and the player is facing left...
-		if (h > 0 && !m_FacingRight)
-		{
+		if (h > 0 && !m_FacingRight) {
 			// ... flip the player.
-			Flip();
+			Flip ();
 		}
 		// Otherwise if the input is moving the player left and the player is facing right...
-		else if (h < 0 && m_FacingRight)
-		{
+		else if (h < 0 && m_FacingRight) {
 			// ... flip the player.
-			Flip();
+			Flip ();
 		}
 	}
 

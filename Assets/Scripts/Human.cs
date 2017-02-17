@@ -64,7 +64,6 @@ public class Human : MonoBehaviour {
 
 		// Set the scale of the health bar to be proportional to the player's health.
 		healthBar.transform.localScale = new Vector3(healthScale.x * health * 0.01f, 1f, 1f);
-
 		StartCoroutine(DisplayHealthBar());
 	}
 

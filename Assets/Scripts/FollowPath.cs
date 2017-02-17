@@ -37,10 +37,14 @@ public class FollowPath : MonoBehaviour {
 	}
 
 	void UsePhysice() {
+		Debug.Log("Entered Use Physice");
 		Vector3 dir = pathPoints [currentPath].position - transform.position;
 		Vector3 dirNorm = dir.normalized;
+		Debug.Log ("dirNormX: " + dirNorm.x);
+		Debug.Log ("dirNormY: " + dirNorm.y);
 		rb2d.velocity = new Vector3 (dirNorm.x * (speed * Time.fixedDeltaTime), rb2d.velocity.y);
-
+		Debug.Log ("Time: " + Time.fixedDeltaTime);
+		Debug.Log ("Velocity: " + rb2d.velocity);
 		if (dir.magnitude <= reachDistance) {
 			currentPath++;
 			if (currentPath >= pathPoints.Length) {

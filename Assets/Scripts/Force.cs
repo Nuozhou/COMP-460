@@ -9,7 +9,7 @@ public class Force : MonoBehaviour {
 	public float throwForce = 50f;
 	public float grabRange = 5f;
 
-	private GameObject grabbedObject;
+	public GameObject grabbedObject;
 	private float grabbedLocationOffsetX;
 	public GameObject arr;
 	private AlienMovements alienMovements;

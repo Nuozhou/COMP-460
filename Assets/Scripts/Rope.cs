@@ -29,8 +29,10 @@ public class Rope : MonoBehaviour {
 			lastNode = node;
 			lastNodePosition = node.transform.position;
 		}
+
 		lastNode.GetComponent<HingeJoint2D> ().connectedBody = human.GetComponent<Rigidbody2D> ();
 		lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+
 	}
 
 
@@ -42,12 +44,17 @@ public class Rope : MonoBehaviour {
 
 		bool operate = Input.GetButtonDown ("Operate");
 		if (operate && Vector3.Distance (human.transform.position, lastNodePosition) < 5f && humanAttached == false) {
+			
 			lastNode.GetComponent<HingeJoint2D> ().enabled = true;
 			human.transform.position = new Vector3 (lastNodePosition.x, lastNodePosition.y - 2, lastNodePosition.z);
 			humanAttached = true;
+
+
 		} else if (operate && humanAttached) {
+			
 			lastNode.GetComponent<HingeJoint2D> ().enabled = false;
 			humanAttached = false;
+
 		}
 	}
 

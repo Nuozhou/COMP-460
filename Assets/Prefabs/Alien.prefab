@@ -37,12 +37,12 @@ GameObject:
   - component: {fileID: 4792989053513506}
   - component: {fileID: 212520249470753910}
   - component: {fileID: 50380087737119164}
-  - component: {fileID: 58433795713238266}
   - component: {fileID: 95106231274013098}
   - component: {fileID: 114627816520187690}
   - component: {fileID: 114112970228544930}
   - component: {fileID: 114073413614854928}
   - component: {fileID: 114844843293233328}
+  - component: {fileID: 61071286518988014}
   m_Layer: 9
   m_Name: Alien
   m_TagString: Player
@@ -157,20 +157,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &58433795713238266
-CircleCollider2D:
+--- !u!61 &61071286518988014
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304448901671656}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 227595f503cda40a3b8471549572f278, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -1.3385218, y: 1.56268}
   serializedVersion: 2
-  m_Radius: 6
+  m_Size: {x: 13.728082, y: 7.442644}
 --- !u!95 &95106231274013098
 Animator:
   serializedVersion: 3

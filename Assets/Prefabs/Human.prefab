@@ -284,7 +284,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1616293197499508}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 227595f503cda40a3b8471549572f278, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_Offset: {x: 1, y: -6}
@@ -298,7 +298,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1616293197499508}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 227595f503cda40a3b8471549572f278, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0.8959118, y: 2.261828}
@@ -386,13 +386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d368cea2a5c4454a5f0d44f641f2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxSpeed: 10
+  m_MaxSpeed: 15
   m_JumpForce: 1000
   m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294967295
+  standingOnAlien: 0
   m_FacingRight: 1
 --- !u!114 &114751104769813638
 MonoBehaviour:

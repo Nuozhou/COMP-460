@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections;
 
 public class HumanMovements : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class HumanMovements : MonoBehaviour {
 	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
+	public bool standingOnAlien;
 	private Transform m_CeilingCheck;   // A position marking where to check for ceilings
 	const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
 	private Animator m_Anim;            // Reference to the player's animator component.
@@ -37,19 +39,38 @@ public class HumanMovements : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		m_Grounded = false;
+		standingOnAlien = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
-			if (colliders[i].gameObject != gameObject)
+			if (colliders [i].gameObject.name == "Alien") {
+				standingOnAlien = true;
+				StartCoroutine (waitHumanJump ());
+			} 
+
+			if (colliders [i].gameObject != gameObject) {
 				m_Grounded = true;
+			}
 		}
 		m_Anim.SetBool("Ground", m_Grounded);
 
 		// Set the vertical animation
 		m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+	}
+
+	private IEnumerator waitHumanJump() {
+		yield return new WaitForSeconds(1f);
+		if (standingOnAlien) {
+			standingOnAlien = false;
+		}
+		GameObject.Find ("Alien").GetComponent<BoxCollider2D> ().enabled = false;
+		yield return new WaitForSeconds(1f);
+		GameObject.Find ("Alien").GetComponent<BoxCollider2D> ().enabled = true;
+
+
 	}
 
 
@@ -91,6 +112,7 @@ public class HumanMovements : MonoBehaviour {
 				// Move the character
 				m_Rigidbody2D.velocity = new Vector2 (move * m_MaxSpeed, m_Rigidbody2D.velocity.y);
 			}
+
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
 			{
@@ -111,6 +133,9 @@ public class HumanMovements : MonoBehaviour {
 			m_Grounded = false;
 			m_Anim.SetBool("Ground", false);
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+			if (standingOnAlien) {
+				standingOnAlien = false;
+			}
 		}
 	}
 

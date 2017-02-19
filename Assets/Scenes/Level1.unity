@@ -1853,6 +1853,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1238540226412346, guid: b122bc265c821455d95674d1185c926e, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1238540226412346, guid: b122bc265c821455d95674d1185c926e, type: 2}
+      propertyPath: m_TagString
+      value: Grabbable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b122bc265c821455d95674d1185c926e, type: 2}
   m_IsPrefabParent: 0

@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114619710756638482}
   - component: {fileID: 114424124637692196}
   - component: {fileID: 114421923624238560}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FlyBall
   m_TagString: Enemy
   m_Icon: {fileID: 0}

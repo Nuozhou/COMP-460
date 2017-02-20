@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class GrowingBall : MonoBehaviour {
 	float rate = 0.001f;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		Grow ();
@@ -18,18 +14,25 @@ public class GrowingBall : MonoBehaviour {
 		transform.localScale = new Vector3(transform.localScale.x+rate, transform.localScale.y+rate, transform.localScale.z+rate); 
 	}
 
+	public IEnumerator DestroyAfterAwake() {
+		yield return new WaitForSeconds (5f);
+		Destroy (gameObject);
+	}
+
 	IEnumerator Damage(Transform coll) {
 		yield return new WaitForSeconds (0.5f);
 		if (coll.name == "Human") {
-			coll.GetComponent<Human> ().DamageHuman (5);
+			coll.GetComponent<Human> ().DamageHuman (40);
 		} 
 		if (coll.name == "Alien") {
-			coll.GetComponent<Alien> ().DamageAlien (5);
+			coll.GetComponent<Alien> ().DamageAlien (40);
 		}
+
 
 	}
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.transform.tag == "Player") {
+			Destroy (gameObject);
 			StartCoroutine (Damage (coll.transform));
 		}
 	}

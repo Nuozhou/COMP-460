@@ -48,7 +48,7 @@ public class Laser : MonoBehaviour {
 				} else if (hit.collider.gameObject.name == "Alien") {
 					hit.collider.gameObject.GetComponent<Alien> ().DamageAlien (20);
 				}
-			} else if (hit.collider.tag == "Throwable") {
+			} else if (hit.collider.tag == "Grabbable") {
 				if (!reflected) {
 
 					Vector2 newDir = Vector2.Reflect ((hit.point - laserOrigin).normalized, hit.normal);

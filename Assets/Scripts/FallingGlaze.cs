@@ -18,7 +18,7 @@ public class FallingGlaze : MonoBehaviour {
 	void Update () {
 		float dist = rb2d.position.x - targetRb2d.position.x;
 		if (dist < 0.5 && dist > -0.5) {
-			transform.GetComponent<Falling> ().startTime = true;
+			transform.GetComponent<Falling> ().startFalling = true;
 			isFalling = true;
 		}
 	}

@@ -13,6 +13,7 @@ public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
 	public Timer timer;
 	public Transform SavePoint;
+	public Transform[] resetObjects;
 	private GameObject pausePanel;
 	public Sprite CrossButtonImage;
 	public Sprite CircleButtonImage;
@@ -124,6 +125,15 @@ public class GameMaster : MonoBehaviour {
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - human.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(human.healthScale.x * human.health * 0.01f, 1f, 1f);
 
+		if (gm.resetObjects.Length > 0) {
+			for (int i = 0; i < gm.resetObjects.Length; i++) {
+				if (gm.resetObjects [i].tag == "FallingIce") {
+					gm.resetObjects [i].GetComponent<Falling> ().Reset ();
+				}
+			}
+		}
+
+
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
 		}
@@ -137,6 +147,15 @@ public class GameMaster : MonoBehaviour {
 		SpriteRenderer healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
 		healthBar.material.color = Color.Lerp(Color.green, Color.red, 1 - alien.health * 0.01f);
 		healthBar.transform.localScale = new Vector3(alien.healthScale.x * alien.health * 0.01f, 1f, 1f);
+
+		if (gm.resetObjects.Length > 0) {
+			for (int i = 0; i < gm.resetObjects.Length; i++) {
+				if (gm.resetObjects [i].tag == "FallingIce") {
+					gm.resetObjects [i].GetComponent<Falling> ().Reset ();
+				}
+			}
+		}
+
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
 		}

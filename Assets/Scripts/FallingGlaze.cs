@@ -27,6 +27,7 @@ public class FallingGlaze : MonoBehaviour {
 		if (isFalling) {
 			Destroy (gameObject);
 			if (coll.gameObject.tag == "Player") {
+				Debug.Log ("Damage Human");
 				target.GetComponent<Human> ().DamageHuman (20);
 			}
 				

@@ -587,11 +587,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.6
+      value: 7.1
       objectReference: {fileID: 0}
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2140,11 +2140,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 397.6
+      value: -14.9
       objectReference: {fileID: 0}
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3005,9 +3005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bf8662bbefe45dab5c8852a77df13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonMessage1: Jump on Alien
+  ButtonMessage1: Use Alien
   ButtonName: Cross
-  ButtonMessage2: and Double Jump
+  ButtonMessage2: As Platform
 --- !u!61 &250670415
 BoxCollider2D:
   m_ObjectHideFlags: 0

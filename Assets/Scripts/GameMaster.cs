@@ -43,6 +43,7 @@ public class GameMaster : MonoBehaviour {
 		timer = gameObject.GetComponent<Timer> ();
 		pausePanel = GameObject.Find ("GameMenu");
 		pausePanel.SetActive(false);
+		GameMaster.gm.ContinueGame ();
 		StartCoroutine(ShowButtonMessage ("Use Left Joystick ", " to move", "LeftJoystick"));
 	}
 

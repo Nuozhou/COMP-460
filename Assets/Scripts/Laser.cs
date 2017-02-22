@@ -27,6 +27,12 @@ public class Laser : MonoBehaviour {
 		//laserHit.position = hit.point;
 		line.SetPosition (0, transform.position);
 		if (hit.collider == null) {
+			if (lastHitPoint != null) {
+				if (reflected) {
+					DestroyAllReflections ();
+					reflected = false;
+				}
+			}
 			Vector3 endPoint = transform.position + new Vector3(laserDirection.x * 100, laserDirection.y * 100, 0);
 			line.SetPosition (1, endPoint); 
 		} else {

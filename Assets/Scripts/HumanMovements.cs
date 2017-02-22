@@ -67,7 +67,7 @@ public class HumanMovements : MonoBehaviour {
 			standingOnAlien = false;
 		}
 		GameObject.Find ("Alien").GetComponent<BoxCollider2D> ().enabled = false;
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(3f);
 		GameObject.Find ("Alien").GetComponent<BoxCollider2D> ().enabled = true;
 
 

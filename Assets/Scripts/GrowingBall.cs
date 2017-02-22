@@ -5,9 +5,14 @@ using UnityEngine;
 public class GrowingBall : MonoBehaviour {
 	float rate = 0.001f;
 
-	// Update is called once per frame
+	void Start() {
+		GetComponent<Rigidbody2D> ().simulated = false;
+	}
+
 	void Update () {
-		Grow ();
+		if (GetComponent<Rigidbody2D> ().simulated) {
+			Grow ();
+		}
 	}
 
 	void Grow() {
@@ -15,25 +20,19 @@ public class GrowingBall : MonoBehaviour {
 	}
 
 	public IEnumerator DestroyAfterAwake() {
-		yield return new WaitForSeconds (5f);
-		Destroy (gameObject);
+		yield return new WaitForSeconds (10f);
+		//Destroy (gameObject);
 	}
-
-	IEnumerator Damage(Transform coll) {
-		yield return new WaitForSeconds (0.5f);
-		if (coll.name == "Human") {
-			coll.GetComponent<Human> ().DamageHuman (40);
-		} 
-		if (coll.name == "Alien") {
-			coll.GetComponent<Alien> ().DamageAlien (40);
-		}
-
-
-	}
+		
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.transform.tag == "Player") {
 			Destroy (gameObject);
-			StartCoroutine (Damage (coll.transform));
+			if (coll.transform.name == "Human") {
+				coll.transform.GetComponent<Human> ().DamageHuman (40);
+			} 
+			if (coll.transform.name == "Alien") {
+				coll.transform.GetComponent<Alien> ().DamageAlien (40);
+			}
 		}
 	}
 }

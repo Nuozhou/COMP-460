@@ -125,9 +125,7 @@ public class BossAI : MonoBehaviour {
 			if (GetComponent<SpriteRenderer> ().enabled == true) {
 				StartCoroutine (TurnInvisible ());
 			}
-		} else if (rand < 0.015f) {
-			Blink (transform.position + new Vector3 (Random.Range (-5f, 5f), Random.Range (-5f, 5f), 0));
-		} 
+		}
 
 
 		if (currentWaypoint >= path.vectorPath.Count) {

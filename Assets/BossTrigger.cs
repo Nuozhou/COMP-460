@@ -8,12 +8,14 @@ public class BossTrigger : MonoBehaviour {
 
 	public bool isTriggered = false;
 
-	void OnTriggerEnter2D() {
+	void OnTriggerEnter2D(Collider2D col) {
 		if (!isTriggered) {
-			Transform boss = Instantiate (bossPrefab, new Vector3 (transform.position.x + 10f, transform.position.y + 5f, transform.position.z), Quaternion.identity);
-			boss.GetComponent<BossAI> ().target1 = GameObject.Find ("Human").transform;
-			boss.GetComponent<BossAI> ().target1 = GameObject.Find ("Alien").transform;
-			isTriggered = true;
+			if (col.tag == "Player") {
+				Transform boss = Instantiate (bossPrefab, new Vector3 (transform.position.x + 10f, transform.position.y + 5f, transform.position.z), Quaternion.identity);
+				boss.GetComponent<BossAI> ().target1 = GameObject.Find ("Human").transform;
+				boss.GetComponent<BossAI> ().target1 = GameObject.Find ("Alien").transform;
+				isTriggered = true;
+			}
 		} 
 		/*
 		Camera.main.GetComponent<Camera2Person> ().enabled = false;

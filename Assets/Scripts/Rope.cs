@@ -42,6 +42,8 @@ public class Rope : MonoBehaviour {
 			lr.SetPosition (i, nodes [i].transform.position);
 		}
 
+		lastNodePosition = lastNode.transform.position;
+
 		bool operate = Input.GetButtonDown ("Operate");
 		if (operate && Vector3.Distance (human.transform.position, lastNodePosition) < 10f && humanAttached == false) {
 

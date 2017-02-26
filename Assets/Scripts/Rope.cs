@@ -10,9 +10,9 @@ public class Rope : MonoBehaviour {
 	public List<GameObject> nodes = new List<GameObject>();
 	public LineRenderer lr;
 	public GameObject human;
-	private GameObject lastNode;
+	public GameObject lastNode;
 	private Vector3 lastNodePosition;
-	private bool humanAttached;
+	public bool humanAttached;
 
 	void Start() {
 		lr = GetComponent<LineRenderer> ();
@@ -47,17 +47,18 @@ public class Rope : MonoBehaviour {
 		bool operate = Input.GetButtonDown ("Operate");
 		if (operate && Vector3.Distance (human.transform.position, lastNodePosition) < 10f && humanAttached == false) {
 
-			human.transform.position = new Vector3 (lastNodePosition.x, lastNodePosition.y, lastNodePosition.z);
-			human.transform.SetParent (lastNode.transform);
+			human.transform.position = new Vector3 (lastNodePosition.x, lastNodePosition.y - 2f, lastNodePosition.z);
 			lastNode.GetComponent<HingeJoint2D> ().enabled = true;
 			humanAttached = true;
+			human.GetComponent<HumanMovements> ().attachedToRope = true;
+			human.GetComponent<Human> ().attachedRope = this.transform;
 
 
 		} else if (operate && humanAttached) {
 			
 			lastNode.GetComponent<HingeJoint2D> ().enabled = false;
-			lastNode.transform.DetachChildren ();
 			humanAttached = false;
+			human.GetComponent<HumanMovements> ().attachedToRope = false;
 
 		}
 	}

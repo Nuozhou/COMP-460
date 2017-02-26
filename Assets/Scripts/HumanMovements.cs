@@ -14,6 +14,7 @@ public class HumanMovements : MonoBehaviour {
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	public bool standingOnAlien;
+	public bool attachedToRope;
 	private Transform m_CeilingCheck;   // A position marking where to check for ceilings
 	const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
 	private Animator m_Anim;            // Reference to the player's animator component.
@@ -31,6 +32,7 @@ public class HumanMovements : MonoBehaviour {
 		m_Anim = GetComponent<Animator>();
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 		camera = Camera.main;
+		attachedToRope = false;
 		cameraHeight = camera.orthographicSize * 2f;
 		cameraWidth = cameraHeight * camera.aspect;
 	}
@@ -93,6 +95,25 @@ public class HumanMovements : MonoBehaviour {
 
 		// Set whether or not the character is crouching in the animator
 		m_Anim.SetBool("Crouch", crouch);
+
+		if (attachedToRope) {
+			m_Anim.SetFloat("Speed", Mathf.Abs(move));
+			m_Rigidbody2D.AddForce (new Vector2 (move * m_MaxSpeed, 0f));
+
+			// If the input is moving the player right and the player is facing left...
+			if (move > 0 && !m_FacingRight)
+			{
+				// ... flip the player.
+				Flip();
+			}
+			// Otherwise if the input is moving the player left and the player is facing right...
+			else if (move < 0 && m_FacingRight)
+			{
+				// ... flip the player.
+				Flip();
+			}
+			return;
+		}
 
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)

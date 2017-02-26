@@ -12,6 +12,7 @@ public class Human : MonoBehaviour {
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;	
 	public int fallBoundary = -50;
+	public Transform attachedRope;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
 
 	void Start() {

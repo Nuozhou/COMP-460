@@ -23,7 +23,7 @@ public class Laser : MonoBehaviour {
 
 	void Update() {
 		
-		RaycastHit2D hit = Physics2D.Raycast (transform.position, laserDirection, 100);
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, laserDirection, 1000);
 		//laserHit.position = hit.point;
 		line.SetPosition (0, transform.position);
 		if (hit.collider == null) {
@@ -54,7 +54,7 @@ public class Laser : MonoBehaviour {
 				} else if (hit.collider.gameObject.name == "Alien") {
 					hit.collider.gameObject.GetComponent<Alien> ().DamageAlien (20);
 				}
-			} else if (hit.collider.tag == "Grabbable") {
+			} else if (hit.collider.tag == "LaserPlane") {
 				if (!reflected) {
 
 					Vector2 newDir = Vector2.Reflect ((hit.point - laserOrigin).normalized, hit.normal);

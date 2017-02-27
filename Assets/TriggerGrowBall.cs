@@ -9,7 +9,6 @@ public class TriggerGrowBall : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D col) {
 		if (col.tag == "Player") {
 			growBall.GetComponent<Rigidbody2D> ().simulated = true;
-			StartCoroutine (growBall.GetComponent<GrowingBall> ().DestroyAfterAwake ());
 		}
 	}
 }

@@ -83,9 +83,22 @@ public class Force : MonoBehaviour {
 		}
 
 		if (isGrabbed) {
-			grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			if (Input.GetButtonDown ("AlienFlip")) {
+				if (grabbedObject.transform.position.x > transform.position.x) {
+					grabbedObject.transform.position = new Vector3 (transform.position.x - grabbedLocationOffsetX, transform.position.y, transform.position.z);
+				} else if (grabbedObject.transform.position.x < transform.position.x) {
+					grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+				}
+			}
+
+			if (grabbedObject.transform.position.x > transform.position.x) {
+				grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			} else if (grabbedObject.transform.position.x < transform.position.x) {
+				grabbedObject.transform.position = new Vector3 (transform.position.x - grabbedLocationOffsetX, transform.position.y, transform.position.z);
+			}
+
 			if (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy") {
-				arr.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
+				arr.transform.position = new Vector3 (grabbedObject.transform.position.x, grabbedObject.transform.position.y, grabbedObject.transform.position.z);
 			}
 		}
 	}

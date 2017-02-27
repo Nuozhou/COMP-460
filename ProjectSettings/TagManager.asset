@@ -21,6 +21,8 @@ TagManager:
   - Boss
   - Grabbable
   - FallingIce
+  - Rotatable
+  - GrowBall
   layers:
   - Default
   - TransparentFX

@@ -119,7 +119,9 @@ public class GameMaster : MonoBehaviour {
 	public static IEnumerator KillHuman(Human human) {
 		yield return new WaitForSeconds(2);
 		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
-		human.attachedRope.GetComponent<Rope>().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
+			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		}
 		GameObject.Find ("Human").GetComponent<HumanMovements> ().attachedToRope = false;
 		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		human.health = 50;
@@ -131,6 +133,9 @@ public class GameMaster : MonoBehaviour {
 			for (int i = 0; i < gm.resetObjects.Length; i++) {
 				if (gm.resetObjects [i].tag == "FallingIce") {
 					gm.resetObjects [i].GetComponent<Falling> ().Reset ();
+				}
+				if (gm.resetObjects [i].tag == "GrowBall") {
+					gm.resetObjects [i].GetComponent<GrowingBall> ().Reset ();
 				}
 			}
 		}
@@ -144,7 +149,9 @@ public class GameMaster : MonoBehaviour {
 	public static IEnumerator KillAlien(Alien alien) {
 		yield return new WaitForSeconds(2);
 		GameObject.Find("Human").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
-		GameObject.Find("Human").GetComponent<Human>().attachedRope.GetComponent<Rope>().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
+			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		}
 		GameObject.Find ("Human").GetComponent<HumanMovements> ().attachedToRope = false;
 		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		alien.health = 50;
@@ -156,6 +163,9 @@ public class GameMaster : MonoBehaviour {
 			for (int i = 0; i < gm.resetObjects.Length; i++) {
 				if (gm.resetObjects [i].tag == "FallingIce") {
 					gm.resetObjects [i].GetComponent<Falling> ().Reset ();
+				}
+				if (gm.resetObjects [i].tag == "GrowBall") {
+					gm.resetObjects [i].GetComponent<GrowingBall> ().Reset ();
 				}
 			}
 		}

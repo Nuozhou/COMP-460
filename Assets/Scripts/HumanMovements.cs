@@ -98,7 +98,7 @@ public class HumanMovements : MonoBehaviour {
 
 		if (attachedToRope) {
 			m_Anim.SetFloat("Speed", Mathf.Abs(move));
-			m_Rigidbody2D.AddForce (new Vector2 (move * m_MaxSpeed, 0f));
+			m_Rigidbody2D.AddForce (new Vector2 (1.5f * move * m_MaxSpeed, 0f));
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)

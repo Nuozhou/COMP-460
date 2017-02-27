@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GrowingBall : MonoBehaviour {
 	float rate = 0.001f;
+	private Vector3 originalPosition;
 
 	void Start() {
 		GetComponent<Rigidbody2D> ().simulated = false;
+		originalPosition = transform.position;
 	}
 
 	void Update () {
@@ -19,9 +21,10 @@ public class GrowingBall : MonoBehaviour {
 		transform.localScale = new Vector3(transform.localScale.x+rate, transform.localScale.y+rate, transform.localScale.z+rate); 
 	}
 
-	public IEnumerator DestroyAfterAwake() {
-		yield return new WaitForSeconds (10f);
-		//Destroy (gameObject);
+
+	public void Reset() {
+		GetComponent<Rigidbody2D> ().simulated = false;
+		transform.position = originalPosition;
 	}
 		
 	void OnCollisionEnter2D(Collision2D coll) {

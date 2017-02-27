@@ -50,9 +50,9 @@ public class Laser : MonoBehaviour {
 		if (hit.collider != null) {
 			if (hit.collider.tag == "Player") {
 				if (hit.collider.gameObject.name == "Human") {
-					hit.collider.gameObject.GetComponent<Human> ().DamageHuman (20);
+					hit.collider.gameObject.GetComponent<Human> ().DamageHuman (1);
 				} else if (hit.collider.gameObject.name == "Alien") {
-					hit.collider.gameObject.GetComponent<Alien> ().DamageAlien (20);
+					hit.collider.gameObject.GetComponent<Alien> ().DamageAlien (1);
 				}
 			} else if (hit.collider.tag == "LaserPlane") {
 				if (!reflected) {

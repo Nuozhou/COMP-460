@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour {
 		firePoint = transform.FindChild("FirePoint");
 		humanMovements = transform.root.GetComponent<HumanMovements> ();
 		m_Anim = GameObject.Find ("Human").GetComponent<Animator> ();
-		transform.GetComponent<SpriteRenderer> ().enabled = false;
+		//transform.GetComponent<SpriteRenderer> ().enabled = false;
 		isShooting = false;
 	}
 	
@@ -39,15 +39,15 @@ public class Weapon : MonoBehaviour {
 			}
 		}
 
-		if (isShooting && counter < 15) {
+		if (isShooting && counter < 30) {
 			counter++;
 		}
 
-		if (isShooting && counter == 15) {
+		if (isShooting && counter == 30) {
 			counter = 0;
 			isShooting = false;
 			m_Anim.SetBool ("UseGun", false);
-			transform.GetComponent<SpriteRenderer> ().enabled = false;
+			//transform.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 
 	}
@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour {
 	private void Shoot() {
 		isShooting = true;
 		counter = 0;
-		transform.GetComponent<SpriteRenderer> ().enabled = true;
+		//transform.GetComponent<SpriteRenderer> ().enabled = true;
 		if (humanMovements.m_FacingRight) {
 			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
 			bulletInstance.velocity = new Vector2(bulletSpeed, 0);

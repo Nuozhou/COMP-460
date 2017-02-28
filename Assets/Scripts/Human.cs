@@ -11,7 +11,7 @@ public class Human : MonoBehaviour {
 	public Vector3 healthScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;	
-	public int fallBoundary = -50;
+	public int fallBoundary = -30;
 	public Transform attachedRope;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
 

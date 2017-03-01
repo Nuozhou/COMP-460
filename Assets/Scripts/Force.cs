@@ -89,6 +89,7 @@ public class Force : MonoBehaviour {
 				} else if (grabbedObject.transform.position.x < transform.position.x) {
 					grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
 				}
+				
 			}
 
 			if (grabbedObject.transform.position.x > transform.position.x) {

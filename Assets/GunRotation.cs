@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class GunRotation : MonoBehaviour {
 
-	public bool reset;
+	private HumanMovements humanMovements;
+
+	void Start() {
+		humanMovements = transform.root.GetComponent<HumanMovements> ();
+	}
 
 	// Update is called once per frame
 	void Update () {
 		
-		if (reset) {
-			transform.parent.rotation = Quaternion.Euler (new Vector3 (0, 0, 0));
-			return;
-		} 
 		float horizontal = Input.GetAxis ("HumanHorizontalR");
 		float vertical = Input.GetAxis ("HumanVerticalR");
 		//Debug.Log ("horizontal:" + horizontal);
@@ -25,6 +25,11 @@ public class GunRotation : MonoBehaviour {
 		if (angle < -20f) {
 			angle = -20f;
 		}
-		transform.parent.rotation = Quaternion.Euler (new Vector3 (0, 0, angle));
+
+		if (humanMovements.m_FacingRight) {
+			transform.parent.rotation = Quaternion.Euler (new Vector3 (0, 0, angle));
+		} else {
+			transform.parent.rotation = Quaternion.Euler (new Vector3 (0, 0, -angle));
+		}
 	}
 }

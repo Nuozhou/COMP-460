@@ -55,13 +55,17 @@ public class Weapon : MonoBehaviour {
 	private void Shoot() {
 		isShooting = true;
 		counter = 0;
+		GetComponent<AudioSource> ().Play ();
 		//transform.GetComponent<SpriteRenderer> ().enabled = true;
 		if (humanMovements.m_FacingRight) {
-			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler (transform.parent.eulerAngles)) as Rigidbody2D;
 			bulletInstance.velocity = new Vector2 (bulletSpeed * Mathf.Cos (transform.parent.eulerAngles.z * Mathf.Deg2Rad), bulletSpeed * Mathf.Sin (transform.parent.eulerAngles.z * Mathf.Deg2Rad));
 		} else {
-			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
+			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler (transform.parent.eulerAngles)) as Rigidbody2D;
 			bulletInstance.velocity = new Vector2 (-bulletSpeed * Mathf.Cos (transform.parent.eulerAngles.z * Mathf.Deg2Rad), -bulletSpeed * Mathf.Sin (transform.parent.eulerAngles.z * Mathf.Deg2Rad));
+			Vector3 theScale = bulletInstance.transform.localScale;
+			theScale.x *= -1;
+			bulletInstance.transform.localScale = theScale;
 		}
 	}
 }

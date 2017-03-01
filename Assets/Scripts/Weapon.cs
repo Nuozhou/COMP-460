@@ -28,12 +28,22 @@ public class Weapon : MonoBehaviour {
 	void Update () {
 		if (fireRate == 0f) {
 			if (Input.GetButton ("Fire1")) {
+				if (!isShooting) {
+					GetComponent<GunRotation> ().reset = true;
+				} else {
+					GetComponent<GunRotation> ().reset = false;
+				}
 				m_Anim.SetBool ("UseGun", true);
 				Shoot ();
 			}
 		} else {
 			if (Input.GetButton ("Fire1") && Time.time > fireTime) {
 				fireTime = Time.time + 1f / fireRate;
+				if (!isShooting) {
+					GetComponent<GunRotation> ().reset = true;
+				} else {
+					GetComponent<GunRotation> ().reset = false;
+				}
 				m_Anim.SetBool ("UseGun", true);
 				Shoot ();
 			}
@@ -58,10 +68,10 @@ public class Weapon : MonoBehaviour {
 		//transform.GetComponent<SpriteRenderer> ().enabled = true;
 		if (humanMovements.m_FacingRight) {
 			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-			bulletInstance.velocity = new Vector2(bulletSpeed, 0);
+			bulletInstance.velocity = new Vector2 (bulletSpeed * Mathf.Cos (transform.parent.eulerAngles.z * Mathf.Deg2Rad), bulletSpeed * Mathf.Sin (transform.parent.eulerAngles.z * Mathf.Deg2Rad));
 		} else {
 			Rigidbody2D bulletInstance = Instantiate(bullet, firePoint.position, Quaternion.Euler(new Vector3(0,0,0))) as Rigidbody2D;
-			bulletInstance.velocity = new Vector2(-bulletSpeed, 0);
+			bulletInstance.velocity = new Vector2 (bulletSpeed * Mathf.Cos (transform.parent.eulerAngles.z * Mathf.Deg2Rad), bulletSpeed * Mathf.Sin (transform.parent.eulerAngles.z * Mathf.Deg2Rad));
 		}
 	}
 }

@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 59042078}
   - component: {fileID: 59042077}
   - component: {fileID: 59042076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 73105021}
   - component: {fileID: 73105020}
   - component: {fileID: 73105019}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 104377390}
   - component: {fileID: 104377389}
   - component: {fileID: 104377388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 142841396}
   - component: {fileID: 142841395}
   - component: {fileID: 142841394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleft (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1263,7 +1263,7 @@ GameObject:
   - component: {fileID: 143376404}
   - component: {fileID: 143376403}
   - component: {fileID: 143376402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1512,7 +1512,7 @@ GameObject:
   - component: {fileID: 147265779}
   - component: {fileID: 147265778}
   - component: {fileID: 147265777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1740,7 +1740,7 @@ GameObject:
   - component: {fileID: 152087367}
   - component: {fileID: 152087366}
   - component: {fileID: 152087365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1939,8 +1939,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 152087364}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.91, y: -11.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 39.91, y: -11.3, z: 0}
+  m_LocalScale: {x: 1, y: 1.0176966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 27
@@ -2047,7 +2047,7 @@ GameObject:
   - component: {fileID: 229972880}
   - component: {fileID: 229972879}
   - component: {fileID: 229972878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone02 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2270,7 @@ GameObject:
   - component: {fileID: 232727170}
   - component: {fileID: 232727169}
   - component: {fileID: 232727168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2669,7 +2669,7 @@ GameObject:
   - component: {fileID: 261863622}
   - component: {fileID: 261863621}
   - component: {fileID: 261863620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3009,7 +3009,7 @@ GameObject:
   - component: {fileID: 317343237}
   - component: {fileID: 317343236}
   - component: {fileID: 317343239}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3489,7 +3489,7 @@ GameObject:
   - component: {fileID: 416584433}
   - component: {fileID: 416584432}
   - component: {fileID: 416584431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3748,7 +3748,7 @@ GameObject:
   - component: {fileID: 426716963}
   - component: {fileID: 426716962}
   - component: {fileID: 426716961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG -icicle1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4091,7 +4091,7 @@ GameObject:
   - component: {fileID: 439995373}
   - component: {fileID: 439995372}
   - component: {fileID: 439995371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingicebrick01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4230,7 +4230,7 @@ GameObject:
   - component: {fileID: 494991262}
   - component: {fileID: 494991261}
   - component: {fileID: 494991260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4453,7 +4453,7 @@ GameObject:
   - component: {fileID: 496444612}
   - component: {fileID: 496444611}
   - component: {fileID: 496444610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4710,47 +4710,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4700694217099234, guid: 0a9df1b3706a84e82a5e0b32141f7202, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.0250001
-      objectReference: {fileID: 0}
-    - target: {fileID: 4700694217099234, guid: 0a9df1b3706a84e82a5e0b32141f7202, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2.4981403
-      objectReference: {fileID: 0}
-    - target: {fileID: 4700694217099234, guid: 0a9df1b3706a84e82a5e0b32141f7202, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2.0886693
-      objectReference: {fileID: 0}
-    - target: {fileID: 4700694217099234, guid: 0a9df1b3706a84e82a5e0b32141f7202, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.0886693
-      objectReference: {fileID: 0}
-    - target: {fileID: 50097058582612014, guid: 0a9df1b3706a84e82a5e0b32141f7202,
-        type: 2}
-      propertyPath: m_Mass
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50097058582612014, guid: 0a9df1b3706a84e82a5e0b32141f7202,
-        type: 2}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50097058582612014, guid: 0a9df1b3706a84e82a5e0b32141f7202,
-        type: 2}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50097058582612014, guid: 0a9df1b3706a84e82a5e0b32141f7202,
-        type: 2}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 50097058582612014, guid: 0a9df1b3706a84e82a5e0b32141f7202,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0a9df1b3706a84e82a5e0b32141f7202, type: 2}
   m_IsPrefabParent: 0
@@ -4764,7 +4723,7 @@ GameObject:
   - component: {fileID: 512765939}
   - component: {fileID: 512765938}
   - component: {fileID: 512765937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5043,7 +5002,7 @@ GameObject:
   - component: {fileID: 581775620}
   - component: {fileID: 581775619}
   - component: {fileID: 581775618}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5462,7 +5421,7 @@ GameObject:
   - component: {fileID: 605356504}
   - component: {fileID: 605356503}
   - component: {fileID: 605356502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: small rocks'1
   m_TagString: FallingIce
   m_Icon: {fileID: 0}
@@ -6347,7 +6306,7 @@ GameObject:
   - component: {fileID: 651479276}
   - component: {fileID: 651479275}
   - component: {fileID: 651479274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6564,7 +6523,7 @@ GameObject:
   - component: {fileID: 685193973}
   - component: {fileID: 685193972}
   - component: {fileID: 685193971}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: small rocks'3
   m_TagString: FallingIce
   m_Icon: {fileID: 0}
@@ -6777,7 +6736,7 @@ GameObject:
   - component: {fileID: 703996852}
   - component: {fileID: 703996851}
   - component: {fileID: 703996850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingice_ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6979,7 +6938,7 @@ GameObject:
   - component: {fileID: 738237517}
   - component: {fileID: 738237516}
   - component: {fileID: 738237515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7194,7 +7153,7 @@ GameObject:
   - component: {fileID: 745271376}
   - component: {fileID: 745271375}
   - component: {fileID: 745271374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingice_ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7396,7 +7355,7 @@ GameObject:
   - component: {fileID: 749415521}
   - component: {fileID: 749415520}
   - component: {fileID: 749415519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7613,7 +7572,7 @@ GameObject:
   - component: {fileID: 768785920}
   - component: {fileID: 768785919}
   - component: {fileID: 768785918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7828,7 +7787,7 @@ GameObject:
   - component: {fileID: 797690761}
   - component: {fileID: 797690760}
   - component: {fileID: 797690759}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone02 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8035,8 +7994,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 797690758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.53, y: -11.32, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 48.53, y: -11.27, z: 0}
+  m_LocalScale: {x: 1, y: 1.0176966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 25
@@ -8051,7 +8010,7 @@ GameObject:
   - component: {fileID: 851368605}
   - component: {fileID: 851368604}
   - component: {fileID: 851368603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8316,7 +8275,7 @@ GameObject:
   - component: {fileID: 915686900}
   - component: {fileID: 915686899}
   - component: {fileID: 915686898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8639,7 +8598,7 @@ GameObject:
   - component: {fileID: 959939627}
   - component: {fileID: 959939626}
   - component: {fileID: 959939629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8887,7 +8846,7 @@ GameObject:
   - component: {fileID: 969958221}
   - component: {fileID: 969958220}
   - component: {fileID: 969958219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9099,8 +9058,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969958218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.08, y: -11.76, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 56.08, y: -11.71, z: 0}
+  m_LocalScale: {x: 1, y: 1.0176966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 26
@@ -9115,7 +9074,7 @@ GameObject:
   - component: {fileID: 974386705}
   - component: {fileID: 974386704}
   - component: {fileID: 974386703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneright (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9405,7 +9364,7 @@ GameObject:
   - component: {fileID: 1084039266}
   - component: {fileID: 1084039265}
   - component: {fileID: 1084039264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9655,7 +9614,7 @@ GameObject:
   - component: {fileID: 1121894077}
   - component: {fileID: 1121894076}
   - component: {fileID: 1121894079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone02 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9954,7 +9913,7 @@ GameObject:
   - component: {fileID: 1161350056}
   - component: {fileID: 1161350055}
   - component: {fileID: 1161350054}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10184,7 +10143,7 @@ GameObject:
   - component: {fileID: 1172799504}
   - component: {fileID: 1172799503}
   - component: {fileID: 1172799502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: small rocks'4
   m_TagString: FallingIce
   m_Icon: {fileID: 0}
@@ -10337,7 +10296,7 @@ GameObject:
   - component: {fileID: 1179716319}
   - component: {fileID: 1179716318}
   - component: {fileID: 1179716316}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingice_moving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10579,7 +10538,7 @@ GameObject:
   - component: {fileID: 1196260359}
   - component: {fileID: 1196260358}
   - component: {fileID: 1196260361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10908,7 +10867,7 @@ GameObject:
   - component: {fileID: 1224102432}
   - component: {fileID: 1224102431}
   - component: {fileID: 1224102430}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG -icicle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11251,7 +11210,7 @@ GameObject:
   - component: {fileID: 1237638240}
   - component: {fileID: 1237638239}
   - component: {fileID: 1237638238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneright (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11549,7 +11508,7 @@ GameObject:
   - component: {fileID: 1241145148}
   - component: {fileID: 1241145147}
   - component: {fileID: 1241145146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11766,7 +11725,7 @@ GameObject:
   - component: {fileID: 1246160286}
   - component: {fileID: 1246160285}
   - component: {fileID: 1246160284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12075,7 +12034,7 @@ GameObject:
   - component: {fileID: 1258508741}
   - component: {fileID: 1258508740}
   - component: {fileID: 1258508739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneright (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12268,7 +12227,7 @@ GameObject:
   - component: {fileID: 1305467773}
   - component: {fileID: 1305467772}
   - component: {fileID: 1305467771}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12496,7 +12455,7 @@ GameObject:
   - component: {fileID: 1311746023}
   - component: {fileID: 1311746022}
   - component: {fileID: 1311746021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12820,7 +12779,7 @@ GameObject:
   - component: {fileID: 1321142073}
   - component: {fileID: 1321142072}
   - component: {fileID: 1321142071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13570,7 +13529,7 @@ GameObject:
   - component: {fileID: 1361706427}
   - component: {fileID: 1361706426}
   - component: {fileID: 1361706425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13847,7 +13806,7 @@ GameObject:
   - component: {fileID: 1380058900}
   - component: {fileID: 1380058899}
   - component: {fileID: 1380058898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstonerightup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14075,7 +14034,7 @@ GameObject:
   - component: {fileID: 1400139115}
   - component: {fileID: 1400139114}
   - component: {fileID: 1400139113}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14413,7 +14372,7 @@ GameObject:
   - component: {fileID: 1462377606}
   - component: {fileID: 1462377605}
   - component: {fileID: 1462377604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG - icicle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14726,7 +14685,7 @@ GameObject:
   - component: {fileID: 1467672921}
   - component: {fileID: 1467672920}
   - component: {fileID: 1467672919}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG - icicle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15352,7 +15311,7 @@ GameObject:
   - component: {fileID: 1500915107}
   - component: {fileID: 1500915106}
   - component: {fileID: 1500915105}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG -icicle1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15803,7 +15762,7 @@ GameObject:
   - component: {fileID: 1534142136}
   - component: {fileID: 1534142135}
   - component: {fileID: 1534142134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG - icicle3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16307,7 +16266,7 @@ GameObject:
   - component: {fileID: 1542333705}
   - component: {fileID: 1542333704}
   - component: {fileID: 1542333703}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pillar fixed 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16957,7 +16916,7 @@ GameObject:
   - component: {fileID: 1558470210}
   - component: {fileID: 1558470209}
   - component: {fileID: 1558470208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingicebrick01 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17096,7 +17055,7 @@ GameObject:
   - component: {fileID: 1572385022}
   - component: {fileID: 1572385021}
   - component: {fileID: 1572385020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17313,7 +17272,7 @@ GameObject:
   - component: {fileID: 1578350333}
   - component: {fileID: 1578350332}
   - component: {fileID: 1578350331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17633,7 +17592,7 @@ GameObject:
   - component: {fileID: 1595007964}
   - component: {fileID: 1595007963}
   - component: {fileID: 1595007962}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BG - icicle3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18193,102 +18152,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9334bcbb7e68e489e9fb05c09d053a52, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1610455148 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1166578977722946, guid: df2cb797307fb42e68efe0c2045a94d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 115844722}
---- !u!82 &1610455149
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1610455148}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 40fafbc84549e4ba19eedcba4dae663b, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
---- !u!114 &1610455150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1610455148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ce2377b629d74756bdb899fcf545b44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1614014821
 GameObject:
   m_ObjectHideFlags: 0
@@ -18327,7 +18190,7 @@ GameObject:
   - component: {fileID: 1614823967}
   - component: {fileID: 1614823966}
   - component: {fileID: 1614823965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18586,7 +18449,7 @@ GameObject:
   - component: {fileID: 1617962784}
   - component: {fileID: 1617962783}
   - component: {fileID: 1617962782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18835,7 +18698,7 @@ GameObject:
   - component: {fileID: 1622594829}
   - component: {fileID: 1622594828}
   - component: {fileID: 1622594827}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19196,7 +19059,7 @@ GameObject:
   - component: {fileID: 1664904363}
   - component: {fileID: 1664904362}
   - component: {fileID: 1664904361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: small rocks'2
   m_TagString: FallingIce
   m_Icon: {fileID: 0}
@@ -19345,7 +19208,7 @@ GameObject:
   - component: {fileID: 1703889827}
   - component: {fileID: 1703889826}
   - component: {fileID: 1703889825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19604,7 +19467,7 @@ GameObject:
   - component: {fileID: 1717285599}
   - component: {fileID: 1717285598}
   - component: {fileID: 1717285597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19821,7 +19684,7 @@ GameObject:
   - component: {fileID: 1733012947}
   - component: {fileID: 1733012946}
   - component: {fileID: 1733012948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20080,7 +19943,7 @@ GameObject:
   - component: {fileID: 1737065622}
   - component: {fileID: 1737065621}
   - component: {fileID: 1737065620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20339,7 +20202,7 @@ GameObject:
   - component: {fileID: 1751495778}
   - component: {fileID: 1751495777}
   - component: {fileID: 1751495776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20556,7 +20419,7 @@ GameObject:
   - component: {fileID: 1753449080}
   - component: {fileID: 1753449079}
   - component: {fileID: 1753449078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20882,7 +20745,7 @@ GameObject:
   - component: {fileID: 1822186310}
   - component: {fileID: 1822186309}
   - component: {fileID: 1822186308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21161,7 +21024,7 @@ GameObject:
   - component: {fileID: 1851489225}
   - component: {fileID: 1851489224}
   - component: {fileID: 1851489223}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleft (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21434,7 +21297,7 @@ GameObject:
   - component: {fileID: 1885791285}
   - component: {fileID: 1885791284}
   - component: {fileID: 1885791283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleftup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21635,8 +21498,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1885791282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.26, y: -11.79, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 23.26, y: -11.74, z: 0}
+  m_LocalScale: {x: 1, y: 1.0176966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 28
@@ -21715,7 +21578,7 @@ GameObject:
   - component: {fileID: 1911562022}
   - component: {fileID: 1911562021}
   - component: {fileID: 1911562020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22162,7 +22025,7 @@ GameObject:
   - component: {fileID: 1954163804}
   - component: {fileID: 1954163803}
   - component: {fileID: 1954163802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22377,7 +22240,7 @@ GameObject:
   - component: {fileID: 1975446524}
   - component: {fileID: 1975446523}
   - component: {fileID: 1975446522}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22592,7 +22455,7 @@ GameObject:
   - component: {fileID: 2005222043}
   - component: {fileID: 2005222042}
   - component: {fileID: 2005222041}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground ice 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22893,7 +22756,7 @@ GameObject:
   - component: {fileID: 2027803143}
   - component: {fileID: 2027803142}
   - component: {fileID: 2027803141}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23092,8 +22955,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2027803140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.29, y: -11.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 31.29, y: -11.33, z: 0}
+  m_LocalScale: {x: 1, y: 1.0176966, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 29
@@ -23177,7 +23040,7 @@ GameObject:
   - component: {fileID: 2043898348}
   - component: {fileID: 2043898347}
   - component: {fileID: 2043898346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstoneleft (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23486,7 +23349,7 @@ GameObject:
   - component: {fileID: 2123485534}
   - component: {fileID: 2123485533}
   - component: {fileID: 2123485532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floatingice_ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23688,7 +23551,7 @@ GameObject:
   - component: {fileID: 2135584611}
   - component: {fileID: 2135584610}
   - component: {fileID: 2135584609}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: groundstone01
   m_TagString: Untagged
   m_Icon: {fileID: 0}

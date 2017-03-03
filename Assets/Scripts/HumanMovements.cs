@@ -170,5 +170,7 @@ public class HumanMovements : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+		GameObject.Find ("HumanHealthDisplay").transform.localScale = GameObject.Find ("HumanHealthDisplay").transform.localScale * (-1);
 	}
 }

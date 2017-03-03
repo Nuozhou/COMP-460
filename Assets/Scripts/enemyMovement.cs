@@ -118,6 +118,7 @@ public class enemyMovement : MonoBehaviour {
 		facingX -= 1f;
 		enemyGraphic.transform.localScale = new Vector3 (facingX, enemyGraphic.transform.localScale.y, enemyGraphic.transform.localScale.z);
 		facingRight = !facingRight;
+		GameObject.Find ("EnemyHealthDisplay").transform.localScale = GameObject.Find ("EnemyHealthDisplay").transform.localScale * (-1);
 
 	}
 }

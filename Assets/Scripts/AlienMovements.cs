@@ -77,5 +77,7 @@ public class AlienMovements : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+		GameObject.Find ("AlienHealthDisplay").transform.localScale = GameObject.Find ("AlienHealthDisplay").transform.localScale * (-1);
 	}
 }

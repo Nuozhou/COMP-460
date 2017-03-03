@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 420cfb7b21216463194351d7a91c27e3
+timeCreated: 1488572867
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Control Freak
+  fontNames:
+  - Control Freak
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

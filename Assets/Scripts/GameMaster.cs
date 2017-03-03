@@ -49,7 +49,7 @@ public class GameMaster : MonoBehaviour {
 	void Update() {
 		if(Input.GetButtonDown ("GameMenu")) 
 		{
-			Debug.Log ("Entered Game menu");
+			//Debug.Log ("Entered Game menu");
 			if (!pausePanel.activeInHierarchy) 
 			{
 				PauseGame();
@@ -63,7 +63,7 @@ public class GameMaster : MonoBehaviour {
 
 	public void PauseGame()
 	{
-		Debug.Log ("Entered pause");
+		//Debug.Log ("Entered pause");
 		Time.timeScale = 0;
 		pausePanel.SetActive(true);
 		//Disable scripts that still work while timescale is set to 0
@@ -71,7 +71,7 @@ public class GameMaster : MonoBehaviour {
 
 	public void ContinueGame()
 	{
-		Debug.Log ("Exit pause");
+		//Debug.Log ("Exit pause");
 		Time.timeScale = 1;
 		pausePanel.SetActive(false);
 		//enable the scripts again

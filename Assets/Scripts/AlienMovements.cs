@@ -10,19 +10,35 @@ public class AlienMovements : MonoBehaviour {
 	private float cameraHeight;
 	private float cameraWidth;
 	public bool m_FacingRight = true;
+	private Animator m_Anim; 
 	private Force force;
+	private int waitTimer;
 
 	void Awake() {
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
+		m_Anim = GetComponent<Animator> ();
 		camera = Camera.main;
 		cameraHeight = camera.orthographicSize * 2f;
 		cameraWidth = cameraHeight * camera.aspect;
 		force = GetComponent<Force> ();
+		waitTimer = 0;
+	}
+
+	void Update() {
+		if (waitTimer > 35) {
+			m_Anim.SetBool ("AlienWaiting", true);
+		} else {
+			m_Anim.SetBool ("AlienWaiting", false);
+		}
 	}
 
 	public void Move(float h, float v)
 	{
-
+		if (h == 0f && v == 0f) {
+			waitTimer++;
+		} else {
+			waitTimer = 0;
+		}
 		float newX = float.PositiveInfinity;
 		float newY = float.PositiveInfinity;
 

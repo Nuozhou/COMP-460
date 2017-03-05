@@ -49,7 +49,7 @@ public class Rope : MonoBehaviour {
 		bool operate = Input.GetButtonDown ("Operate");
 		if (operate && Vector3.Distance (human.transform.position, lastNodePosition) < 10f && humanAttached == false) {
 
-			human.transform.position = new Vector3 (lastNodePosition.x - 0.5f, lastNodePosition.y, lastNodePosition.z);
+			human.transform.position = new Vector3 (lastNodePosition.x, lastNodePosition.y - 1f, lastNodePosition.z);
 			lastNode.GetComponent<HingeJoint2D> ().enabled = true;
 			humanAttached = true;
 			human.GetComponent<HumanMovements> ().attachedToRope = true;

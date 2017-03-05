@@ -26,6 +26,19 @@ public class GameMaster : MonoBehaviour {
 	public Sprite LeftJoystick;
 	public Sprite RightJoystick;
 
+	public GameObject CrossPrefab;
+	public GameObject CirclePrefab;
+	public GameObject SquarePrefab;
+	public GameObject TrianglePrefab;
+	public GameObject L1Prefab;
+	public GameObject L2Prefab;
+	public GameObject R1Prefab;
+	public GameObject R2Prefab;
+	public GameObject LeftJoystickPrefab;
+	public GameObject RightJoystickPrefab;
+	public GameObject OptionPrefab;
+	public GameObject textPrefab;
+
 	[Serializable]
 	class PlayerData
 	{
@@ -114,6 +127,67 @@ public class GameMaster : MonoBehaviour {
 		message1UI.SetActive (false);
 		buttonUI.SetActive (false);
 		message2UI.SetActive (false);
+	}
+
+	public static void ShowDialogMessage(string message) {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
+		dialogPanel.SetActive (true);
+		GameObject dialogText = dialogPanel.transform.Find ("DialogText").gameObject;
+		dialogText.GetComponent<Text> ().text = message;
+	}
+
+	public static void CloseDialogPanel() {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
+		dialogPanel.SetActive (false);
+	}
+
+	public static void ShowControlMessage(string message) {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
+		controlPanel.SetActive (true);
+		char[] delimiterChars = {' '};
+		string[] textArray = message.Split (delimiterChars);
+
+		for (int i = 0; i < textArray.Length; i++) {
+			if (textArray [i] == "Cross") {
+				GameObject cross = Instantiate (GameMaster.gm.CrossPrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "Circle") {
+				GameObject cross = Instantiate (GameMaster.gm.CirclePrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "Square") {
+				GameObject cross = Instantiate (GameMaster.gm.SquarePrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "Triangle") {
+				GameObject cross = Instantiate (GameMaster.gm.TrianglePrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "R1") {
+				GameObject cross = Instantiate (GameMaster.gm.R1Prefab, controlPanel.transform, false);
+			} else if (textArray [i] == "L1") {
+				GameObject cross = Instantiate (GameMaster.gm.L1Prefab, controlPanel.transform, false);
+			} else if (textArray [i] == "R2") {
+				GameObject cross = Instantiate (GameMaster.gm.R2Prefab, controlPanel.transform, false);
+			} else if (textArray [i] == "L2") {
+				GameObject cross = Instantiate (GameMaster.gm.L2Prefab, controlPanel.transform, false);
+			} else if (textArray [i] == "LeftJoystick") {
+				GameObject cross = Instantiate (GameMaster.gm.LeftJoystickPrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "RightJoystick") {
+				GameObject cross = Instantiate (GameMaster.gm.RightJoystickPrefab, controlPanel.transform, false);
+			} else if (textArray [i] == "Option") {
+				GameObject cross = Instantiate (GameMaster.gm.OptionPrefab, controlPanel.transform, false);
+			} else {
+				GameObject textObject = Instantiate (GameMaster.gm.textPrefab, controlPanel.transform, false);
+				textObject.GetComponent<Text> ().text = textArray [i];
+			}
+
+		}
+	}
+
+	public static void CloseControlPanel() {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
+		controlPanel.SetActive (false);
+		foreach (Transform child in controlPanel.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
 	}
 
 	public static IEnumerator KillHuman(Human human) {

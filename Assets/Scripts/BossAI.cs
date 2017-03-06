@@ -78,7 +78,6 @@ public class BossAI : MonoBehaviour {
 	//Update the target (find the closest player
 	void UpdateTarget() {
 		if (target1 == null && target2 == null) {
-			Debug.LogError ("fly ball no target found!");
 			return;
 		}
 		if (target1 == null) {
@@ -114,6 +113,7 @@ public class BossAI : MonoBehaviour {
 			return;
 		}
 
+		/*
 		float rand = Random.Range (0f, 1f);
 
 		if (rand < 0.005f) {
@@ -121,11 +121,16 @@ public class BossAI : MonoBehaviour {
 				StartCoroutine (MakeCopy ());
 				hasCopy = true;
 			}
-		} else if (rand < 0.01f) {
+		} 
+		*/
+
+		/*
+		else if (rand < 0.01f) {
 			if (GetComponent<SpriteRenderer> ().enabled == true) {
 				StartCoroutine (TurnInvisible ());
 			}
 		}
+		*/
 
 
 		if (currentWaypoint >= path.vectorPath.Count) {

@@ -19,14 +19,13 @@ public class OneTimeAnimation : MonoBehaviour {
 	}
 
 	IEnumerator ResetChange() {
-		yield return new WaitForSeconds (0.5f);
+		yield return new WaitForSeconds (2f);
 		change = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		float dist = rb2d.position.x - targetRb2d.position.x;
-		if (dist < 8 && dist > -8) {
+		if (Vector3.Distance(transform.position, target.position) < 40f) {
 			anim.enabled = true;
 			StartCoroutine (ResetChange ());
 		}

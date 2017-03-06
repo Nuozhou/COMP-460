@@ -2,13 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Throwable : MonoBehaviour {
-	public Force force;
-
-	void Start() {
-		force = GameObject.Find ("Alien").GetComponent<Force> ();
-	}
-		
+public class Throwable : MonoBehaviour {	
 
 	void OnCollisionEnter2D (Collision2D col) {
 		if (col.gameObject.tag == "Enemy") {

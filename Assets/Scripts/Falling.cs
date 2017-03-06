@@ -52,7 +52,7 @@ public class Falling : MonoBehaviour {
 
 
 	private IEnumerator Fall() {
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		rb2d.gravityScale = 3f;
 	}
 }

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114159902275790102}
   - component: {fileID: 50896031991597528}
   - component: {fileID: 60934167902132422}
+  - component: {fileID: 95110159503509804}
   m_Layer: 0
   m_Name: ICICLE_1
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272068015355972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.1, y: 13.5, z: 0}
+  m_LocalPosition: {x: 76, y: 31, z: 0}
   m_LocalScale: {x: 0.589879, y: 0.58987886, z: 0.58987886}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,19 +52,19 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1272068015355972}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 5
 --- !u!60 &60934167902132422
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -409,6 +410,23 @@ PolygonCollider2D:
       - {x: -0.35, y: 1.8499999}
       - {x: -0.35, y: 1.87}
       - {x: -0.39, y: 1.91}
+--- !u!95 &95110159503509804
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272068015355972}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9bd40bdccdfe74828b1782af1976a376, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114043495899028976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,9 +439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 0}
-  startTime: 0
-  waitTime: 0
-  isIcicle: 1
+  startFalling: 0
   anim: {fileID: 0}
 --- !u!114 &114159902275790102
 MonoBehaviour:

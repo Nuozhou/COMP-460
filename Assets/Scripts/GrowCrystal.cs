@@ -4,21 +4,15 @@ using UnityEngine;
 
 public class GrowCrystal : MonoBehaviour {
 
-	public bool isColide = false;
-	Rigidbody2D rb2d;
-	// Use this for initialization
-	void Start () {
-		
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	void OnCollisonEnter2D(Collision2D coll) {
-		isColide = true;
-		coll.gameObject.GetComponent<Human> ().DamageHuman (10);
+		if (coll.transform.tag == "Player") {
+			if (coll.transform.name == "Human") {
+				coll.gameObject.GetComponent<Human> ().DamageHuman (20);
+			}
+
+			if (coll.transform.name == "Alien") {
+				coll.gameObject.GetComponent<Alien> ().DamageAlien (20);
+			}
+		}
 	}
 }

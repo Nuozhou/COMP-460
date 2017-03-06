@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304448901671656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.3, y: -0.9, z: 3.1121}
+  m_LocalPosition: {x: 58.9, y: 8.9, z: 3.1121}
   m_LocalScale: {x: 0.19330418, y: 0.18922992, z: 0.28497154}
   m_Children:
   - {fileID: 4386984547108436}
@@ -228,7 +228,7 @@ MonoBehaviour:
   isGrabbed: 0
   grabMask:
     serializedVersion: 2
-    m_Bits: 6144
+    m_Bits: 6400
   throwForce: 50
   grabRange: 5
   grabbedObject: {fileID: 0}

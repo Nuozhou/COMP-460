@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class DialogBoxTrigger : MonoBehaviour {
 
+	public string messageLine1;
+	public string messageLine2;
+	public string messageLine3;
+
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.tag == "Player") {
-			GameMaster.ShowDialogMessage ("This is dialog message" + "\n" + "and its second line");
+			string message = messageLine1 + "\n" + messageLine2 + "\n" + messageLine3;
+			GameMaster.ShowDialogMessage (message);
 		}
 	}
 

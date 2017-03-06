@@ -26,6 +26,7 @@ public class Force : MonoBehaviour {
 			isGrabbed = false;
 			if (arr != null) {
 				Destroy (arr);
+				GameMaster.CloseControlPanel ();
 			}
 		}
 
@@ -34,6 +35,7 @@ public class Force : MonoBehaviour {
 				isGrabbed = false;
 				grabbedObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (throwForce * Mathf.Cos (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad), throwForce * Mathf.Sin (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad));
 				Destroy (arr);
+				GameMaster.CloseControlPanel ();
 			}
 		}
 
@@ -72,6 +74,7 @@ public class Force : MonoBehaviour {
 					grabbedObject.transform.position = new Vector3 (transform.position.x + grabbedLocationOffsetX, transform.position.y, transform.position.z);
 					if (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy") {
 						arr = Instantiate (arrow, grabbedObject.transform.position, Quaternion.Euler (new Vector3 (0, 0, 0)));
+						GameMaster.ShowControlMessage ("Alien: Use RightJoystick to Aim and R2 to throw");
 					}
 				}
 			} else {

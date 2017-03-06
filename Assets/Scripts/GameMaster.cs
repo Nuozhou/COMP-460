@@ -61,7 +61,9 @@ public class GameMaster : MonoBehaviour {
 				ContinueGame();   
 			}
 		} 
+	}
 
+	void LateUpdate() {
 		float placingX = -230f;
 		float spacing = 10f;
 

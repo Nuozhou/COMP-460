@@ -189,6 +189,7 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 
+		GameObject.Find ("Human").GetComponent<Animator> ().SetBool ("UseRope", false);
 
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
@@ -217,6 +218,8 @@ public class GameMaster : MonoBehaviour {
 				}
 			}
 		}
+
+		GameObject.Find ("Human").GetComponent<Animator> ().SetBool ("UseRope", false);
 
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;

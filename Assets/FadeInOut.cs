@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class FadeInOut : MonoBehaviour {
-	public float fadeSpeed = 0.5f;
+	public float fadeSpeed = 0.8f;
 	private int fadeDir = -1;
 	private RawImage image;
 

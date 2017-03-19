@@ -2381,6 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fad1ee71364ad9a59eaa9108d2a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneNum: 10
 --- !u!60 &706926195
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3008,7 +3009,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 706926193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.6, y: 20, z: 0}
+  m_LocalPosition: {x: 121.1, y: 21.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5629,6 +5630,11 @@ Prefab:
     - target: {fileID: 224723458000485524, guid: 113d1d648b1b942e394695f446eb5b58,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224011834697750898, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

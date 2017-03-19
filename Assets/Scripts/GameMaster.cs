@@ -167,7 +167,13 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public static IEnumerator KillHuman(Human human) {
-		yield return new WaitForSeconds(2);
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject gameMessageText = UICanvas.transform.Find ("GameMessageText").gameObject;
+		GameObject blackCanvas = UICanvas.transform.Find ("BlackCanvas").gameObject;
+		blackCanvas.GetComponent<FadeInOut> ().FadeOut ();
+		gameMessageText.GetComponent<Text>().text = "You Died!!";
+		yield return new WaitForSeconds (3f);
+
 		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
 		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
 			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
@@ -194,10 +200,19 @@ public class GameMaster : MonoBehaviour {
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
 		}
+
+		gameMessageText.GetComponent<Text>().text = "";
+		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
 	}
 
 	public static IEnumerator KillAlien(Alien alien) {
-		yield return new WaitForSeconds(2);
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject gameMessageText = UICanvas.transform.Find ("GameMessageText").gameObject;
+		GameObject blackCanvas = UICanvas.transform.Find ("BlackCanvas").gameObject;
+		blackCanvas.GetComponent<FadeInOut> ().FadeOut ();
+		gameMessageText.GetComponent<Text>().text = "You Died!!";
+		yield return new WaitForSeconds (3f);
+
 		GameObject.Find("Human").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
 		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
 			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
@@ -224,7 +239,10 @@ public class GameMaster : MonoBehaviour {
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
 		}
+		gameMessageText.GetComponent<Text>().text = "";
+		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
 	}
+
 
 	public static void Save() {
 		BinaryFormatter bf = new BinaryFormatter ();

@@ -39,7 +39,6 @@ public class Alien : MonoBehaviour {
 			}
 			UpdateHealthBar ();
 			if (health <= 0) {
-				GameMessage.dead = true;
 				StartCoroutine(GameMaster.KillAlien(this));
 			}
 		} 

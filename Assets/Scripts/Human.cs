@@ -44,7 +44,6 @@ public class Human : MonoBehaviour {
 			}
 			UpdateHealthBar ();
 			if (health <= 0) {
-				GameMessage.dead = true;
 				StartCoroutine(GameMaster.KillHuman(this));
 			}
 		}

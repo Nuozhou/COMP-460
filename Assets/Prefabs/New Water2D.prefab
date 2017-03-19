@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1334916888399844}
+  m_IsPrefabParent: 1
+--- !u!1 &1334916888399844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4880956345080044}
+  - component: {fileID: 23176915944431514}
+  - component: {fileID: 33197767388034304}
+  - component: {fileID: 114967774700250608}
+  - component: {fileID: 114516364108945714}
+  - component: {fileID: 61560597583413682}
+  m_Layer: 4
+  m_Name: New Water2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4880956345080044
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 26.89322, y: -8.857082, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23176915944431514
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: e7075384ad0453947a733993cf0efa53, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &33197767388034304
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_Mesh: {fileID: 0}
+--- !u!61 &61560597583413682
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.24999952}
+  serializedVersion: 2
+  m_Size: {x: 24.353558, y: 11.594166}
+--- !u!114 &114516364108945714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39104e7689a801045a284cca0676d421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buoyantForceMode: 1
+  surfaceWaves: 0
+  waterType: 0
+  animationMethod: 0
+  clippingMethod: 0
+  flowDirection: 3
+  controlPointPos: 0
+  sineWavesType: 0
+  particleSystemInstantiation: 0
+  sineAmplitudes: []
+  sineStretches: []
+  phaseOffset: []
+  defaultWaterAreaOffset: 0
+  sineWaves: 4
+  springConstant: 0.02
+  damping: 0.04
+  spread: 0.03
+  floatHeight: 3
+  bounceDamping: 0.15
+  forcePositionOffset: {x: 0, y: 0, z: 0}
+  collisionVelocity: 0.0125
+  topEdge: {fileID: 0}
+  bottomEdge: {fileID: 0}
+  leftEdge: {fileID: 0}
+  rightEdge: {fileID: 0}
+  particleS: {fileID: 100000, guid: 3d4426bdea2e63d41a19d724a80098cc, type: 2}
+  constantWaterArea: 0
+  waterDisplacement: 0
+  animateWaterArea: 0
+  waveSpeed: 8
+  velocityFilter: -2
+  waterDensity: 2
+  polygonCorners: 8
+  maxDrag: 500
+  maxLift: 200
+  dragCoefficient: 0.4
+  liftCoefficient: 0.25
+  timeStep: 0.5
+  maxAmplitude: 0.1
+  minAmplitude: 0.01
+  maxStretch: 2
+  minStretch: 0.8
+  maxPhaseOffset: 0.1
+  minPhaseOffset: 0.02
+  maxVelocity: 0.1
+  minVelocity: -0.1
+  forceScale: 4
+  liniarBFDragCoefficient: 0.1
+  liniarBFAbgularDragCoefficient: 0.01
+  interactionRegion: 1
+  waterLineCurrentGlobalPos: {x: 0, y: 0, z: 0}
+  splashSound: {fileID: 8300000, guid: 887fc33bbbbf27a43801fabe470eacfd, type: 3}
+  playerBoundingBoxSize: {x: 1, y: 2}
+  playerBoundingBoxCenter: {x: 0, y: 0}
+  playerBuoyantForceScale: 1
+  showPolygon: 0
+  showForces: 0
+  neighborVertVelocityScale: 0.5
+  sineWaveVelocityScale: 0.05
+  overlapSphereRadius: 0.05
+  springSimulation: 1
+  topEdgeYOffset: 0
+  bottomEdgeYOffset: 0
+  leftEdgeXOffset: 0
+  rightEdgeXOffset: 0
+  particleSystemPosOffset: {x: 0, y: 0, z: 0}
+  particleSystemSortingLayerName: 44656661756c74
+  particleSystemOrderInLayer: 0
+  meshSegmentsPerWaterLineSegment: 4
+  showClippingPlolygon: 0
+  waterFlow: 0
+  flowAngle: 0
+  waterFlowForce: 5
+  useAngles: 0
+  waveAmplitude: 0.1
+  waveStretch: 1
+  wavePhaseOffset: 0.2
+  controlPointVelocity: 0
+  useControlPoints: 0
+  randomValues: 1
+  particleSystemSorting: 0
+--- !u!114 &114967774700250608
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1334916888399844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea03457dd2337d4eabc8643ca6a7a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitsPerUV: {x: 5.12, y: 20.48}
+  unitsPerUV2: {x: 1, y: 1}
+  xSegments: 74
+  zSegments: 1
+  width: 24.353558
+  height: 11.094166
+  pixelsPerUnit: 100
+  segmentsPerUnit: 3
+  verticalTiling: 1
+  showMesh: 1
+  createCollider: 1
+  colliderOffset: 0.5
+  handlesPosition:
+  - {x: 0, y: 5.5470824, z: 0}
+  - {x: 0, y: -5.5470834, z: 0}
+  - {x: -12.176779, y: -0.00000047683716, z: 0}
+  - {x: 12.176779, y: -0.00000047683716, z: 0}
+  curentWaterArea: 270.1824
+  use3DCollider: 0
+  boxColliderZOffset: 0.5
+  boxColliderZSize: 1
+  handleScale: 1
+  cubeWater: 0
+  zSize: 10
+  surfaceVertsCount: 150
+  waterHeight: 6
+  waterWidth: 10
+  useHandles: 1

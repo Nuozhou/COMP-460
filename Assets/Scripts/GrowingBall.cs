@@ -23,13 +23,14 @@ public class GrowingBall : MonoBehaviour {
 
 
 	public void Reset() {
+		gameObject.SetActive (true);
 		GetComponent<Rigidbody2D> ().simulated = false;
 		transform.position = originalPosition;
 	}
 		
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.transform.tag == "Player") {
-			Destroy (gameObject);
+			gameObject.SetActive (false);
 			if (coll.transform.name == "Human") {
 				coll.transform.GetComponent<Human> ().DamageHuman (40);
 			} 

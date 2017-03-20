@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Destroy(gameObject, 2);
+		Destroy(this.gameObject, 2);
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {

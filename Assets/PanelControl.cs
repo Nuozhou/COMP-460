@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PanelControl : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class PanelControl : MonoBehaviour {
 			transform.Find ("CrossImage").gameObject.SetActive (true);
 			transform.Find ("Text1").gameObject.SetActive (true);
 			transform.Find ("Text2").gameObject.SetActive (true);
+			EventSystem.current.SetSelectedGameObject (null);
+			EventSystem.current.SetSelectedGameObject (transform.Find("MainPanel").Find("LevelSelectionButton").gameObject);
 			activePanel = true;
 		}
 	}

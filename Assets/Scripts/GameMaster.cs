@@ -201,6 +201,7 @@ public class GameMaster : MonoBehaviour {
 			gm.timer.remainingTime = 30f;
 		}
 
+		yield return new WaitForSeconds (2f);
 		gameMessageText.GetComponent<Text>().text = "";
 		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
 	}
@@ -239,6 +240,8 @@ public class GameMaster : MonoBehaviour {
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
 		}
+
+		yield return new WaitForSeconds (2f);
 		gameMessageText.GetComponent<Text>().text = "";
 		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
 	}

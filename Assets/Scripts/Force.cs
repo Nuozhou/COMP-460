@@ -8,6 +8,7 @@ public class Force : MonoBehaviour {
 	public LayerMask grabMask;
 	public float throwForce = 50f;
 	public float grabRange = 5f;
+	public AudioClip throwClip;
 
 	public GameObject grabbedObject;
 	private float grabbedLocationOffsetX;
@@ -34,6 +35,7 @@ public class Force : MonoBehaviour {
 			if (isGrabbed && (grabbedObject.tag == "Throwable" || grabbedObject.tag == "Enemy")) {
 				isGrabbed = false;
 				grabbedObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (throwForce * Mathf.Cos (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad), throwForce * Mathf.Sin (arr.transform.FindChild ("ThrowArrow").eulerAngles.z * Mathf.Deg2Rad));
+				AudioSource.PlayClipAtPoint (throwClip, transform.position);
 				Destroy (arr);
 				GameMaster.CloseControlPanel ();
 			}

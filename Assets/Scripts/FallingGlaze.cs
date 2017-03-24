@@ -9,6 +9,7 @@ public class FallingGlaze : MonoBehaviour {
 	Rigidbody2D rb2d;
 	private Animator anim;
 	private bool isFalling = false;
+	public AudioClip iceClip;
 	// Use this for initialization
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -30,9 +31,11 @@ public class FallingGlaze : MonoBehaviour {
 			if (coll.gameObject.tag == "Player") {
 				target.GetComponent<Human> ().DamageHuman (20);
 				anim.SetBool ("Break", true);
+				AudioSource.PlayClipAtPoint (iceClip, transform.position);
 				StartCoroutine (WaitAndDestroy ());
 			} else {
 				anim.SetBool ("Break", true);
+				AudioSource.PlayClipAtPoint (iceClip, transform.position);
 				StartCoroutine (WaitAndDestroy ());
 			}
 		}

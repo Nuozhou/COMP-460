@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114073413614854928}
   - component: {fileID: 114844843293233328}
   - component: {fileID: 61071286518988014}
+  - component: {fileID: 82349097982547512}
   m_Layer: 9
   m_Name: Alien
   m_TagString: Player
@@ -130,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304448901671656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.9, y: 8.9, z: 3.1121}
+  m_LocalPosition: {x: -6.8, y: -3.6, z: 3.1121}
   m_LocalScale: {x: 0.19330418, y: 0.18922992, z: 0.28497154}
   m_Children:
   - {fileID: 4386984547108436}
@@ -171,6 +172,86 @@ BoxCollider2D:
   m_Offset: {x: -1.3385218, y: 1.56268}
   serializedVersion: 2
   m_Size: {x: 13.728082, y: 7.442644}
+--- !u!82 &82349097982547512
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304448901671656}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95106231274013098
 Animator:
   serializedVersion: 3
@@ -231,6 +312,7 @@ MonoBehaviour:
     m_Bits: 6400
   throwForce: 50
   grabRange: 5
+  throwClip: {fileID: 8300000, guid: d92b7fe8615334666b29055ebc87b070, type: 3}
   grabbedObject: {fileID: 0}
   arr: {fileID: 0}
 --- !u!114 &114844843293233328

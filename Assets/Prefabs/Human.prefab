@@ -199,7 +199,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1616293197499508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.4, y: 0.8, z: 0}
+  m_LocalPosition: {x: -14.8, y: -1.9, z: 0}
   m_LocalScale: {x: 0.2519149, y: 0.25191492, z: 0.25191492}
   m_Children:
   - {fileID: 4023804940646018}
@@ -463,7 +463,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -596,6 +596,7 @@ MonoBehaviour:
   repeatDamagePeriod: 2
   fallBoundary: -50
   attachedRope: {fileID: 0}
+  hurtClip: {fileID: 8300000, guid: 7767c3cd99f554c5daa919c030426de1, type: 3}
 --- !u!114 &114577605363925706
 MonoBehaviour:
   m_ObjectHideFlags: 1

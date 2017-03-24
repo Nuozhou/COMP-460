@@ -13,6 +13,7 @@ public class Human : MonoBehaviour {
 	public float repeatDamagePeriod = 2f;	
 	public int fallBoundary = -30;
 	public Transform attachedRope;
+	public AudioClip hurtClip;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
 
 	void Start() {
@@ -37,6 +38,7 @@ public class Human : MonoBehaviour {
 	}
 	public void DamageHuman(int damage) {
 		if (Time.time > lastHitTime + repeatDamagePeriod) {
+			AudioSource.PlayClipAtPoint (hurtClip, transform.position);
 			lastHitTime = Time.time;
 			health -= damage;
 			if (health < 0) {

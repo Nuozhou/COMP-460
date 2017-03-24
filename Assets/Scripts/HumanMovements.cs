@@ -13,7 +13,7 @@ public class HumanMovements : MonoBehaviour {
 	public AudioClip jumpStartClip;
 	public AudioClip jumpEndClip;
 	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	const float k_GroundedRadius = .3f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	public bool standingOnAlien;
 	public bool attachedToRope;

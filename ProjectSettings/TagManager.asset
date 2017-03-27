@@ -23,6 +23,8 @@ TagManager:
   - FallingIce
   - Rotatable
   - GrowBall
+  - Compressee
+  - IceFlower
   layers:
   - Default
   - TransparentFX

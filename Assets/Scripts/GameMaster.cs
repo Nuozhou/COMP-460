@@ -194,6 +194,10 @@ public class GameMaster : MonoBehaviour {
 				if (gm.resetObjects [i].tag == "GrowBall") {
 					gm.resetObjects [i].GetComponent<GrowingBall> ().Reset ();
 				}
+				if (gm.resetObjects [i].tag == "IceFlower") {
+					gm.resetObjects [i].GetComponent<ColliderReset> ().Reset ();
+				}
+					
 			}
 		}
 

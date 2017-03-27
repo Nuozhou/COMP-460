@@ -9,6 +9,7 @@ public class Alien : MonoBehaviour {
 	private SpriteRenderer healthBar;
 	private SpriteRenderer healthBarOutline;
 	public Vector3 healthScale;
+	public Vector3 originalLocalScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
@@ -18,6 +19,7 @@ public class Alien : MonoBehaviour {
 		healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
 		healthBarOutline = GameObject.Find("AlienHealthOutline").GetComponent<SpriteRenderer>();
 		healthScale = healthBar.transform.localScale;
+		originalLocalScale = transform.localScale;
 		UpdateHealthBar ();
 	}
 

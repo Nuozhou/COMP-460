@@ -46,10 +46,12 @@ public class Compresser : MonoBehaviour {
 		if (isVertical) {
 			if (human.position.y < upperObject.position.y && human.position.y > lowerObject.position.y) {
 				human.GetComponent<Human> ().DamageHuman (100);
+				human.localScale = new Vector3 (human.localScale.x, human.localScale.y * 0.3f, human.localScale.z);
 			}
 		} else {
 			if (human.position.x > upperObject.position.x && human.position.x < lowerObject.position.x) {
 				human.GetComponent<Human> ().DamageHuman (100);
+				human.localScale = new Vector3 (human.localScale.x * 0.3f, human.localScale.y, human.localScale.z);
 			}
 		}
 	}
@@ -58,12 +60,15 @@ public class Compresser : MonoBehaviour {
 		if (isVertical) {
 			if (alien.position.y < upperObject.position.y && alien.position.y > lowerObject.position.y) {
 				alien.GetComponent<Alien> ().DamageAlien (100);
+				alien.localScale = new Vector3 (alien.localScale.x, alien.localScale.y * 0.3f, alien.localScale.z);
 			}
 		} else {
 			if (alien.position.x > upperObject.position.x && alien.position.x < lowerObject.position.x) {
 				alien.GetComponent<Alien> ().DamageAlien (100);
+				alien.localScale = new Vector3 (alien.localScale.x * 0.3f, alien.localScale.y, alien.localScale.z);
 			}
 		}
 	}
+
 
 }

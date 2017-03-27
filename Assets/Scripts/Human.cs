@@ -8,6 +8,7 @@ public class Human : MonoBehaviour {
 	public int health = 100;
 	private SpriteRenderer healthBar;
 	private SpriteRenderer healthBarOutline;
+	public Vector3 originalLocalScale;
 	public Vector3 healthScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;	
@@ -21,6 +22,7 @@ public class Human : MonoBehaviour {
 		healthBar = GameObject.Find("HumanHealth").GetComponent<SpriteRenderer>();
 		healthBarOutline = GameObject.Find("HumanHealthOutline").GetComponent<SpriteRenderer>();
 		healthScale = healthBar.transform.localScale;
+		originalLocalScale = transform.localScale;
 		UpdateHealthBar ();
 	}
 

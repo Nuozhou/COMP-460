@@ -176,10 +176,14 @@ public class GameMaster : MonoBehaviour {
 
 
 		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
-		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
-			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		if (human.attachedRope != null) {
+			human.attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
 		}
-		GameObject.Find ("Human").GetComponent<HumanMovements> ().attachedToRope = false;
+		human.gameObject.GetComponent<HumanMovements> ().attachedToRope = false;
+		if (!human.gameObject.GetComponent<HumanMovements> ().m_FacingRight) {
+			human.gameObject.GetComponent<HumanMovements> ().Flip ();
+		}
+		human.gameObject.transform.localScale = human.originalLocalScale;
 		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 
 		human.health = 50;
@@ -201,7 +205,7 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 
-		GameObject.Find ("Human").GetComponent<Animator> ().SetBool ("UseRope", false);
+		human.gameObject.GetComponent<Animator> ().SetBool ("UseRope", false);
 
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;
@@ -220,11 +224,16 @@ public class GameMaster : MonoBehaviour {
 		gameMessageText.GetComponent<Text>().text = "You Died!!";
 		yield return new WaitForSeconds (3f);
 
-		GameObject.Find("Human").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
-		if (GameObject.Find ("Human").GetComponent<Human> ().attachedRope != null) {
-			GameObject.Find ("Human").GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
+		GameObject humanObject = GameObject.Find("Human");
+		humanObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
+		if (humanObject.GetComponent<Human> ().attachedRope != null) {
+			humanObject.GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
 		}
-		GameObject.Find ("Human").GetComponent<HumanMovements> ().attachedToRope = false;
+		humanObject.GetComponent<HumanMovements> ().attachedToRope = false;
+		if (!alien.gameObject.GetComponent<AlienMovements> ().m_FacingRight) {
+			alien.gameObject.GetComponent<AlienMovements> ().Flip ();
+		}
+		alien.gameObject.transform.localScale = alien.originalLocalScale;
 		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		alien.health = 50;
 		SpriteRenderer healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
@@ -241,7 +250,7 @@ public class GameMaster : MonoBehaviour {
 			}
 		}
 
-		GameObject.Find ("Human").GetComponent<Animator> ().SetBool ("UseRope", false);
+		humanObject.GetComponent<Animator> ().SetBool ("UseRope", false);
 
 		if (gm.timer != null && Timer.elevatorBrokenTimer == true) {
 			gm.timer.remainingTime = 30f;

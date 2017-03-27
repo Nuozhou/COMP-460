@@ -5516,7 +5516,7 @@ MonoBehaviour:
   - {fileID: 1051457831}
   currentPath: 0
   reachDistance: 1
-  speed: 100
+  speed: 200
   enable: 1
 --- !u!1 &946582808
 GameObject:

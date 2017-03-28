@@ -7,19 +7,19 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IceDemo.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LavaScene1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Ice2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Laser.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SwingLevel.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/BossLevel.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GravityRotation.unity
   - enabled: 1
     path: Assets/Scenes/TutorialLevel.unity

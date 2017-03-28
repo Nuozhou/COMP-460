@@ -152,6 +152,7 @@ public class GameMaster : MonoBehaviour {
 			} else {
 				GameObject textObject = Instantiate (GameMaster.gm.textPrefab, controlPanel.transform, false);
 				textObject.GetComponent<Text> ().text = textArray [i];
+				textObject.GetComponent<Text> ().color = Color.white;
 			}
 
 		}

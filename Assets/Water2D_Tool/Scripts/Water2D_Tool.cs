@@ -156,6 +156,8 @@ namespace Water2DTool
         /// </summary>
         public void RecreateWaterMesh()
         {
+
+			Debug.Log ("Entered Recreate WaterMesh");
             DMesh.Clear();
 
             SetMaterial();
@@ -211,6 +213,7 @@ namespace Water2DTool
         /// </summary>
         public void UpdateCollider2D()
         {
+			Debug.Log ("Entered UpdateCollider2D");
             if (!createCollider)
             {
                 if (GetComponent<BoxCollider2D>() != null)

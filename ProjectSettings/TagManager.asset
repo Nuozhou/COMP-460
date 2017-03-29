@@ -25,6 +25,7 @@ TagManager:
   - GrowBall
   - Compressee
   - IceFlower
+  - Ignore
   layers:
   - Default
   - TransparentFX

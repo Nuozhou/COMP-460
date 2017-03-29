@@ -2810,14 +2810,14 @@ namespace Water2DTool
             {
                 // This makes sure only the first collider with the "Player" tag 
                 // that is detected is added to the floatingObjects list.
-                if (other.tag == "Player" && onTriggerPlayerDetected)
-                    return;
+                //if (other.tag == "Player" && onTriggerPlayerDetected)
+                //    return;
 
                 floatingObjects2D.Add(other);
                 tempObj2D.Add(other);
 
-                if (other.tag == "Player" && !onTriggerPlayerDetected)
-                    onTriggerPlayerDetected = true;
+                //if (other.tag == "Player" && !onTriggerPlayerDetected)
+                //    onTriggerPlayerDetected = true;
             }
         }
 

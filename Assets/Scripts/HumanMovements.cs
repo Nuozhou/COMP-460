@@ -12,6 +12,7 @@ public class HumanMovements : MonoBehaviour {
 
 	public AudioClip jumpStartClip;
 	public AudioClip jumpEndClip;
+	public AudioClip ropeSwingClip;
 	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
 	const float k_GroundedRadius = .3f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
@@ -25,6 +26,7 @@ public class HumanMovements : MonoBehaviour {
 	private Camera camera;
 	private float cameraHeight;
 	private float cameraWidth;
+	private bool jumped = false;
 
 	private void Awake()
 	{
@@ -37,6 +39,27 @@ public class HumanMovements : MonoBehaviour {
 		attachedToRope = false;
 		cameraHeight = camera.orthographicSize * 2f;
 		cameraWidth = cameraHeight * camera.aspect;
+	}
+
+	private void Update() {
+		/*
+		Debug.Log ("grounded: " + m_Grounded);
+		Debug.Log ("Jumped:" + jumped);
+		if (jumped && m_Grounded) {
+			GetComponent<AudioSource> ().clip = jumpEndClip;
+			GetComponent<AudioSource> ().Play ();
+			Debug.Log ("played jump end sound");
+			jumped = false;
+		}
+		*/
+		/*
+		if (jumped && m_Grounded) {
+			Debug.Log ("played jump end sound");
+			GetComponent<AudioSource> ().clip = jumpEndClip;
+			GetComponent<AudioSource> ().Play ();
+			jumped = false;
+		}
+		*/
 	}
 
 
@@ -59,6 +82,7 @@ public class HumanMovements : MonoBehaviour {
 				m_Grounded = true;
 			}
 		}
+			
 		m_Anim.SetBool("Ground", m_Grounded);
 
 		// Set the vertical animation
@@ -99,8 +123,13 @@ public class HumanMovements : MonoBehaviour {
 		m_Anim.SetBool("Crouch", crouch);
 
 		if (attachedToRope) {
+			//Debug.Log ("Rope move");
 			m_Anim.SetFloat("Speed", Mathf.Abs(move));
 			m_Rigidbody2D.AddForce (new Vector2 (1.5f * move * m_MaxSpeed, 0f));
+			if (!GetComponent<AudioSource> ().isPlaying && m_Rigidbody2D.velocity.x > 9f) {
+				GetComponent<AudioSource> ().clip = ropeSwingClip;
+				GetComponent<AudioSource> ().Play ();
+			}
 
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
@@ -154,8 +183,10 @@ public class HumanMovements : MonoBehaviour {
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;
+			jumped = true;
 			m_Anim.SetBool("Ground", false);
-			AudioSource.PlayClipAtPoint(jumpStartClip, transform.position);
+			GetComponent<AudioSource> ().clip = jumpStartClip;
+			GetComponent<AudioSource> ().Play ();
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 			if (standingOnAlien) {
 				standingOnAlien = false;

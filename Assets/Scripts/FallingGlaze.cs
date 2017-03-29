@@ -29,7 +29,11 @@ public class FallingGlaze : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (isFalling) {
 			if (coll.gameObject.tag == "Player") {
-				target.GetComponent<Human> ().DamageHuman (20);
+				if (coll.gameObject.name == "Human") {
+					coll.gameObject.GetComponent<Human> ().DamageHuman (20);
+				} else if (coll.gameObject.name == "Alien") {
+					coll.gameObject.GetComponent<Alien> ().DamageAlien (20);
+				}
 				anim.SetBool ("Break", true);
 				AudioSource.PlayClipAtPoint (iceClip, transform.position);
 				StartCoroutine (WaitAndDestroy ());

@@ -15,7 +15,9 @@ public class Human : MonoBehaviour {
 	public int fallBoundary = -30;
 	public Transform attachedRope;
 	public AudioClip hurtClip;
+	public AudioClip deathClip;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
+	public bool humanDead = false;
 
 	void Start() {
 		health = 100;
@@ -27,7 +29,7 @@ public class Human : MonoBehaviour {
 	}
 
 	void Update() {
-		if (transform.position.y <= fallBoundary)
+		if (transform.position.y <= fallBoundary && !humanDead)
 			DamageHuman(health);
 	}
 
@@ -40,14 +42,20 @@ public class Human : MonoBehaviour {
 	}
 	public void DamageHuman(int damage) {
 		if (Time.time > lastHitTime + repeatDamagePeriod) {
-			AudioSource.PlayClipAtPoint (hurtClip, transform.position);
+			if (!humanDead) {
+				GetComponent<AudioSource> ().clip = hurtClip;
+				GetComponent<AudioSource> ().Play ();
+			}
 			lastHitTime = Time.time;
 			health -= damage;
 			if (health < 0) {
 				health = 0;
 			}
 			UpdateHealthBar ();
-			if (health <= 0) {
+			if (health <= 0 && !humanDead) {
+				humanDead = true;
+				GetComponent<AudioSource>().clip = deathClip;
+				GetComponent<AudioSource> ().Play ();
 				StartCoroutine(GameMaster.KillHuman(this));
 			}
 		}

@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1304448901671656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.8, y: -3.6, z: 3.1121}
+  m_LocalPosition: {x: -100.72623, y: -13.402153, z: 0}
   m_LocalScale: {x: 0.19330418, y: 0.18922992, z: 0.28497154}
   m_Children:
   - {fileID: 4386984547108436}
@@ -182,7 +182,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -293,7 +293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   healthScale: {x: 0, y: 0, z: 0}
+  originalLocalScale: {x: 0, y: 0, z: 0}
   repeatDamagePeriod: 2
+  deathClip: {fileID: 8300000, guid: 3d1bc570563c64f699186ef350f1eddb, type: 3}
 --- !u!114 &114627816520187690
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,7 +314,8 @@ MonoBehaviour:
     m_Bits: 6400
   throwForce: 50
   grabRange: 5
-  throwClip: {fileID: 8300000, guid: d92b7fe8615334666b29055ebc87b070, type: 3}
+  grabClip: {fileID: 8300000, guid: cf9bc115c05f849c0b1ebbbb3c5d3b4f, type: 3}
+  throwClip: {fileID: 8300000, guid: ebf07d6df041448b99b9bcf4a0ff6761, type: 3}
   grabbedObject: {fileID: 0}
   arr: {fileID: 0}
 --- !u!114 &114844843293233328

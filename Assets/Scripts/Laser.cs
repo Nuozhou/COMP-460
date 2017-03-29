@@ -12,6 +12,7 @@ public class Laser : MonoBehaviour {
 	public Vector2 laserDirection = new Vector2(0, - 90);
 	private bool reflected = false;
 	public GameObject reflectedLaser;
+	public AudioClip iceBreakClip;
 
 	void Start() {
 		line = transform.GetComponent<LineRenderer> ();
@@ -64,6 +65,7 @@ public class Laser : MonoBehaviour {
 				}
 			} else if (hit.collider.tag == "LaserTarget") {
 				Destroy (hit.transform.gameObject);
+				GetComponent<AudioSource> ().Play ();
 			}
 		}
 	}

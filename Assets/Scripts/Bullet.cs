@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour {
 		} else if (col.tag == "Boss") {
 			col.gameObject.GetComponent<BossAI> ().Damage (damage);
 			Destroy (gameObject);
-		}
+		} 
 	}
 
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Parallaxing : MonoBehaviour {
 
-	public Transform[] backgroundObjects;
-	private float[] scales; 
+	public List<Transform> backgroundObjects;
+	public List<float> scales; 
 	public float smoothing;
 
 	private Transform cam;
@@ -19,16 +19,16 @@ public class Parallaxing : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		previousCameraPosition = cam.position;
-		scales = new float[backgroundObjects.Length];
-		for (int i = 0; i < backgroundObjects.Length; i++) {
-			scales [i] = backgroundObjects [i].position.z * (-1);
+		scales = new List<float>();
+		for (int i = 0; i < backgroundObjects.Count; i++) {
+			scales.Add(backgroundObjects [i].position.z * (-1));
 		}
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		for (int i = 0; i < backgroundObjects.Length; i++) {
+		for (int i = 0; i < backgroundObjects.Count; i++) {
 			float parallax1 = (previousCameraPosition.x - cam.position.x) * scales [i];
 			float parallax2 = (previousCameraPosition.y - cam.position.y) * scales [i];
 			float targetPositionX = backgroundObjects [i].position.x + parallax1;

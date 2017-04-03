@@ -29,13 +29,18 @@ public class GameMaster : MonoBehaviour {
 	public GameObject OptionPrefab;
 	public GameObject textPrefab;
 
-	[Serializable]
-	class PlayerData
-	{
-		public int humanHealth;
-		public int alienHealth;
-		public int sceneId;
-		public Transform SavePoint;
+
+	void Awake() {
+		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+			SaveAndLoad.PlayerData data = (SaveAndLoad.PlayerData) bf.Deserialize (file);
+			file.Close ();
+			if (data.sceneId == SceneManager.GetActiveScene ().buildIndex) {
+				GameObject.Find ("Human").transform.position = new Vector3 (data.SavePointX, data.SavePointY + 1f, data.SavePointZ);
+				GameObject.Find ("Alien").transform.position = new Vector3 (data.SavePointX, data.SavePointY + 3f, data.SavePointZ);
+			}
+		}
 	}
 
 	void Start() {
@@ -261,29 +266,5 @@ public class GameMaster : MonoBehaviour {
 		yield return new WaitForSeconds (2f);
 		gameMessageText.GetComponent<Text>().text = "";
 		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
-	}
-
-
-	public static void Save() {
-		BinaryFormatter bf = new BinaryFormatter ();
-		FileStream file = File.Create (Application.persistentDataPath + "/playerInfo.dat");
-		PlayerData data = new PlayerData ();
-		data.humanHealth = GameObject.Find ("Human").GetComponent<Human> ().health;
-		data.alienHealth = GameObject.Find ("Alien").GetComponent<Alien> ().health;
-		data.sceneId = SceneManager.GetActiveScene ().buildIndex;
-		data.SavePoint = gm.SavePoint;
-		bf.Serialize (file, data);
-		file.Close ();
-
-	}
-
-	public static void Load() {
-		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
-			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
-			PlayerData data = (PlayerData) bf.Deserialize (file);
-			SceneManager.LoadScene (data.sceneId);
-			file.Close ();
-		}
 	}
 }

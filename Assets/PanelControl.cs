@@ -15,7 +15,7 @@ public class PanelControl : MonoBehaviour {
 			transform.Find ("Text1").gameObject.SetActive (true);
 			transform.Find ("Text2").gameObject.SetActive (true);
 			EventSystem.current.SetSelectedGameObject (null);
-			EventSystem.current.SetSelectedGameObject (transform.Find("MainPanel").Find("LevelSelectionButton").gameObject);
+			EventSystem.current.SetSelectedGameObject (transform.Find("MainPanel").Find("NewGameButton").gameObject);
 			activePanel = true;
 		}
 	}

@@ -40,8 +40,9 @@ GameObject:
   - component: {fileID: 114518878849291336}
   - component: {fileID: 114154399048804140}
   - component: {fileID: 114722744258813486}
+  - component: {fileID: 114162311379755116}
   m_Layer: 5
-  m_Name: Button
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,6 +110,7 @@ GameObject:
   - component: {fileID: 224282951732137650}
   - component: {fileID: 222374336001993810}
   - component: {fileID: 114114700070780284}
+  - component: {fileID: 114029529547601352}
   m_Layer: 5
   m_Name: GameMenu
   m_TagString: Untagged
@@ -169,6 +171,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114029529547601352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1630676385761298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a624a8062894babb4f38102ee2f5f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114059920099527790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -339,8 +352,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114162311379755116}
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114162311379755116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1102784507153884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cad7500174617469db2b61d222f6a383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savePointX: 0
+  savePointY: 0
+  savePointZ: 0
 --- !u!114 &114218598139716196
 MonoBehaviour:
   m_ObjectHideFlags: 1

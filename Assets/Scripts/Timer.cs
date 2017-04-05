@@ -12,20 +12,23 @@ public class Timer : MonoBehaviour {
 		if (elevatorBrokenTimer) {
 			StartCoroutine (elevatorSurvival ());
 			remainingTime -= Time.deltaTime;
-			GameMessage.textMessage.text = Mathf.Floor (remainingTime % 60).ToString () + " seconds";
-			GameMessage.textMessage.enabled = true;
+			Debug.Log ("Print time messsage");
+			GameMaster.ShowControlMessage ("Survive: " + Mathf.Floor (remainingTime % 60).ToString () + " seconds");
+			//GameMessage.textMessage.text = Mathf.Floor (remainingTime % 60).ToString () + " seconds";
+			//GameMessage.textMessage.enabled = true;
 			if (Mathf.Floor (remainingTime % 60) == 0f) {
 				elevatorBrokenTimer = false;
 				remainingTime = 30f;
-				GameMessage.textMessage.text = "";
-				GameMessage.textMessage.enabled = false;
+				GameMaster.CloseControlPanel ();
+				//GameMessage.textMessage.text = "";
+				//GameMessage.textMessage.enabled = false;
 			}
 		}
 	}
 
 	public IEnumerator elevatorSurvival() {
 		yield return new WaitForSeconds(30);
-		GameObject.Find ("platform").GetComponent<Elevator> ().broken = false;
+		GameObject.FindGameObjectWithTag("Elevator").GetComponent<Elevator> ().broken = false;
 	}
 
 

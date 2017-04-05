@@ -36,11 +36,11 @@ public class Elevator : MonoBehaviour {
 	}
 
 	public void StartElevatorUp() {
-		m_Rigidbody2D.velocity = new Vector2 (0f, 1f);
+		m_Rigidbody2D.velocity = new Vector2 (0f, 2f);
 	}
 
 	public void StartElevatorDown() {
-		m_Rigidbody2D.velocity = new Vector2 (0f, -1f);
+		m_Rigidbody2D.velocity = new Vector2 (0f, -2f);
 	}
 
 	public void SwitchDirection() {

@@ -104,9 +104,9 @@ public class GameMaster : MonoBehaviour {
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
 		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
-		if (!controlPanel.activeInHierarchy) {
-			dialogPanel.SetActive (true);
-		}
+		//if (!controlPanel.activeInHierarchy) {
+		//	dialogPanel.SetActive (true);
+		//}
 		GameObject dialogText = dialogPanel.transform.Find ("DialogText").gameObject;
 		dialogText.GetComponent<Text> ().text = message;
 	}
@@ -125,9 +125,9 @@ public class GameMaster : MonoBehaviour {
 			GameObject.Destroy(child.gameObject);
 		}
 
-		if (!dialogPanel.activeInHierarchy) {
-			controlPanel.SetActive (true);
-		}
+		//if (!dialogPanel.activeInHierarchy) {
+		//	controlPanel.SetActive (true);
+		//}
 		char[] delimiterChars = {' '};
 		string[] textArray = message.Split (delimiterChars);
 

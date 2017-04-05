@@ -13,7 +13,7 @@ public class TriggerMaxDistChange : MonoBehaviour {
 
 	void Update() {
 		for (int i = 0; i < compresserObjects.Length; i++) {
-			compresserObjects [i].GetComponent<Compresser> ().maxDistance = compresserObjects [i].GetComponent<Compresser> ().originalMaxDistance + (transform.position.x - originalX);
+			compresserObjects [i].GetComponent<Compresser> ().maxDistance = compresserObjects [i].GetComponent<Compresser> ().originalMaxDistance + (transform.position.x - originalX) * 2f;
 		}
 	}
 }

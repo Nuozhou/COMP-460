@@ -19,15 +19,17 @@ public class Bubble : MonoBehaviour {
 		}
 		Collider2D coll = water.gameObject.GetComponent<BoxCollider2D>();
 		center = coll.bounds.center;
-		height = coll.bounds.size.y-2;
-		width = coll.bounds.size.x-2;
+		height = coll.bounds.size.y;
+		width = coll.bounds.size.x;
 
 		InvokeRepeating ("generateRandomBubble", 0f, 2f);
 	}
 
 	void generateRandomBubble() {
-		Vector3 pos = new Vector3 (Random.Range (center.x-width/2, center.x+width/2), Random.Range (center.y-height/2, center.y+height/2), center.z);
+		Vector3 pos = new Vector3 (Random.Range (center.x-width/2+1, center.x+width/2-1), Random.Range (center.y-height/2, center.y+height/2-10), center.z);
 		GameObject bubbleSpawn = Instantiate (bubble, pos, Quaternion.Euler(270, 0, 0));
+
+
 		StartCoroutine (deleteBubble (bubbleSpawn));
 	}
 

@@ -13,13 +13,13 @@ public class Timer : MonoBehaviour {
 			StartCoroutine (elevatorSurvival ());
 			remainingTime -= Time.deltaTime;
 			Debug.Log ("Print time messsage");
-			GameMaster.ShowControlMessage ("Survive: " + Mathf.Floor (remainingTime % 60).ToString () + " seconds");
+			GameMaster.ShowTimerMessage ("Survive: " + Mathf.Floor (remainingTime % 60).ToString () + " seconds");
 			//GameMessage.textMessage.text = Mathf.Floor (remainingTime % 60).ToString () + " seconds";
 			//GameMessage.textMessage.enabled = true;
 			if (Mathf.Floor (remainingTime % 60) == 0f) {
 				elevatorBrokenTimer = false;
 				remainingTime = 30f;
-				GameMaster.CloseControlPanel ();
+				GameMaster.CloseTimerMessage ();
 				//GameMessage.textMessage.text = "";
 				//GameMessage.textMessage.enabled = false;
 			}

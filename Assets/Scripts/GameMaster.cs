@@ -100,6 +100,18 @@ public class GameMaster : MonoBehaviour {
 		//enable the scripts again
 	}
 
+	public static void ShowTimerMessage(string message) {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject timerMessageText = UICanvas.transform.Find ("TimerText").gameObject;
+		timerMessageText.GetComponent<Text> ().text = message;
+	}
+
+	public static void CloseTimerMessage() {
+		GameObject UICanvas = GameObject.Find ("UICanvas");
+		GameObject timerMessageText = UICanvas.transform.Find ("TimerText").gameObject;
+		timerMessageText.GetComponent<Text> ().text = "";
+	}
+
 	public static void ShowDialogMessage(string message) {
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;

@@ -27,7 +27,7 @@ public class Bubble : MonoBehaviour {
 
 	void generateRandomBubble() {
 		Vector3 pos = new Vector3 (Random.Range (center.x-width/2, center.x+width/2), Random.Range (center.y-height/2, center.y+height/2), center.z);
-		GameObject bubbleSpawn = Instantiate (bubble, pos, Quaternion.identity);
+		GameObject bubbleSpawn = Instantiate (bubble, pos, Quaternion.Euler(270, 0, 0));
 		StartCoroutine (deleteBubble (bubbleSpawn));
 	}
 

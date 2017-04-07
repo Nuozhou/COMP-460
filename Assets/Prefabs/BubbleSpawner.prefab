@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198932359580547326}
   - component: {fileID: 199810025512612084}
   m_Layer: 8
-  m_Name: Particle System
+  m_Name: BubbleSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,13 +34,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1641917040113234}
-  m_LocalRotation: {x: -0.6379935, y: -0.35263667, z: -0.31092888, w: 0.60986465}
-  m_LocalPosition: {x: 139.9, y: -15.3, z: 2.1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalPosition: {x: 103.76529, y: -17.958609, z: 2.1}
   m_LocalScale: {x: 1, y: 1.6131033, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -85.923004, y: -151.99901, z: 95.994}
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!198 &198932359580547326
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -96,7 +96,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -476921937
+  randomSeed: 1999550163
   InitialModule:
     serializedVersion: 3
     enabled: 1

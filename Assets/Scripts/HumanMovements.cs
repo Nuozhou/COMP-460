@@ -102,7 +102,7 @@ public class HumanMovements : MonoBehaviour {
 	}
 
 
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool crouch, bool jump, bool triangle)
 	{
 		// If crouching, check to see if the character can stand up
 		/*
@@ -192,6 +192,16 @@ public class HumanMovements : MonoBehaviour {
 				standingOnAlien = false;
 			}
 		}
+
+		/*
+		if (Physics2D.gravity.y >= -2f && jump) {
+			m_Rigidbody2D.AddForce(new Vector2(0f, -0.2f * m_JumpForce));
+		}
+
+		if (Physics2D.gravity.y >= -2f && triangle) {
+			m_Rigidbody2D.AddForce(new Vector2(0f, 0.2f * m_JumpForce));
+		}
+		*/
 	}
 
 

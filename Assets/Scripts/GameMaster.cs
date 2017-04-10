@@ -71,17 +71,22 @@ public class GameMaster : MonoBehaviour {
 	void LateUpdate() {
 		float placingX = -230f;
 		float spacing = 10f;
+		float totalSize = 0f;
 
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
 		if (controlPanel.transform.childCount > 0) {
+			foreach (Transform child in controlPanel.transform) { 
+				totalSize += child.GetComponent<RectTransform> ().sizeDelta.x + spacing;
+			}
+			placingX = -totalSize / 2f;
 			foreach (Transform child in controlPanel.transform) {
 				child.GetComponent<RectTransform> ().anchoredPosition = new Vector2 (placingX + child.GetComponent<RectTransform> ().sizeDelta.x /2f, 0f);
 				//Debug.Log ("sizeDelta: " + textObject.GetComponent<RectTransform> ().sizeDelta);
 				//Debug.Log ("rectWidth: " + textObject.GetComponent<RectTransform> ().rect.width);
 				placingX += child.GetComponent<RectTransform> ().sizeDelta.x + spacing;
 			}
-		} 
+		}
 	}
 
 	public void PauseGame()
@@ -116,6 +121,7 @@ public class GameMaster : MonoBehaviour {
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
 		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
+		dialogPanel.SetActive (true);
 		//if (!controlPanel.activeInHierarchy) {
 		//	dialogPanel.SetActive (true);
 		//}
@@ -136,6 +142,8 @@ public class GameMaster : MonoBehaviour {
 		foreach (Transform child in controlPanel.transform) {
 			GameObject.Destroy(child.gameObject);
 		}
+
+		controlPanel.SetActive (true);
 
 		//if (!dialogPanel.activeInHierarchy) {
 		//	controlPanel.SetActive (true);

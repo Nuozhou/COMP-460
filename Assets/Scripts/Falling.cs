@@ -32,6 +32,10 @@ public class Falling : MonoBehaviour {
 		*/
 		if (startFalling) {
 			StartCoroutine (Fall ());
+		} else {
+			rb2d.gravityScale = 0f;
+			rb2d.velocity = Vector2.zero;
+			transform.position = originalPosition;
 		}
 
 	}

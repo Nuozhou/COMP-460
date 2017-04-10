@@ -1040,6 +1040,48 @@ PolygonCollider2D:
       - {x: 12.925, y: -8.078125}
       - {x: 12.925, y: -3.4963136}
       - {x: 12.571582, y: -3.4963136}
+--- !u!1 &220293044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 220293046}
+  - component: {fileID: 220293045}
+  m_Layer: 0
+  m_Name: bubblespawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &220293045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 220293044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7624b0b0a4f364ef59e9cf323554efc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 0}
+  bubble: {fileID: 1641917040113234, guid: bb1f74ed954d24a8f87c1e67198f6d79, type: 2}
+--- !u!4 &220293046
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 220293044}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 411.3, y: 6.6, z: 0}
+  m_LocalScale: {x: 14.735518, y: 15.020365, z: 4.791857}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 87
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322539254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,7 +4344,7 @@ GameObject:
   - component: {fileID: 1080798002}
   m_Layer: 0
   m_Name: New Water2D
-  m_TagString: Untagged
+  m_TagString: Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5503,11 +5545,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 307
+      value: -116.9
       objectReference: {fileID: 0}
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 27.7
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7348,11 +7390,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 307
+      value: -116.9
       objectReference: {fileID: 0}
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 22.7
+      value: -5.8
       objectReference: {fileID: 0}
     - target: {fileID: 4069049102796952, guid: df2cb797307fb42e68efe0c2045a94d0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8668,7 +8710,7 @@ MonoBehaviour:
   upperObject: {fileID: 2064640407}
   lowerObject: {fileID: 1952646601}
   maxDistance: 0
-  moveSpeed: 0.15
+  moveSpeed: 0.13
   moveDirection: 0
   originalMaxDistance: 0
   distance: 0
@@ -11510,7 +11552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6837221d921402aa5f1662e8634734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageLine1: 'Human: The pillar out there might help with this trap.'
+  messageLine1: 'Human: The pillar might help with this trap.'
   messageLine2: 
   messageLine3: 
 --- !u!61 &2049334074
@@ -11569,8 +11611,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2049334072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.3, y: 7.5, z: 0}
-  m_LocalScale: {x: 22.303808, y: 17.547003, z: 4.791857}
+  m_LocalPosition: {x: 88, y: 5.9, z: 0}
+  m_LocalScale: {x: 9.492559, y: 15.002399, z: 3.2016404}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 73

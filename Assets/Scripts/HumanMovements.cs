@@ -14,7 +14,7 @@ public class HumanMovements : MonoBehaviour {
 	public AudioClip jumpEndClip;
 	public AudioClip ropeSwingClip;
 	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-	const float k_GroundedRadius = .3f; // Radius of the overlap circle to determine if grounded
+	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	public bool standingOnAlien;
 	public bool attachedToRope;
@@ -193,7 +193,7 @@ public class HumanMovements : MonoBehaviour {
 			}
 		}
 
-		/*
+
 		if (Physics2D.gravity.y >= -2f && jump) {
 			m_Rigidbody2D.AddForce(new Vector2(0f, -0.2f * m_JumpForce));
 		}
@@ -201,7 +201,7 @@ public class HumanMovements : MonoBehaviour {
 		if (Physics2D.gravity.y >= -2f && triangle) {
 			m_Rigidbody2D.AddForce(new Vector2(0f, 0.2f * m_JumpForce));
 		}
-		*/
+
 	}
 
 

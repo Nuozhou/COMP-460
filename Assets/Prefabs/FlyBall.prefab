@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114619710756638482}
   - component: {fileID: 114424124637692196}
   - component: {fileID: 114421923624238560}
-  - component: {fileID: 114397508861931728}
+  - component: {fileID: 114233024293158864}
   m_Layer: 12
   m_Name: FlyBall
   m_TagString: Enemy
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 1, z: 0}
   player: {fileID: 4635533757654474}
---- !u!114 &114397508861931728
+--- !u!114 &114233024293158864
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -302,7 +302,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6027f8908bb4d1597e1aa841fb9223, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: {fileID: 0}
 --- !u!114 &114421923624238560
 MonoBehaviour:
   m_ObjectHideFlags: 1

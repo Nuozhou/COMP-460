@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour {
 
-	public int damage = 10;
+	public int damage = 30;
 
 	// Use this for initialization
 	void Start () {
-		Destroy(gameObject, 2);
+		Destroy(gameObject, 3);
 	}
 
 	void OnTriggerEnter2D (Collider2D col) {

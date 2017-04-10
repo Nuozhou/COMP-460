@@ -8,9 +8,9 @@ public class ElevatorBreakArea : MonoBehaviour {
 		if (col.tag == "Elevator" && used == false) {
 			// ... find the Enemy script and call the Hurt function.
 			col.gameObject.transform.root.GetComponent<Elevator>().broken = true;
-			Timer.elevatorBrokenTimer = true;
+			//Timer.elevatorBrokenTimer = true;
 			GameMaster.gm.SavePoint = transform;
-			Debug.Log (GameMaster.gm.SavePoint.position);
+			//Debug.Log (GameMaster.gm.SavePoint.position);
 			// Destroy the rocket.
 			used = true;
 		}

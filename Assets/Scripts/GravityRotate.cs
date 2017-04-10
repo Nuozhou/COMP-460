@@ -6,7 +6,6 @@ public class GravityRotate : MonoBehaviour {
 	//public GameObject center;
 	GameObject[] allObjects;
 	List<Transform> rotateObjects = new List<Transform>();
-	List<Transform> reverseRotateObjects = new List<Transform> ();
 	public float speed = 5f; 
 	private Vector3 zAxis = new Vector3(0, 0, 1);
 
@@ -14,11 +13,7 @@ public class GravityRotate : MonoBehaviour {
 	void Start () {
 		allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
 		foreach (GameObject obj in allObjects) {
-			if (obj.tag == "RotatePlane") {
-				rotateObjects.Add (obj.transform);
-			} else if (obj.tag == "ReverseRotatePlane") {
-				reverseRotateObjects.Add (obj.transform);
-			}
+			rotateObjects.Add (obj.transform);
 		}
 
 	}
@@ -26,11 +21,11 @@ public class GravityRotate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		foreach (Transform trans in rotateObjects) {
-			trans.RotateAround (transform.position, zAxis, speed * Time.deltaTime);
-		}
-
-		foreach (Transform trans in reverseRotateObjects) {
-			trans.RotateAround (transform.position, zAxis, -speed * Time.deltaTime);
+			if (trans.tag == "RotatePlane") {
+				trans.RotateAround (transform.position, zAxis, speed * Time.deltaTime);
+			} else if (trans.tag == "ReverseRotatePlane") {
+				trans.RotateAround (transform.position, zAxis, -speed * Time.deltaTime);
+			}
 		}
 	}
 }

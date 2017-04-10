@@ -17,21 +17,35 @@ public class Camera2Person : MonoBehaviour {
 	private Vector3 lookAheadPos;
 
 	void Start() {
-		lastCenterPosition = (target1.position + target2.position) * 0.5f;
+		if (target2 == null) {
+			lastCenterPosition = target1.position;
+		} else {
+			lastCenterPosition = (target1.position + target2.position) * 0.5f;
+		}
 		m_OffsetZ = (transform.position - lastCenterPosition).z;
 		transform.parent = null;
 	}
 
 	void SetCameraPos() {
-		Vector3 middle = new Vector3 ((target1.position.x + target2.position.x) * 0.5f, 
-			                 (target1.position.y + target2.position.y) * 0.5f, 0);
+		Vector3 middle;
+		if (target2 == null) {
+			middle = target1.position;
+		} else {
+			middle = new Vector3 ((target1.position.x + target2.position.x) * 0.5f, 
+				                (target1.position.y + target2.position.y) * 0.5f, 0);
+		}
 
 		transform.position = new Vector3(middle.x, middle.y, transform.position.z);
 	}
 		
 	void Update() {
 		// only update lookahead pos if accelerating or changed direction
-		Vector3 centerPosition = (target1.position + target2.position) * 0.5f;
+		Vector3 centerPosition;
+		if (target2 == null) {
+			centerPosition = target1.position;
+		} else {
+			centerPosition = (target1.position + target2.position) * 0.5f;
+		}
 		float xMoveDelta = (centerPosition - lastCenterPosition).x;
 
 		bool updateLookAheadTarget = Mathf.Abs(xMoveDelta) > lookAheadMoveThreshold;

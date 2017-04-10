@@ -91,7 +91,7 @@ public class Human : MonoBehaviour {
 			// ... and if the time exceeds the time of the last hit plus the time between hits...
 			DamageHuman (10);
 		} else if (col.gameObject.tag == "SwingRock") {
-			DamageHuman (20);
+			DamageHuman (50);
 		}
 	}
 

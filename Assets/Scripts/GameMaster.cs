@@ -51,6 +51,7 @@ public class GameMaster : MonoBehaviour {
 		pausePanel = GameObject.Find ("GameMenu");
 		pausePanel.SetActive(false);
 		GameMaster.gm.ContinueGame ();
+		Physics2D.gravity = new Vector2 (0, -9.8f);
 	}
 
 	void Update() {
@@ -136,6 +137,7 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public static void ShowControlMessage(string message) {
+		Debug.Log (message);
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
 		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
@@ -175,6 +177,9 @@ public class GameMaster : MonoBehaviour {
 			} else if (textArray [i] == "Option") {
 				GameObject cross = Instantiate (GameMaster.gm.OptionPrefab, controlPanel.transform, false);
 			} else {
+				//Debug.Log (textArray [i]);
+				//Debug.Log (controlPanel.transform.position);
+				//Debug.Log (GameMaster.gm.textPrefab.tag);
 				GameObject textObject = Instantiate (GameMaster.gm.textPrefab, controlPanel.transform, false);
 				textObject.GetComponent<Text> ().text = textArray [i];
 				textObject.GetComponent<Text> ().color = Color.white;

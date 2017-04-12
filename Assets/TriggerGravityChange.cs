@@ -7,7 +7,9 @@ public class TriggerGravityChange : MonoBehaviour {
 	private bool used = false;
 	void OnTriggerEnter2D(Collider2D col) {
 		if (col.tag == "Player" && col.name == "Human" && !used) {
-			Physics2D.gravity *= -1;
+			if (Physics2D.gravity.y >= 0f) {
+				Physics2D.gravity = new Vector2(0f, -9.8f);
+			}
 			used = true;
 		}
 	}

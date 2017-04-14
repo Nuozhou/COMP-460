@@ -14,7 +14,7 @@ public class GravityChangeDevice : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		bool operate = Input.GetButtonDown ("Operate");
-		if (operate && Vector3.Distance(human.position, transform.position) < 30f) {
+		if (operate && Vector3.Distance(human.position, transform.position) < 50f) {
 			if (Physics2D.gravity.y < 0f) {
 				Physics2D.gravity = new Vector2 (0, 2f);
 			} else {

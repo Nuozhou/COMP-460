@@ -7,12 +7,10 @@ public class Level3Start : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log ("Entered level 3 start");
 		StartCoroutine (StartingMessages ());
 	}
 
 	private IEnumerator StartingMessages() {
-		Debug.Log ("Entered starting messages");
 		GameMaster.ShowDialogMessage (dialogMessage + "\n");
 		yield return new WaitForSeconds (5f);
 		GameMaster.CloseDialogPanel ();

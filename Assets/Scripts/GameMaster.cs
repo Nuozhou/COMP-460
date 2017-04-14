@@ -137,7 +137,6 @@ public class GameMaster : MonoBehaviour {
 	}
 
 	public static void ShowControlMessage(string message) {
-		Debug.Log (message);
 		GameObject UICanvas = GameObject.Find ("UICanvas");
 		GameObject dialogPanel = UICanvas.transform.Find ("DialogPanel").gameObject;
 		GameObject controlPanel = UICanvas.transform.Find ("ControlPanel").gameObject;
@@ -205,8 +204,10 @@ public class GameMaster : MonoBehaviour {
 		gameMessageText.GetComponent<Text>().text = "You Died!!";
 		yield return new WaitForSeconds (3f);
 
+		human.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+		human.GetComponent<Rigidbody2D> ().gravityScale = 0;
 
-		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
+		human.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		if (human.attachedRope != null) {
 			human.attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
 		}
@@ -215,7 +216,7 @@ public class GameMaster : MonoBehaviour {
 			human.gameObject.GetComponent<HumanMovements> ().Flip ();
 		}
 		human.gameObject.transform.localScale = human.originalLocalScale;
-		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
+		GameObject.Find ("Alien").transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 5f, gm.SavePoint.position.z);
 
 		human.health = 50;
 		human.humanDead = false;
@@ -246,6 +247,8 @@ public class GameMaster : MonoBehaviour {
 		yield return new WaitForSeconds (2f);
 		gameMessageText.GetComponent<Text>().text = "";
 		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
+		human.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+		human.GetComponent<Rigidbody2D> ().gravityScale = 3;
 	}
 
 	public static IEnumerator KillAlien(Alien alien) {
@@ -257,7 +260,9 @@ public class GameMaster : MonoBehaviour {
 		yield return new WaitForSeconds (3f);
 
 		GameObject humanObject = GameObject.Find("Human");
-		humanObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 1f, gm.SavePoint.position.z);
+		humanObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+		humanObject.GetComponent<Rigidbody2D> ().gravityScale = 0;
+		humanObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
 		if (humanObject.GetComponent<Human> ().attachedRope != null) {
 			humanObject.GetComponent<Human> ().attachedRope.GetComponent<Rope> ().lastNode.GetComponent<HingeJoint2D> ().enabled = false;
 		}
@@ -266,7 +271,7 @@ public class GameMaster : MonoBehaviour {
 			alien.gameObject.GetComponent<AlienMovements> ().Flip ();
 		}
 		alien.gameObject.transform.localScale = alien.originalLocalScale;
-		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 3f, gm.SavePoint.position.z);
+		alien.gameObject.transform.position = new Vector3 (gm.SavePoint.position.x, gm.SavePoint.position.y + 5f, gm.SavePoint.position.z);
 		alien.health = 50;
 		SpriteRenderer healthBar = GameObject.Find("AlienHealth").GetComponent<SpriteRenderer>();
 		healthBar.transform.localScale = new Vector3(alien.healthScale.x * alien.health * 0.01f, 1f, 1f);
@@ -291,5 +296,8 @@ public class GameMaster : MonoBehaviour {
 		yield return new WaitForSeconds (2f);
 		gameMessageText.GetComponent<Text>().text = "";
 		blackCanvas.GetComponent<FadeInOut> ().FadeIn ();
+
+		humanObject.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+		humanObject.GetComponent<Rigidbody2D> ().gravityScale = 3;
 	}
 }

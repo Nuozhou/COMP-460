@@ -1031,7 +1031,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!1 &156436064
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 156436067}
   - component: {fileID: 156436066}
   - component: {fileID: 156436065}
+  - component: {fileID: 156436069}
   m_Layer: 0
   m_Name: ControlPoint
   m_TagString: Untagged
@@ -1061,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb22b289cbbe3423dbaeb1abc356812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 'Alien: Use Circle to Change Direction of the Rotation.'
+  message: 'Alien: Use Circle to Reverse the Rotation of the Rings'
 --- !u!61 &156436066
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1117,13 +1118,33 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 156436064}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.2, y: 413, z: 0}
-  m_LocalScale: {x: 317.9628, y: 150.04195, z: 19.855604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.5, y: -1.4, z: 0.8979042}
+  m_LocalScale: {x: 14.481373, y: 42.02242, z: 19.855604}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1559555695}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &156436069
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156436064}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &161360056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1448,21 @@ Prefab:
     - target: {fileID: 1635028779436634, guid: 113d1d648b1b942e394695f446eb5b58, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224990524751603874, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224968662318020252, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224011834697750898, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 113d1d648b1b942e394695f446eb5b58, type: 2}
@@ -2271,7 +2307,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!1001 &483414922
 Prefab:
   m_ObjectHideFlags: 0
@@ -2352,11 +2388,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 839187588}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -104.5, y: -47}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -104.5, y: 131}
   m_SizeDelta: {x: 53, y: 94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610101920
@@ -2411,6 +2447,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 698768053}
+  - component: {fileID: 698768054}
   m_Layer: 0
   m_Name: InnerRing
   m_TagString: ReverseRotatePlane
@@ -2433,9 +2470,23 @@ Transform:
   - {fileID: 964875768}
   - {fileID: 1833803013}
   - {fileID: 901648635}
+  - {fileID: 1254208878}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698768054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698768052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d087895542a4de59c99b172160505b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 1869438997}
+  speed: 7
 --- !u!1 &704400394
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +3910,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!212 &704400398
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4039,6 +4090,7 @@ GameObject:
   - component: {fileID: 901648634}
   - component: {fileID: 901648633}
   - component: {fileID: 901648632}
+  - component: {fileID: 901648636}
   m_Layer: 0
   m_Name: CheckPoint (5)
   m_TagString: Untagged
@@ -4119,6 +4171,26 @@ Transform:
   m_Father: {fileID: 698768053}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &901648636
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 901648631}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &925517238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,11 +4219,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 839187588}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -165, y: -34.077}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -165, y: 144}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925517240
@@ -5669,7 +5741,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!212 &964875771
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6171,7 +6243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170541012
 GameObject:
@@ -7055,7 +7127,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!1 &1228942744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7091,7 +7163,7 @@ Transform:
   - {fileID: 1060003372}
   - {fileID: 704554652}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250029376
 GameObject:
@@ -7104,6 +7176,8 @@ GameObject:
   - component: {fileID: 1250029379}
   - component: {fileID: 1250029378}
   - component: {fileID: 1250029377}
+  - component: {fileID: 1250029381}
+  - component: {fileID: 1250029382}
   m_Layer: 0
   m_Name: ControlPoint (1)
   m_TagString: Untagged
@@ -7122,7 +7196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb22b289cbbe3423dbaeb1abc356812c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 'Human: Use Circle to Use Anti-Gravity Device.'
+  message: 'Human: Use Circle to Use Anti-Gravity Device to Reverse Gravity.'
 --- !u!61 &1250029378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7185,6 +7259,155 @@ Transform:
   m_Father: {fileID: 1559555695}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1250029381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250029376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6837221d921402aa5f1662e8634734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageLine1: 'Human: Maybe I should use the device to float to the top.'
+  messageLine2: Then I can use it again to fall onto the top of the inner ring.
+  messageLine3: 
+--- !u!50 &1250029382
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1250029376}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &1254208877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1254208878}
+  - component: {fileID: 1254208881}
+  - component: {fileID: 1254208880}
+  - component: {fileID: 1254208879}
+  - component: {fileID: 1254208882}
+  m_Layer: 0
+  m_Name: CheckPoint (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254208878
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254208877}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.1, y: 26.4, z: 0.8979042}
+  m_LocalScale: {x: 25.582363, y: 4.385817, z: 19.85561}
+  m_Children: []
+  m_Father: {fileID: 698768053}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1254208879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254208877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6837221d921402aa5f1662e8634734, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageLine1: 'Human: There is an openning on the inner ring.'
+  messageLine2: If I find it, I can go in the ring.
+  messageLine3: 
+--- !u!61 &1254208880
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254208877}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.0056727924}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0113447}
+--- !u!212 &1254208881
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254208877}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1656224357
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3f163871c2c4046b8ac4582775c7817c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+--- !u!50 &1254208882
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254208877}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1260863880
 GameObject:
   m_ObjectHideFlags: 0
@@ -8151,7 +8374,71 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
+--- !u!1 &1298233118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1298233119}
+  - component: {fileID: 1298233120}
+  m_Layer: 0
+  m_Name: doodle-1388119_1280
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1298233119
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1298233118}
+  m_LocalRotation: {x: -0, y: -0, z: 0.97023517, w: 0.24216478}
+  m_LocalPosition: {x: -19.7, y: 10.57, z: 0.8979042}
+  m_LocalScale: {x: 0.13333341, y: 0.13333341, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1559555695}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 151.97101}
+--- !u!212 &1298233120
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1298233118}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1656224357
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 81d107ffa445141cfb661510ecd71838, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &1357159769
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,6 +8887,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1559555695}
+  - component: {fileID: 1559555696}
   m_Layer: 0
   m_Name: OuterRing
   m_TagString: RotatePlane
@@ -8623,9 +8911,24 @@ Transform:
   - {fileID: 474670464}
   - {fileID: 1357159774}
   - {fileID: 1250029380}
+  - {fileID: 156436068}
+  - {fileID: 1298233119}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1559555696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1559555694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d087895542a4de59c99b172160505b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 1869438997}
+  speed: 7
 --- !u!1 &1592244902
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,7 +9299,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833803012
 GameObject:
@@ -10379,7 +10682,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!212 &1833803016
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10423,7 +10726,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1869438997}
-  - component: {fileID: 1869438996}
   m_Layer: 0
   m_Name: Center
   m_TagString: Untagged
@@ -10431,18 +10733,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1869438996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869438995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d27558530fd42eda6be2ab2f699a45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
 --- !u!4 &1869438997
 Transform:
   m_ObjectHideFlags: 0
@@ -11746,7 +12036,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 3
+  m_Constraints: 0
 --- !u!212 &1870403877
 SpriteRenderer:
   m_ObjectHideFlags: 0

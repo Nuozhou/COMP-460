@@ -29,8 +29,9 @@ public class Human : MonoBehaviour {
 	}
 
 	void Update() {
-		if (transform.position.y <= fallBoundary && !humanDead)
-			DamageHuman(health);
+		if (transform.position.y <= fallBoundary && !humanDead) {
+			DamageHuman (health);
+		}
 	}
 
 	public void HealHuman (int amount) {

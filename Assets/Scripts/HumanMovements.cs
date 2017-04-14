@@ -14,7 +14,7 @@ public class HumanMovements : MonoBehaviour {
 	public AudioClip jumpEndClip;
 	public AudioClip ropeSwingClip;
 	private Transform m_GroundCheck;    // A position marking where to check if the player is grounded.
-	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	const float k_GroundedRadius = .3f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	public bool standingOnAlien;
 	public bool attachedToRope;
@@ -42,6 +42,13 @@ public class HumanMovements : MonoBehaviour {
 	}
 
 	private void Update() {
+
+		if (Physics2D.gravity.y > 0f) {
+			m_Anim.SetBool ("Floating", true);
+		} else {
+			m_Anim.SetBool ("Floating", false);
+		}
+		//Debug.Log ("Floating: " + m_Anim.GetBool ("Floating"));
 		/*
 		Debug.Log ("grounded: " + m_Grounded);
 		Debug.Log ("Jumped:" + jumped);
@@ -124,7 +131,7 @@ public class HumanMovements : MonoBehaviour {
 
 		if (attachedToRope) {
 			//Debug.Log ("Rope move");
-			m_Anim.SetFloat("Speed", Mathf.Abs(move));
+			m_Anim.SetFloat ("Speed", Mathf.Abs (move));
 			m_Rigidbody2D.AddForce (new Vector2 (1.5f * move * m_MaxSpeed, 0f));
 			if (!GetComponent<AudioSource> ().isPlaying && m_Rigidbody2D.velocity.x > 9f) {
 				GetComponent<AudioSource> ().clip = ropeSwingClip;
@@ -132,16 +139,14 @@ public class HumanMovements : MonoBehaviour {
 			}
 
 			// If the input is moving the player right and the player is facing left...
-			if (move > 0 && !m_FacingRight)
-			{
+			if (move > 0 && !m_FacingRight) {
 				// ... flip the player.
-				Flip();
+				Flip ();
 			}
 			// Otherwise if the input is moving the player left and the player is facing right...
-			else if (move < 0 && m_FacingRight)
-			{
+			else if (move < 0 && m_FacingRight) {
 				// ... flip the player.
-				Flip();
+				Flip ();
 			}
 			return;
 		}

@@ -19,6 +19,8 @@ public class Level3CameraStart : MonoBehaviour {
 		}
 		GameObject.Find ("Human").transform.position = new Vector3(-10, 140, 0);
 		GameObject.Find ("Alien").transform.position = new Vector3(-10, 143, 0);
+		GameObject.Find ("InnerRing").GetComponent<RotatePlane> ().enabled = false;
 		GetComponent<Camera2Person> ().enabled = true;
+
 	}
 }

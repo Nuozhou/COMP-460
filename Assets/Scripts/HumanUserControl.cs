@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof (HumanMovements))]
 public class HumanUserControl : MonoBehaviour {

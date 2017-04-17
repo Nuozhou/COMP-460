@@ -25,6 +25,7 @@ public class Human : MonoBehaviour {
 		healthBarOutline = GameObject.Find("HumanHealthOutline").GetComponent<SpriteRenderer>();
 		healthScale = healthBar.transform.localScale;
 		originalLocalScale = transform.localScale;
+		Debug.Log ("Health bar start");
 		UpdateHealthBar ();
 	}
 
@@ -32,6 +33,7 @@ public class Human : MonoBehaviour {
 		if (transform.position.y <= fallBoundary && !humanDead) {
 			DamageHuman (health);
 		}
+		Debug.Log ("Update Health bar layer: " + healthBar.sortingLayerName);
 	}
 
 	public void HealHuman (int amount) {
@@ -83,6 +85,7 @@ public class Human : MonoBehaviour {
 		yield return new WaitForSeconds(3);
 		healthBar.sortingLayerName = "Default";
 		healthBarOutline.sortingLayerName = "Default";
+		Debug.Log ("healthbar layer: " + healthBar.sortingLayerName);
 	}
 
 	void OnCollisionEnter2D (Collision2D col)

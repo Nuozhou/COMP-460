@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HumanMovements : MonoBehaviour {
@@ -43,11 +44,17 @@ public class HumanMovements : MonoBehaviour {
 
 	private void Update() {
 
-		if (Physics2D.gravity.y > 0f) {
-			m_Anim.SetBool ("Floating", true);
-		} else {
-			m_Anim.SetBool ("Floating", false);
+		bool operate = Input.GetButtonDown ("Operate");
+		if (operate && SceneManager.GetActiveScene().buildIndex == 5) {
+			if (Physics2D.gravity.y < 0f) {
+				Physics2D.gravity = new Vector2 (0, 2f);
+				m_Anim.SetBool ("Floating", true);
+			} else {
+				Physics2D.gravity = new Vector2 (0, -9.8f);
+				m_Anim.SetBool ("Floating", false);
+			}
 		}
+
 		//Debug.Log ("Floating: " + m_Anim.GetBool ("Floating"));
 		/*
 		Debug.Log ("grounded: " + m_Grounded);

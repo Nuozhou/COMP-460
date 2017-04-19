@@ -1277,7 +1277,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dca14ed54c35e47998778dd71eafaa7b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2382,7 +2382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050fad1ee71364ad9a59eaa9108d2a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneNum: 10
+  nextSceneNum: 3
 --- !u!60 &706926195
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5633,6 +5633,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224990524751603874, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224011834697750898, guid: 113d1d648b1b942e394695f446eb5b58,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 113d1d648b1b942e394695f446eb5b58, type: 2}
   m_IsPrefabParent: 0
@@ -6492,11 +6502,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114627816520187690, guid: e21accb863f5e45e79cdcad0d51be55e,
+    - target: {fileID: 114112970228544930, guid: e21accb863f5e45e79cdcad0d51be55e,
         type: 2}
-      propertyPath: grabMask.m_Bits
-      value: 6400
-      objectReference: {fileID: 0}
+      propertyPath: hurtClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 242d5452c8b7d4839b4aee3344731602, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e21accb863f5e45e79cdcad0d51be55e, type: 2}
   m_IsPrefabParent: 0

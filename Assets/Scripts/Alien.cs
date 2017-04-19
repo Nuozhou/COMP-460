@@ -12,6 +12,7 @@ public class Alien : MonoBehaviour {
 	public Vector3 originalLocalScale;
 	private float lastHitTime;
 	public float repeatDamagePeriod = 2f;
+	public AudioClip hurtClip;
 	public AudioClip deathClip;
 	public Dictionary<string, int> inventory = new Dictionary<string, int>();
 
@@ -44,7 +45,10 @@ public class Alien : MonoBehaviour {
 			if (health <= 0) {
 				GetComponent<AudioSource> ().clip = deathClip;
 				GetComponent<AudioSource> ().Play ();
-				StartCoroutine(GameMaster.KillAlien(this));
+				StartCoroutine (GameMaster.KillAlien (this));
+			} else {
+				GetComponent<AudioSource> ().clip = hurtClip;
+				GetComponent<AudioSource> ().Play ();
 			}
 		} 
 	}

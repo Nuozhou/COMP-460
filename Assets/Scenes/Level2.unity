@@ -7902,8 +7902,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121473865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 336.1, y: 28.6, z: 0}
-  m_LocalScale: {x: 22.303808, y: 17.547003, z: 4.791857}
+  m_LocalPosition: {x: 336, y: 27.7, z: 0}
+  m_LocalScale: {x: 24.72458, y: 19.36255, z: 4.791857}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 71
@@ -8652,7 +8652,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218021303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.2, y: -11, z: 200}
+  m_LocalPosition: {x: 47.2, y: -8.5, z: 200}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9367,7 +9367,9 @@ EdgeCollider2D:
   - {x: 3.684874, y: 9.200387}
   - {x: 6.4705195, y: 10.446712}
   - {x: 8.152128, y: 11.360514}
-  - {x: 9.588469, y: 10.928904}
+  - {x: 9.8285055, y: 10.650214}
+  - {x: 8.57199, y: 9.457162}
+  - {x: 12.807102, y: 7.342866}
 --- !u!4 &1337054917 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4792989053513506, guid: e21accb863f5e45e79cdcad0d51be55e,
@@ -9844,7 +9846,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
-  - {x: -11.54584, y: 3.4609354}
+  - {x: -13.460613, y: 2.0932422}
   - {x: -11.0615, y: 4.0890303}
   - {x: -10.962668, y: 4.3130183}
   - {x: -9.423828, y: 4.779829}
@@ -9861,7 +9863,7 @@ EdgeCollider2D:
   - {x: 9.0790615, y: 5.8297954}
   - {x: 10.016186, y: 6.194972}
   - {x: 10.8223505, y: 6.308975}
-  - {x: 11.870304, y: 6.002561}
+  - {x: 14.195381, y: 6.002561}
 --- !u!212 &1477833185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9968,7 +9970,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1482923413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.5, y: -11, z: 200}
+  m_LocalPosition: {x: -32.5, y: -8.5, z: 200}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12161,7 +12163,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704891506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -112.4, y: -10.9, z: 200}
+  m_LocalPosition: {x: -112.4, y: -8.4, z: 200}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15912,7 +15914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   messageLine1: 'Human: The pillar might help with this trap.'
-  messageLine2: 
+  messageLine2: '(Hint: push the pillar into the stone)'
   messageLine3: 
 --- !u!61 &2049334074
 BoxCollider2D:
